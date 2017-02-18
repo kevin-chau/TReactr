@@ -14,14 +14,20 @@ import { makeDir } from './lib/fs';
 import run from './run';
 
 // GitHub Pages
+// const remote = {
+//   name: 'github',
+//   url: 'https://github.com/kevinchau321/TReactr.git',
+//   branch: 'gh-pages',
+//   website: 'https://kevinchau321.github.io/Treactr/',
+//   static: true,
+// };
 
-// Heroku
+// Heroku App
 const remote = {
   name: 'heroku',
-  url: 'https://github.com/kevinchau321/TReactr.git',
-  branch: 'heroku',
+  url: 'https://git.heroku.com/treactr.git',
+  branch: 'master',
   website: 'https://treactr.herokuapp.com/',
-  static: true,
 };
 
 // Azure Web Apps
