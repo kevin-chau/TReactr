@@ -17,8 +17,8 @@ import run from './run';
 const remote = {
   name: 'github',
   url: 'https://github.com/kevinchau321/TReactr.git',
-  branch: 'gh-pages',
-  website: 'https://kevinchau321.github.io/TReactr/',
+  branch: 'heroku',
+  website: 'https://treactr.herokuapp.com/',
   static: true,
 };
 
