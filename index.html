@@ -1,0 +1,1447 @@
+<!doctype html><html class="no-js" lang="en"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><title>React Starter Kit - www.reactstarterkit.com</title><meta name="description" content=""/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="apple-touch-icon" href="apple-touch-icon.png"/><style id="css">html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}[hidden],template{display:none}html{color:#222;font-weight:100;font-size:1em;font-family:Segoe UI,HelveticaNeue-Light,sans-serif;line-height:1.375}a{color:#0074c2}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}audio,canvas,iframe,img,svg,video{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.browserupgrade{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}@media print{*,:after,:before{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}._3Gi4A{background:#373277;color:#fff}._1rGbt{margin:0 auto;padding:20px 0;max-width:1000px}._19lnX{color:#92e5fc;text-decoration:none;font-size:1.75em}._2mixT{margin-left:10px}._1zCyG{float:right;margin-top:6px}._2Lc2c{text-align:center}._2Qzpm{margin:0;padding:10px;font-weight:400;font-size:4em;line-height:1em}._3mmkW{padding:0;color:hsla(0,0%,100%,.5);font-size:1.25em;margin:0}.Kev6U{float:right;margin:6px 0 0}._1-rhI{display:inline-block;padding:3px 8px;text-decoration:none;font-size:1.125em}._1-rhI,._1-rhI:active,._1-rhI:visited{color:hsla(0,0%,100%,.6)}._1-rhI:hover,.g6k6K{color:#fff}.g6k6K{margin-right:8px;margin-left:8px;border-radius:3px;background:rgba(0,0,0,.15)}.g6k6K:hover{background:rgba(0,0,0,.3)}._2KA91{color:hsla(0,0%,100%,.3)}._2IMq2{padding-left:20px;padding-right:20px}._2Yejq{margin:0 auto;padding:0 0 40px;max-width:1000px}._3Ob1N{margin:0 0 32px;margin:0 0 2rem}._1yWVz{font-size:24px;font-size:1.5rem}._21LXz h1,._21LXz h2,._21LXz h3,._21LXz h4,._21LXz h5,._21LXz h6{font-size:18px;font-size:1.125rem}._21LXz pre{white-space:pre-wrap;font-size:14px;font-size:.875rem}._21LXz img{max-width:100%}._2NP0J{background:#f5f5f5;color:#333}._2AyN4{margin:0 auto;padding:20px 8px;max-width:1000px;text-align:center;font-size:1.5em}._17M03,._17M03:active,._17M03:hover,._17M03:visited{color:#333;text-decoration:none}._17M03:hover{text-decoration:underline}._2n9Qd{padding-right:15px;padding-left:15px}._3Jihw{background:#333;color:#fff}.n1bVC{margin:0 auto;padding:20px 15px;max-width:1000px;text-align:center}._2mr6B{color:hsla(0,0%,100%,.5)}._3HO-I{color:hsla(0,0%,100%,.3)}._1sUkm,._2mr6B{padding:2px 5px;font-size:1em}._1sUkm,._1sUkm:active,._1sUkm:visited{color:hsla(0,0%,100%,.6);text-decoration:none}._1sUkm:hover{color:#fff}</style></head><body><div id="app"><div data-reactroot="" data-reactid="1" data-react-checksum="1364316180"><div class="_3Gi4A" data-reactid="2"><div class="_1rGbt" data-reactid="3"><div class="Kev6U" role="navigation" data-reactid="4"><a href="/about" class="_1-rhI" data-reactid="5">About</a><a href="/contact" class="_1-rhI" data-reactid="6">Contact</a><span class="_2KA91" data-reactid="7"> | </span><a href="/login" class="_1-rhI" data-reactid="8">Log in</a><span class="_2KA91" data-reactid="9">or</span><a href="/register" class="_1-rhI g6k6K" data-reactid="10">Sign up</a></div><a href="/" class="_19lnX" data-reactid="11"><img src="/assets/2f751285.png" srcset="/assets/8844262b.png 2x" width="38" height="38" alt="React" data-reactid="12"/><span class="_2mixT" data-reactid="13">TReactr</span></a><div class="_2Lc2c" data-reactid="14"><h1 class="_2Qzpm" data-reactid="15">TReactr</h1><p class="_3mmkW" data-reactid="16">A Traktor clone in React.js</p></div></div></div><div class="_2IMq2" data-reactid="17"><div class="_2Yejq" data-reactid="18"><h1 data-reactid="19">React.js News</h1><article class="_3Ob1N" data-reactid="20"><h1 class="_1yWVz" data-reactid="21"><a href="https://reactjsnews.com/react-js-with-cloudinary" data-reactid="22">Leveraging React for Easy Image Management</a></h1><div class="_21LXz" data-reactid="23">
+<p><a href="https://facebook.github.io/react/">React</a> is a good tool when it comes to building flexible and reusable UI components. However, it’s “one of those libraries” that cannot handle all the tasks involved in building a full fleshed UI project. Other supporting tools - such as a recently announced <a href="https://github.com/cloudinary/cloudinary-react">React SDK</a> from <a href="http://cloudinary.com/?utm_source=Scotch&amp;utm_medium=Sponsored_Post_6&amp;utm_content=React_Gallery">Cloudinary</a> - are available to provide solutions that the React core cannot.</p>
+
+<!--more-->
+
+<p>In such cases where media (images and videos) becomes a heavy task to handle, <a href="http://cloudinary.com/?utm_source=Scotch&amp;utm_medium=Sponsored_Post_6&amp;utm_content=React_Gallery">Cloudinary</a> simplifies the process with the new React SDK. Let’s build and image library with Cloudinary and React using the <a href="https://github.com/cloudinary/cloudinary-react">Cloudinary’s React SDK</a>.</p>
+
+<h2>Prerequisites</h2>
+
+<p>The only requirements for using <a href="http://cloudinary.com/?utm_source=Scotch&amp;utm_medium=Sponsored_Post_6&amp;utm_content=React_Gallery">Cloudinary</a> in your existing React project are to install the React SDK and the upload widget. If you do not have an existing React project and want to try these examples, take the following steps:</p>
+
+<h3>1. Install Dependencies</h3>
+<p>We need a minimal amount of dependencies so we can focus on building a media library and not structuring a React app:</p>
+
+<div class="language-json highlighter-rouge">
+<pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"img-library"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"watch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -d --watch"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"serve"</span><span class="p">:</span><span class="w"> </span><span class="s2">"serve ./public"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"babel-core"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.18.2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"babel-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.2.9"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"babel-preset-es2015"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.18.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"babel-preset-react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.16.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"serve"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.4.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.14.0"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"axios"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.15.3"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cloudinary-react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.4.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"react-dom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.4.1"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>React (and React DOM) must be used since we are making a React app. The <code class="highlighter-rouge">cloudinary-react</code> dependency is Cloudinary’s React SDK, which we will soon see how it works. <code class="highlighter-rouge">axios</code> is a tool for making HTTP requests and, in our case, we will use it request images from the Cloudinary server.</p>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Install dependencies</span>
+npm install
+</code></pre>
+</div>
+
+<h3>2. Setup Webpack</h3>
+<p>Webpack is our build tool. Only minimal settings are required to have a build running and our React app compiling:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// ./webpack.config.js</span>
+<span class="kd">var</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">BUILD_DIR</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'public'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">APP_DIR</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">entry</span><span class="p">:</span> <span class="nx">APP_DIR</span> <span class="o">+</span> <span class="s1">'/index.jsx'</span><span class="p">,</span>
+    <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">path</span><span class="p">:</span> <span class="nx">BUILD_DIR</span><span class="p">,</span>
+        <span class="na">filename</span><span class="p">:</span> <span class="s1">'bundle.js'</span>
+    <span class="p">},</span>
+    <span class="na">module</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="na">loaders</span> <span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="na">test</span> <span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">jsx</span><span class="se">?</span><span class="sr">/</span><span class="p">,</span>
+                <span class="na">include</span> <span class="p">:</span> <span class="nx">APP_DIR</span><span class="p">,</span>
+                <span class="na">loader</span> <span class="p">:</span> <span class="s1">'babel'</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">config</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>Basic configuration - an entry, output and loaders to handle the React <code class="highlighter-rouge">.jsx</code> files.</p>
+
+<h3>3. Entry Points</h3>
+<p>We need to create an entry point, as we specified in the Webpack configuration, and another entry point for the browser, which is an <code class="highlighter-rouge">index.html</code> file:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// ./src/index.jsx</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-dom'</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">Main</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+           <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"main"</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Scotchage</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>           <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Main</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'container'</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<div class="language-html highlighter-rouge">
+<pre class="highlight"><code><span class="c">&lt;!-- ./public/index.html --&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="c">&lt;!--Stylesheet--&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!--Container for React rendering--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="c">&lt;!--Bundled file--&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bundle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<h3>4. Create Cloudinary Account</h3>
+<p>You need a Cloudinary account to continue with these examples. Sign up for free and store your credentials safely as shown on the dashboard:</p>
+
+<p><img src="http://imgur.com/HdBYCWr.jpg" alt=""></p>
+
+<h2>Uploading Images</h2>
+<p>Before using the React SDK to deliver images from the Cloudinary servers, let’s use the awesome Cloudinary upload widget to upload images. First, we need to add this widget to our <code class="highlighter-rouge">index.html</code>:</p>
+
+<div class="language-html highlighter-rouge">
+<pre class="highlight"><code><span class="c">&lt;!-- ./public/index.html --&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+   . . .
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    . . .
+    <span class="c">&lt;!-- UPLOAD WIDGET --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//widget.cloudinary.com/global/all.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bundle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p>Next, we create a button, attach an event to it and upload an image once the button is clicked:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-dom'</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">Main</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+
+    <span class="nx">uploadWidget</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">cloudinary</span><span class="p">.</span><span class="nx">openUploadWidget</span><span class="p">({</span> <span class="na">cloud_name</span><span class="p">:</span> <span class="s1">'CLOUD_NAME'</span><span class="p">,</span> <span class="na">upload_preset</span><span class="p">:</span> <span class="s1">'PRESET'</span><span class="p">,</span> <span class="na">tags</span><span class="p">:[</span><span class="s1">'xmas'</span><span class="p">]},</span>
+            <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+            <span class="p">});</span>
+    <span class="p">}</span>
+    <span class="nx">render</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"main"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Galleria</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>                <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"upload"</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">uploadWidget</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"upload-button"</span><span class="o">&gt;</span>
+                        <span class="nx">Add</span> <span class="nx">Image</span>
+                    <span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>                <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Main</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'container'</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">uploadWidget</code> member method is the handler invoked by the click event to handle our image upload by calling <code class="highlighter-rouge">cloudinary.openUploadWidget</code>. <code class="highlighter-rouge">openUploadWidget</code> takes a config object and the upload callback handler. The config object must have at least <code class="highlighter-rouge">cloud_name</code> and <code class="highlighter-rouge">upload_preset</code> properties with valid values. You can read more about Cloud Names and Upload Presets.</p>
+
+<p><img src="http://imgur.com/KeMwAtv.jpg" alt=""></p>
+
+<h2>Delivering Images with SDK</h2>
+
+<p>The Cloudinary React SDK has three major components, <strong><code class="highlighter-rouge">Image</code></strong>, <strong><code class="highlighter-rouge">CloudinaryContext</code></strong> and <strong><code class="highlighter-rouge">Transformation</code></strong>:</p>
+
+<ul>
+<li>
+<strong>Image</strong>: This component is responsible for the actual delivery of images. It takes the image ID and asks the server for this image. When the image is provided, it is also responsible for painting the image on the browser.</li>
+  <li>
+<strong>Transformation</strong>:  This component is used to apply transformations to images delivered with <code class="highlighter-rouge">Image</code>.</li>
+  <li>
+<strong>CloudinaryContext</strong>: You can specify Cloudinary configuration for each image on the <code class="highlighter-rouge">Image</code> component. This can be tedious when you are dealing with multiple images. <code class="highlighter-rouge">CloudinaryContext</code> allows you to apply configuration to a group of <code class="highlighter-rouge">Image</code>s.</li>
+</ul>
+<p>Most times you would end up with a structure like this:</p>
+
+<div class="language-html highlighter-rouge">
+<pre class="highlight"><code><span class="nt">&lt;CloudinaryContext&gt;</span>
+    <span class="nt">&lt;Image&gt;</span>
+        <span class="nt">&lt;Transformation</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;Transformation</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Image&gt;</span>
+    <span class="nt">&lt;Image&gt;</span>
+        <span class="nt">&lt;Transformation</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Image&gt;</span>
+<span class="nt">&lt;/CloudinaryContext&gt;</span>
+</code></pre>
+</div>
+
+<p>Back to our demo app, we can request an image from the Cloudinary server and display it with the following components:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s1">'axios'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CloudinaryContext</span><span class="p">,</span> <span class="nx">Transformation</span><span class="p">,</span> <span class="nx">Image</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'cloudinary-react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-dom'</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">Main</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">gallery</span><span class="p">:</span> <span class="p">[]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Request for images tagged xmas       </span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://res.cloudinary.com/christekh/image/list/xmas.json'</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">resources</span><span class="p">);</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">gallery</span><span class="p">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">resources</span><span class="p">});</span>
+            <span class="p">});</span>
+    <span class="p">}</span>
+    <span class="nx">uploadWidget</span><span class="p">()</span> <span class="p">{</span>
+       <span class="c1">// . . .</span>
+    <span class="p">}</span>
+    <span class="nx">render</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"main"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Galleria</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>                <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"gallery"</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">CloudinaryContext</span> <span class="nx">cloudName</span><span class="o">=</span><span class="s2">"CLOUDNAME"</span><span class="o">&gt;</span>
+                        <span class="p">{</span>
+                            <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">gallery</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                                <span class="k">return</span> <span class="p">(</span>
+                                    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"responsive"</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">.</span><span class="nx">public_id</span><span class="p">}</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"img"</span><span class="o">&gt;</span>
+                                            <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">target</span><span class="o">=</span><span class="s2">"_blank"</span> <span class="nx">href</span><span class="o">=</span><span class="p">{</span><span class="err">`</span><span class="na">http</span><span class="p">:</span><span class="c1">//res.cloudinary.com/christekh/image/upload/${data.public_id}.jpg`}&gt;</span>
+                                                <span class="o">&lt;</span><span class="nx">Image</span> <span class="nx">publicId</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">.</span><span class="nx">public_id</span><span class="p">}</span><span class="o">&gt;</span>
+                                                    <span class="o">&lt;</span><span class="nx">Transformation</span>
+                                                        <span class="nx">crop</span><span class="o">=</span><span class="s2">"scale"</span>
+                                                        <span class="nx">width</span><span class="o">=</span><span class="s2">"300"</span>
+                                                        <span class="nx">height</span><span class="o">=</span><span class="s2">"200"</span>
+                                                        <span class="nx">dpr</span><span class="o">=</span><span class="s2">"auto"</span>
+                                                        <span class="nx">responsive_placeholder</span><span class="o">=</span><span class="s2">"blank"</span>
+                                                    <span class="o">/&gt;</span>
+                                                <span class="o">&lt;</span><span class="sr">/Image</span><span class="err">&gt;
+</span>                                            <span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
+</span>                                            <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"desc"</span><span class="o">&gt;</span><span class="nx">Created</span> <span class="nx">at</span> <span class="p">{</span><span class="nx">data</span><span class="p">.</span><span class="nx">created_at</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>                                        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>                                    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>                                <span class="p">)</span>
+                            <span class="p">})</span>
+                        <span class="p">}</span>
+                    <span class="o">&lt;</span><span class="sr">/CloudinaryContext</span><span class="err">&gt;
+</span>                    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"clearfix"</span><span class="o">&gt;&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>                <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Main</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'container'</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<p>Take one more look at the upload code:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code> <span class="nx">cloudinary</span><span class="p">.</span><span class="nx">openUploadWidget</span><span class="p">({</span> <span class="na">cloud_name</span><span class="p">:</span> <span class="s1">'christekh'</span><span class="p">,</span> <span class="na">upload_preset</span><span class="p">:</span> <span class="s1">'idcidr0h'</span><span class="p">,</span> <span class="na">tags</span><span class="p">:[</span><span class="s1">'xmas'</span><span class="p">]},</span>
+            <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+            <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+</code></pre>
+</div>
+
+<p>Each image is tagged with <code class="highlighter-rouge">xmas</code>, which serves as a way to request images with this tag as a collection. This is exactly what we are using the <code class="highlighter-rouge">axios</code> library to do when the component mounts:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://res.cloudinary.com/CLOUDNAME/image/list/xmas.json'</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">resources</span><span class="p">);</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">gallery</span><span class="p">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">resources</span><span class="p">});</span>
+            <span class="p">});</span>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">axios</code> uses promises, so whenever the promise resolves in our case, we have a payload of images. We take advantage of React state to update our UI with the fetched resources.</p>
+
+<p>Down to rendering, we configure the <code class="highlighter-rouge">CloudinaryContext</code> with our <code class="highlighter-rouge">cloud_name</code>, iterate over the <code class="highlighter-rouge">gallery</code> state that stores the images and displays them using the <code class="highlighter-rouge">Image</code> component. We also apply few transformations using the <code class="highlighter-rouge">Transformation</code> component.</p>
+
+<blockquote>
+  <p>For security reasons, Cloudinary will not allow you to make such request from the client unless you tell it to. The best way to go is to use the admin API via a backend SDK and then send the resource list to the client.</p>
+</blockquote>
+
+<p><img src="http://imgur.com/uCKacWp.jpg" alt=""></p>
+
+<h2>Updating State with New Uploads</h2>
+<p>We are able to upload images and request for images to be displayed on the user’s browsers. Here is how we update the displayed images instantly when the user uploads a new image:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="nx">uploadWidget</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">_this</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="nx">cloudinary</span><span class="p">.</span><span class="nx">openUploadWidget</span><span class="p">({</span> <span class="na">cloud_name</span><span class="p">:</span> <span class="s1">'CLOUDNAME'</span><span class="p">,</span> <span class="na">upload_preset</span><span class="p">:</span> <span class="s1">'PRESET'</span><span class="p">,</span> <span class="na">tags</span><span class="p">:[</span><span class="s1">'xmas'</span><span class="p">]},</span>
+            <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Update gallery state with newly uploaded image</span>
+                <span class="nx">_this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">gallery</span><span class="p">:</span> <span class="nx">_this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">gallery</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">result</span><span class="p">)})</span>
+            <span class="p">});</span>
+    <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Rather than logging the uploaded image information to the console, we update the <code class="highlighter-rouge">gallery</code> state, which bears the list of requested images, by concatenating the uploaded result to the <code class="highlighter-rouge">gallery</code>.</p>
+
+<h2>Image Management Simplified</h2>
+<p>Image uploads, transformation and delivery has never been easier. These tasks have been a serious challenge for developers. Cloudinary has created a way to abstract all this hard work, enabling you to simply plug and play.</p>
+</div></article><article class="_3Ob1N" data-reactid="24"><h1 class="_1yWVz" data-reactid="25"><a href="https://reactjsnews.com/react-native-exponent-with-charlie-cheever" data-reactid="26">Native&#x27;s Exponent with Charlie Cheever</a></h1><div class="_21LXz" data-reactid="27">
+<p>React Native continues on a development spree in late 2016.  With an ambitious two-week release cycle, the framework makes rapid progress towards feature and performance parity with its native Android and iOS equivalents.  At the same time, these quick release periods frequently introduce breaking changes, difficulty with setup, and challenges with basic configuration.</p>
+
+<p>Enter Exponent, a tool that promises easier setup, development, and deployment of React Native applications.  Rather than being a replacement for React Native, as it is sometimes confused, Exponent augments React Native by dramatically simplifying the development and deployment processes.  Whereas basic setup with an Android environment to develop with React Native can take over an hour by hand, even for experienced engineers, Exponent shortens the time to start to “Hello World” to a handful of minutes.</p>
+
+<!--more-->
+
+<p>React Native continues on a development spree in late 2016.  With an ambitious two-week release cycle, the framework makes rapid progress towards feature and performance parity with its native Android and iOS equivalents.  At the same time, these quick release periods frequently introduce breaking changes, difficulty with setup, and challenges with basic configuration.</p>
+
+<p>Enter Exponent, a tool that promises easier setup, development, and deployment of React Native applications.  Rather than being a replacement for React Native, as it is sometimes confused, Exponent augments React Native by dramatically simplifying the development and deployment processes.  Whereas basic setup with an Android environment to develop with React Native can take over an hour by hand, even for experienced engineers, Exponent shortens the time to start to “Hello World” to a handful of minutes.</p>
+
+<p><a href="https://getexponent.com/">Exponent’s</a> prime feature is revealed as it’s namesake IDE.  The Exponent IDE is development platform for not only developing apps to test in their respective environment simulators, but also simplifies testing them on real devices.</p>
+
+<p>One of the cofounders of Exponent, <a href="https://twitter.com/ccheever">Charlie Cheever</a>, agreed to answer a few questions about Exponent and its purpose in the community.</p>
+
+<hr>
+<p><strong>Hi, Charlie.  Congrats on the release of Exponent!  One of the toughest aspects of Exponent is understanding what its purpose is.  What is the primary goal of Exponent?</strong></p>
+
+<p>Thanks :)</p>
+
+<p>Before I worked on mobile software, I spent about 15 years making websites. When I started working on the Quora iPhone app and Android app, it felt like time traveling back to 1993. So many things to worry about that have nothing to do with the product you want to build.</p>
+
+<p>One thing we’re trying to do with Exponent is making it as easy to develop native mobile apps as it is to make websites, or even easier! I think about how I learned to build software as a kid–making games on my TI-85 and making Hypercard stacks–and I want to make it so that the middle school kids of today can make cool stuff for themselves and their friends.</p>
+
+<p><strong>Basic environment setup of the iOS and Android simulators for developing React Native apps is commonly cited as a headache by new developers.  What does Exponent do to alleviate this pain?</strong></p>
+
+<p>The biggest thing that Exponent does is take care of everything related to native code for you. So you don’t need to know Swift/Obj-C/Java or even have Xcode or Android Studio to be able to write React Native apps. You write just JavaScript and Exponent has everything else already setup for you.</p>
+
+<p>Since you don’t write any native code with Exponent, just JavaScript, Exponent has a lot of the most popular native modules built in. Native maps, push notifications, Facebook and Google login, camera and camera roll access, contacts, TouchID, and a native video player are all included among other things. We’re always adding more of these as well. We just added full OpenGL support last week and did a game jam and made some mini games with it and are adding sound soon.</p>
+
+<p>We sometimes talk about Exponent as being like Rails for React Native. You could write a website in Ruby on your own. but Rails sets up a bunch of sensible things right off that bat that work together in a coherent way and we kind of do the same thing for React Native. Exponent includes instant app updating as a default, so you can deploy new code and assets with one command in seconds, even faster than most websites can be deployed.</p>
+
+<p><strong>Even after getting set up with the Android and iOS simulators, testing a React Native app on a real phone can still be a challenge.  How does Exponent make it easier to share apps in progress with would-be users?</strong></p>
+
+<p>You can actually open any Exponent project that you’re working on in our development app right away. When you develop with Exponent, you get a URL for your project, and you can open that URL on any phone with the Exponent developer app which you can download from the iOS App Store or Google Play Store. You don’t need to jack your phone into your computer–just open the URL.</p>
+
+<p>Another really cool thing about this is that, if you’re working with someone else, you can just send them the URL and they can open it on their phone as well, even if they are halfway around the world.</p>
+
+<p>We’ve done a bunch of work to make this pretty nice, like having <code class="highlighter-rouge">console.log</code> work even if the phone running your code isn’t plugged into your computer. And you can, of course, open your project on the iOS Simulator or an Android Emulator as well if you prefer.</p>
+
+<p>I know you mentioned a lot of people have trouble getting React Native setup on Android especially. With Exponent, every project works on both iOS and Android from the start and you never have to deal with Android Studio, so the process of getting going is much easier.</p>
+
+<p><strong>What type, or genre, of application would be a good fit with React Native and Exponent?</strong></p>
+
+<p>I would actually use React Native for almost any mobile app at this point. Doing development the traditional way (writing Swift/Java/Obj-C code) is just too hard to iterate on when you consider the slowness of the code-compile-copy-run loop and the fact that you have to write your app twice (and then keep it in sync!). The other thing that is an absolutely huge deal here but is sometimes overlooked is the layout engine. It’s much easier to build and change a layout in React Native’s Flexbox than any of the UI libraries that I’ve seen for Java/Swift/Obj-C.</p>
+
+<p>And if you need to do something really intense, like Snapchat live video filters, you can just write your own code as a native module and write the rest of your app in JS.</p>
+
+<p>I would use Exponent for anything I could because it just saves a lot of time and headaches since you don’t need to deal with Android Studio or Xcode. Some people don’t know that you can turn an Exponent project into an app store app for iOS or for Android with just one command.</p>
+
+<p>In general, Exponent will work for you in pretty much every case where just having a mobile website is one of the things that you’re considering. The features are pretty equivalent except that Exponent apps feel like native apps and mobile apps still feel like mobile web apps.</p>
+
+<p>The main reason <em>not</em> to use Exponent is if you have some custom native code that you need that isn’t included with Exponent. The most common reasons that people can’t use Exponent are if they need use Bluetooth or HealthKit or something else low level that isn’t built in to Exponent; or if they need to integrate into an existing project (though we are working right now on a solution that will let you do this).</p>
+
+<p>The exception to all this is games. If you are making a mobile game, Unity is probably the best choice for you. But we did add OpenGL support to Exponent recently and had a game jam and I was surprised at how good some of the entries were, so I think that might change.</p>
+
+<p>TL;DR: For apps that aren’t games, always use React Native (if you need to do something super custom, just do it as a native module). If you can, use Exponent (you can most of the time but check our docs to make sure we’re not missing anything you need).</p>
+
+<p><strong>One aspect of React Native that seems to be undergoing constant flux is its solution for navigation.  Between the built in Navigators and open source solutions, do you have any thoughts on an ideal solution for navigation?</strong></p>
+
+<p>Short version: I think you should use Ex-Navigation that Adam Miskiewicz (skevy) and Brent Vatne on our team wrote. Skevy in particular has been thinking about navigation in mobile apps and React Native for a long time. Using Ex-Navigation is definitely a better idea than Navigator or NavigatorIOS.</p>
+
+<p>To make things confusing, there is also NavigatorExperimental (yes, that’s different from Ex-Navigation) and ExNavigator (which was made by James Ide and Ex-Navigation is based on). The good news is that everyone working on these problems got together and decided to merge them all together. I don’t know how long that is going to take but it will probably be released sometime in the next few months under the name React Navigation, and that should unify everyone’s efforts!</p>
+
+<p>There is also this other school of thought where some people like to use the platform-specific native code for navigation which is the approach that the Wix Navigator uses. I have a strong personal view that its preferable to write UI components like this in JS because I actually think you want your app to be the same across iOS and Android (they are both just black rectangles with touch screens!) and JS tends to make your code more composable and customizable.</p>
+
+<p>Use Ex-Navigation and keep an eye out for React Navigation! Use JS instead of native for this UI code!</p>
+
+<p><strong>Given the increasingly fast development and deployment times, handling API setup for dealing with data is becoming a large obstacle to React Native apps.  Do you have any thoughts about the use of Backend-As-A-Service solutions like Firebase compared to rolling your own API with Node/Express, Rails, or similar?</strong></p>
+
+<p>I don’t have a strongly held view on this right now. There are so many solutions that fit the use cases of people with different needs. We’re seeing things getting easier and easier in every direction that you look.</p>
+
+<p>If you want to write your own code and you’re using JS, you can use something like Zeit’s new <code class="highlighter-rouge">now</code> stuff to deploy essentially instantly. If you want a more general purpose solution, Heroku is also really easy. And then of course there is AWS and Google Cloud, etc.</p>
+
+<p>It’s trivially easy for React Native apps to communicate with essentially any backend that uses HTTP/JSON since <code class="highlighter-rouge">fetch</code> and <code class="highlighter-rouge">JSON.parse</code> are built-in.</p>
+
+<p>If you don’t want to write any code, it seems like Firebase has become the most popular solution since Parse announced its shutdown. One nice thing about Firebase is that you can use their hosted database stuff with React Native using just JS, which means it works just fine with Exponent. Someone wrote up a guide to how to do this here: <a href="https://gist.github.com/sushiisumii/d2fd4ae45498592810390b3e05313e5c">https://gist.github.com/sushiisumii/d2fd4ae45498592810390b3e05313e5c</a></p>
+
+<p>Longer term, it seems like something like GraphQL/Relay should become really popular, but that stuff is too hard to setup and use still to be mainstream just yet. I’m not sure whether it will be GraphQL/Relay maturing and getting revised that wins or something else that is slightly different and easy to think about as a developer that comes and beats it, but directionally, it’s definitely right. We built something like this at Quora and it saved a ton of development time.</p>
+
+<p>I would just use whatever you are most comfortable with – almost anything will work! React Native is really similar to the the web in terms of its client capabilities and so I would just think about a React Native or Exponent app as being mostly like a website.</p>
+</div></article><article class="_3Ob1N" data-reactid="28"><h1 class="_1yWVz" data-reactid="29"><a href="https://reactjsnews.com/routing-in-react-native-with-jake-murzy" data-reactid="30">Routing in React Native with Jake Murzy</a></h1><div class="_21LXz" data-reactid="31">
+<p>Jake Murzy has been hard at work creating a new navigational library for React Native over the last couple of months.  While React JS has the benefit of the highly-regarded React Router, such a comprehensive routing solution doesn’t exist yet in the React Native community.  In fact, React Native’s routing landscape has been in constant upheaval for the last year.  The library itself has official three ‘navigators’ for handling decision making on which components to show the user, including ‘NavigatorIOS’, ‘Navigator’, and - more recently - ‘NavigatorExperimental’.  The open source community likewise has the packages ‘React Native Router Flux’, ‘React Native Router Native’, and ‘React Native Redux Router’, which of which are in various states of completion, or, more commonly, disrepair.</p>
+
+<!--more-->
+
+<p>Jake Murzy has been hard at work creating a new navigational library for React Native over the last couple of months.  While React JS has the benefit of the highly-regarded React Router, such a comprehensive routing solution doesn’t exist yet in the React Native community.  In fact, React Native’s routing landscape has been in constant upheaval for the last year.  The library itself has official three ‘navigators’ for handling decision making on which components to show the user, including ‘NavigatorIOS’, ‘Navigator’, and - more recently - ‘NavigatorExperimental’.  The open source community likewise has the packages ‘React Native Router Flux’, ‘React Native Router Native’, and ‘React Native Redux Router’, which of which are in various states of completion, or, more commonly, disrepair.</p>
+
+<p><a href="https://github.com/jmurzy/react-router-native">React Router Native</a> appears to focus on matching the API of the immensely popular React Router package, even going as far as introducing the concept of a URL into React Native, which bucks the notion that only web applications need or deserve a URL.</p>
+
+<hr>
+<p><strong>Today Jake is going to share some of his thoughts about his new library.</strong></p>
+
+<p><strong>Q:  Hi Jake!  The React Native library contains several navigation solutions and the surrounding ecosystem has multiple routing libraries.  What made you decide to make your own?</strong></p>
+
+<p>Hey! Thanks for reaching out. I’ve been eagerly watching what’s happening with navigation on React Native for a while. Until very recently, the whole Navigation scene in React Native was a mess. Navigator was being deprecated in favor of NavigationExperimental and NavigationExperimental wasn’t ready for prime time.</p>
+
+<p>My team was just starting a new project so I tried quite a few of the available solutions. Having successfully used React Router on the web, we were looking for a similar solution. Unfortunately, React Router did not support React Native, and other solutions we found were either very unstable, had a hard time keeping up with upstream changes on each release or the quality of code was quite poor.</p>
+
+<p>NavigationExperimental did most of what we wanted but it was a bit too low level so often times we found ourselves writing navigation related code and you can imagine how this gets tedious fast. The low level nature of NavigationExperimental is really by design to allow abstractions to be built up in higher layers. So to finally answer your question, the project came directly out of my frustration trying to make navigation work on React Native as good as React Router did on the web.</p>
+
+<p><strong>Q:  What is the strength of your routing system?  Is there any type of app that would be a perfect fit with React Router Native?  Conversely, is there any type of app that <em>wouldn’t</em> be a good fit with the library?</strong></p>
+
+<p>The use cases for React Router Native is pretty much the same as NavigationExperimental—which is the only supported navigation library by the React Native team. React Router Native is a very thin layer on top of NavigationExperimental that offers React Router’s mental model in a native app. Under the hood, it uses React Router for routing and NavigationExperimental for rendering user components. This is a very powerful combination that makes URLs possible on mobile.</p>
+
+<p>Most apps do not have deep-linking capabilities because implementing it for each screen in your app is a challenging task. Even within apps, users are often forced to take screenshots to share information. And for many, it’s vital that their apps support deep-linking. For example, Yelp goes as far to show a share prompt when users take screenshots of business listings. React Router Native enables developers to implement deep-linking in their apps without putting forth much effort. This can pave the way for a more connected app ecosystem.</p>
+
+<p>That being said, we’re still in the early days of React Native figuring out the right abstractions. Navigation on mobile is a challenging task, and having different flavors is only healthier as the community weighs the pros and cons of each approach rather than second guessing best-practices. So I’m hoping to get the community involved to shape the direction of the project.</p>
+
+<p><strong>Q:  Is React Router Native designed to be used with any of the official Navigation components written by the React Native team?</strong></p>
+
+<p>Absolutely. One of the primary goals of the project is that we follow React’s “learn once, write anywhere” principle. So you can use the community maintained components, interpolators and pan responders from React Native, and everything is highly customizable if you need instruct NavigationExperimental to do fancy transition animations, etc.</p>
+
+<p><strong>Q:  The React Router team has somewhat famously rewritten their API several times in the last two years, each time introducing several breaking changes.  Do you hope to keep your library at parity with React Router, breaking changes and all?  Case in point, the V4 release of React Router will introduce an all-new API.</strong></p>
+
+<p>React Router v4 is a complete rewrite. There was a lot of head-scratching on Twitter over the entire new set of breaking changes. Many people thought v4 should at best have been released under a different name. I’m not sure if I agree with that sentiment though, I understand where it is coming from. React Router v4 is a preview release, and in my opinion, it’s really hard to argue against replacing a foreign API with simple React components. I do hope to keep the library at parity with React Router, and to be honest, v4’s new everything-is-a-component approach makes the integration even easier. So over the next few weeks I’ll be working on v4 support.</p>
+
+<p><strong>Q: If you were new to React Native, which routing solution would you use?  Why?</strong></p>
+
+<p>This is a hard one to answer. Eric Vicenti has done a great job on NavigationExperimental and most of the issues have been sorted out by the community over the last few months. So if you’re familiar with Redux concepts and comfortable writing your own reducers to manage navigation state, NavigationExperimental is a great choice.</p>
+
+<p>One that I’m surprised you didn’t mention that deserves more attention is ExNavigation—another fairly new addition to the brewery. It also uses NavigationExperimental and is maintained by Adam Miskiewicz, Brent Vatne and other awesome members of the Exponent community. It feels a bit tied to the Exponent platform, but runs perfectly fine on React Native and is open source. So you’ve got that.</p>
+
+<p>Finally, If you’re just getting started with React Native and all you need is to be able to click a button and have it transition to a different scene but you don’t want it to get in your way when you need to reach in and apply complex navigational patterns, I strongly recommend you take React Router Native for a spin.</p>
+</div></article><article class="_3Ob1N" data-reactid="32"><h1 class="_1yWVz" data-reactid="33"><a href="https://reactjsnews.com/playing-with-react-and-d3" data-reactid="34">Playing With React and D3</a></h1><div class="_21LXz" data-reactid="35">
+<p>D3 is great at data visualizations, but it manipulates the DOM directly to display that data. Rendering DOM elements is where React shines. It uses a virtual representation of the DOM (virtual DOM) and a super performant diffing algorithm in order to determine the fastest way to update the DOM. We want to leverage React’s highly efficient, declarative, and reusable components with D3’s data utility functions.</p>
+
+<!--more-->
+
+<p>At this point, we can safely say that  <a href="https://facebook.github.io/react/">React</a> is the preferred JavaScript library for building user interfaces. It is used practically everywhere and is almost as pervasive as <a href="https://jquery.com/">jQuery</a>. It has an API that is simple, powerful, and easy to learn. Its performance metrics are really impressive thanks to the Virtual DOM and its clever <a href="https://facebook.github.io/react/docs/reconciliation.html">diff algorithm</a> between state changes. Nothing, however, is perfect, and React too has its limitations. One of React’s greatest strengths is the ease with which it integrate third-party libraries, but some libraries, especially opinionated ones, are more difficult to integrate than others.</p>
+
+<p>An extremely popular library that can be tricky to integrate with React is <a href="https://d3js.org/">D3.js</a>. D3 is an excellent data visualization library with a rich and powerful API. It is the gold standard of data visualizations. However, Because this library is opinionated about data, it is no trivial endeavour to get it to work with React. A few simple strategies permit these two libraries to work together in very powerful ways.</p>
+
+<p><strong>Editor’s Note</strong>: Check out our upcoming workshop, <a href="http://bit.ly/1T0PG3b">React and D3</a>, a crash course in learning how to create data visualizations with these two in demand libraries. Reserve your spot now on Eventbrite and get 20% off admission. Learn more at the <a href="http://bit.ly/1T0PG3b">Eventbrite page</a></p>
+
+<h2>What is React?</h2>
+
+<p>React is an open-source JavaScript library for creating user interfaces that addresses the challenges of building large applications with data that changes over time. Originally developed at Facebook, it is now seen in many of the most commonly used web applications including Instagram, Netflix, Airbnb, and HelloSign.</p>
+
+<h2>Why is React so popular?</h2>
+
+<p>React helps developers build applications by helping manage the application state. It’s simple, declarative, and composable. React is not a traditional MVC framework because React is really only interested in building user interfaces. Some have called it the “V(iew)” in MVC, but that’s a little misleading. React’s viewpoint is different. As application logic has reoriented toward the client, developers have applied more structure to their front-end JavaScript. We applied a paradigm that we already understood from the server (MVC) to the browser. Of course, the browser environment is very different from the server. React acknowledges that client-side applications are really a collection of UI components that should react to events like user interaction.</p>
+
+<p>React encourages the building applications out of self-contained, reusable components that only care about a small piece of the UI. Other frameworks such as Angular also attempt to do this, but React stands out because it enforces a unidirectional data flow from parent component to child component. This makes debugging much easier. Debugging is the hardest part of application development, so while React is more verbose that other libraries or frameworks, in the end it saves a lot of time. In a framework like Angular’s, it can be hard to figure out where a bug is coming from: The view? The model? The controller? The directive? The directive controller? Data in Angular flows in many different directions, and this makes it hard to reason about that state of your application. In React, when there is a bug (and there will be!), you can quickly determine where the bug originated from because data only moves in one direction. Locating a bug is as simple as connecting the numbered dots until you find the culprit.</p>
+
+<h2>What is D3?</h2>
+
+<p>D3 (Data-Driven Documents) is a JavaScript library for producing dynamic, interactive data-visualizations. It’s fairly low level, and the developer has a lot of control over the end result. It takes a bit of work to get D3 to do what you want, so if you’re looking for a more prepackaged solution, you’re probably better off with highcharts.js. That said, it is fairly simple to pick up once you get the hang of it.</p>
+
+<p>D3 does four main things:</p>
+
+<ol>
+<li>LOADS: D3 has convenient methods for importing data from CSV documents.</li>
+  <li>BINDS: D3 binds data elements to the DOM via JavaScript and SVG.</li>
+  <li>TRANSFORMS: data can be adjusted to fit your visual requirements</li>
+  <li>TRANSITIONS: D3 can respond to user input and animate elements based on that input</li>
+</ol>
+<h2>Why Would We Want To Use React with D3?</h2>
+
+<p>D3 is great at data visualizations, but it manipulates the DOM directly to display that data. Rendering DOM elements is where React shines. It uses a virtual representation of the DOM (virtual DOM) and a super performant diffing algorithm in order to determine the fastest way to update the DOM. We want to leverage React’s highly efficient, declarative, and reusable components with D3’s data utility functions. Also, once we create a chart component, we can want to be able to reuse that chart with different data anywhere in our app.</p>
+
+<h2>How to use React and D3?</h2>
+
+<p>D3, like React, is declarative.D3 uses data binding, whereas React uses a unidirectional data flow paradigm. Getting these two libraries to work together takes a bit of work, but the strategy is fairly simple: since SVG lives in the DOM, let React handle displaying SVG representations of the data and lett D3 handle all the math to render the data.</p>
+
+<p>Of course, we’ll have to make compromises. React is unopinionated and flexible, thereby allowing you to accomplish whatever needs to be done. Some tasks, like creating axes, are tedious. We can let D3 directly access the DOM and create. It handles axes well, and since we only need to create very few, this tactic won’t affect performance.</p>
+
+<p>Let’s go through a simple example. I created a repository you can use to follow along here: <a href="https://github.com/freddyrangel/playing-with-react-and-d3">playing-with-react-and-d3</a>. You can follow in the <code class="highlighter-rouge">unfinished</code> directory and if you get stuck you can take a look at the <code class="highlighter-rouge">finished</code> directory.</p>
+
+<p>Let’s generate a random list of X-Y coordinates and display them on a ScatterPlot chart. If you’re following the tutorial, a finished example is provided for you under the “finished” directory, but you can also follow along under “unfinished.” I’ve gone through the trouble of doing all the setup for you. The build will automatically be created from “unfinished/src/index.jsx”</p>
+
+<p>Let’s start by creating a simple “Hello World!” React component. Create a file under “components” named “chart.jsx”</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// unfinished/src/components/chart.jsx</span>
+<span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">World</span><span class="o">!&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<p>This example is simple, but let’s go over the explanation anyway. Since we’re rendering a simple H1 with no state, we can just export a function that returns the HTML we expect. If you’re familiar with Angular or Ember, it might look weird to insert HTML directly into our JS code. On the one hand, this goes against everything we’ve learned about unobtrusive JavaScript. But on the other hand, it actually makes sense: we’re not putting JavaScript in our HTML, we’re putting our HTML into our JavaScript. React sees HTML and client-side JavaScript as fundamentally bonded together. They’re both concerned about one thing – rendering UI components to the user. They simply cannot be separated without losing the ability to see what your component is going at a glance. The great benefits of this approach is that you can describe exactly what your component will look like when it’s rendered.</p>
+
+<p>Also, keep in mind that this is only possible with JSX, which translates HTML elements into React functions that will render the HTML to the page.</p>
+
+<p>Now, let’s move on and mount our component to the DOM. Open up “index.jsx”</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// unfinished/src/index.jsx</span>
+<span class="kr">import</span> <span class="s1">'./main.css'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span>    <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s1">'react-dom'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Chart</span>    <span class="nx">from</span> <span class="s1">'./components/chart.jsx'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">mountingPoint</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'div'</span><span class="p">);</span>
+<span class="nx">mountingPoint</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="s1">'react-app'</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">mountingPoint</span><span class="p">);</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Chart</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nx">mountingPoint</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>You probably noticed a few things. You might be wondering why we’re requiring a CSS file. We’re using Webpack, which allows us to require CSS files. This is very useful when we  modularize both our stylesheets and our JavaScript. We’re also creating a div in which we want to mount our React app. This is just a good practice in case you want to do other things on the page then render a React component. Lastly, we’re calling <code class="highlighter-rouge">render</code> on ReactDOM with 2 arguments, the name of the component and the DOM element we want to mount it on.</p>
+
+<p>Now, let’s install all the dependencies by navigating to the <code class="highlighter-rouge">unfinished</code> directory and running <code class="highlighter-rouge">npm i</code>. Then, fire up the server with <code class="highlighter-rouge">npm run start</code> and go to <code class="highlighter-rouge">localhost:8080</code></p>
+
+<p><img src="https://reactjsnews.com/img/playing-with-react-and-d3/basic_render.png" alt="Basic Render Image"></p>
+
+<p>Awesome! We have rendered our first React component! Let’s do something a little less trivial now.</p>
+
+<p>Let’s compose some functions that will create an array of random data points and then render a <a href="https://en.wikipedia.org/wiki/Scatter_plot">scatter plot</a>. While we’re at it, we’ll add a button to randomize the dataset and trigger a re-render of our app. Let’s open up our <code class="highlighter-rouge">Chart</code> component and add the following:</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// unfinished/src/components/chart.jsx</span>
+<span class="kr">import</span> <span class="nx">React</span>       <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">ScatterPlot</span> <span class="nx">from</span> <span class="s1">'./scatter-plot'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">styles</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">width</span>   <span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="na">height</span>  <span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+  <span class="na">padding</span> <span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// The number of data points for the chart.</span>
+<span class="kr">const</span> <span class="nx">numDataPoints</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+
+<span class="c1">// A function that returns a random number from 0 to 1000</span>
+<span class="kr">const</span> <span class="nx">randomNum</span>     <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
+
+<span class="c1">// A function that creates an array of 50 elements of (x, y) coordinates.</span>
+<span class="kr">const</span> <span class="nx">randomDataSet</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">{</span><span class="na">length</span><span class="p">:</span> <span class="nx">numDataPoints</span><span class="p">}).</span><span class="nx">map</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="nx">randomNum</span><span class="p">(),</span> <span class="nx">randomNum</span><span class="p">()]);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">Chart</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span> <span class="na">data</span><span class="p">:</span> <span class="nx">randomDataSet</span><span class="p">()</span> <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">randomizeData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">data</span><span class="p">:</span> <span class="nx">randomDataSet</span><span class="p">()</span> <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Playing</span> <span class="nx">With</span> <span class="nx">React</span> <span class="nx">and</span> <span class="nx">D3</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">ScatterPlot</span> <span class="p">{...</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">}</span> <span class="p">{...</span><span class="nx">styles</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"controls"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"btn randomize"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">randomizeData</span><span class="p">()}</span><span class="o">&gt;</span>
+          <span class="nx">Randomize</span> <span class="nx">Data</span>
+        <span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Since we want our component to manage it’s own state, we need to add a bit more code than was necessary for our previous “Hello World” stateless functional component. Instead of just a function, we’re going to extend <code class="highlighter-rouge">React.Component</code> and describe our component in the <code class="highlighter-rouge">render()</code> method. <code class="highlighter-rouge">render()</code> is the heart of any React component. It describes what our component is supposed to looks like. React will call <code class="highlighter-rouge">render()</code> on initial mount and on every state change.</p>
+
+<p>Inside of <code class="highlighter-rouge">render()</code>, we are both rendering a scatter plot component as if it were an HTML element and setting some properties or “props”. The <code class="highlighter-rouge">...</code> syntax is a convenient JSX and ES2015 spread operator that spreads the attributes of an array or object instead of doing all of that explicitly. For more information check out: <a href="https://facebook.github.io/react/docs/jsx-spread.html">JSX Spread Attributes</a>. We’re going to use <code class="highlighter-rouge">render()</code> to pass our data and a style object that will be used by some of our child components.</p>
+
+<p>In addition, we’re also rendering a button with an <code class="highlighter-rouge">onClick</code> event handler. We’re going to wrap <code class="highlighter-rouge">this.randomizeData()</code> with an arrow function and  bind the value of <code class="highlighter-rouge">this</code> to our <code class="highlighter-rouge">Chart</code> component. When the button is clicked, <code class="highlighter-rouge">randomizeData()</code> will call <code class="highlighter-rouge">this.setState()</code> and pass in some new data.</p>
+
+<p>Let’s talk about <code class="highlighter-rouge">this.setState()</code>. If <code class="highlighter-rouge">render()</code> is the heart of a React component, <code class="highlighter-rouge">setState()</code> is the brains of a component. <code class="highlighter-rouge">setState</code> explicitly tells React that we’re changing the state, thereby triggering a re-render of the component and its children. This essentially turns UI components into state machines.</p>
+
+<p>Inside of <code class="highlighter-rouge">setState()</code>, we’re passing an object with <code class="highlighter-rouge">data</code> set to the <code class="highlighter-rouge">randomDataSet()</code>. This means that if we want to retrieve the state of our application, we need only call <code class="highlighter-rouge">this.state.whateverStateWereLookingFor</code>. In this case, we can retrieve the randomData by calling <code class="highlighter-rouge">this.state.data</code>.</p>
+
+<p>A little side note on how React works: React offers great performance for rendering UI components by implementing a diff algorithm and comparing a virtual DOM in memory with the actual DOM. When you think about it, the DOM is really a large tree structure. If there’s one thing we have learned from decades of computer science research, it’s how to compare and manipulate trees. React takes advantage of clever tree diffing algorithms, but in order to work, each component can only render one parent element (i.e., you cannot render sibling elements). That’s why In the render function we’re wrapping all our elements in one parent div.</p>
+
+<p>Let’s get started with the scatter plot component. Create a file <code class="highlighter-rouge">unfinished/src/components/scatter-plot.jsx</code> :</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// unfinished/src/components/scatter-plot.jsx</span>
+<span class="kr">import</span> <span class="nx">React</span>        <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">d3</span>           <span class="nx">from</span> <span class="s1">'d3'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">DataCircles</span>  <span class="nx">from</span> <span class="s1">'./data-circles'</span><span class="p">;</span>
+
+<span class="c1">// Returns the largest X coordinate from the data set</span>
+<span class="kr">const</span> <span class="nx">xMax</span>   <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span>  <span class="o">=&gt;</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="c1">// Returns the highest Y coordinate from the data set</span>
+<span class="kr">const</span> <span class="nx">yMax</span>   <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span>  <span class="o">=&gt;</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+<span class="c1">// Returns a function that "scales" X coordinates from the data to fit the chart</span>
+<span class="kr">const</span> <span class="nx">xScale</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">linear</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">domain</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">xMax</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">)])</span>
+    <span class="p">.</span><span class="nx">range</span><span class="p">([</span><span class="nx">props</span><span class="p">.</span><span class="nx">padding</span><span class="p">,</span> <span class="nx">props</span><span class="p">.</span><span class="nx">width</span> <span class="o">-</span> <span class="nx">props</span><span class="p">.</span><span class="nx">padding</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]);</span>
+<span class="p">};</span>
+
+<span class="c1">// Returns a function that "scales" Y coordinates from the data to fit the chart</span>
+<span class="kr">const</span> <span class="nx">yScale</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">linear</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">domain</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">yMax</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">)])</span>
+    <span class="p">.</span><span class="nx">range</span><span class="p">([</span><span class="nx">props</span><span class="p">.</span><span class="nx">height</span> <span class="o">-</span> <span class="nx">props</span><span class="p">.</span><span class="nx">padding</span><span class="p">,</span> <span class="nx">props</span><span class="p">.</span><span class="nx">padding</span><span class="p">]);</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">scales</span> <span class="o">=</span> <span class="p">{</span> <span class="na">xScale</span><span class="p">:</span> <span class="nx">xScale</span><span class="p">(</span><span class="nx">props</span><span class="p">),</span> <span class="na">yScale</span><span class="p">:</span> <span class="nx">yScale</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">};</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">svg</span> <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">width</span><span class="p">}</span> <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">height</span><span class="p">}</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">DataCircles</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span> <span class="p">{...</span><span class="nx">scales</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/svg</span><span class="err">&gt;
+</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<p>There’s a lot going on here, so let’s start with the stateless functional component that we’re exporting. D3 uses SVG to render data visualizations. D3 has special methods for creating SVG elements and binding data to those elements – but we’re going to let React handle that. We’re creating an SVG element with the properties passed in by the <code class="highlighter-rouge">Chart</code> component and which can be accessed via <code class="highlighter-rouge">this.props</code>. Then we’re creating a <code class="highlighter-rouge">DataCircles</code> component (more on that below) which will render the points for the scatter plot.</p>
+
+<p>Let’s talk about D3 scales. This is where D3 shines. Scales takes care of the messy math involved in converting your data into a format that can be displayed on a chart. If you have a data point value 189281, but your chart is only 200 pixels wide, then D3 scales converts that value to a number you can use.</p>
+
+<p><code class="highlighter-rouge">d3.scale.linear()</code> returns a linear scale. D3 also supports other types of scales (ordinal, logarithmic, square root, etc.), but we won’t be talking about those here. <code class="highlighter-rouge">domain</code> is short for an “input domain”, i.e., the range of possible input values. It takes an array of the smallest input value possible and the maximum input value. <code class="highlighter-rouge">range</code> on its own is the range of possible output values. So in <code class="highlighter-rouge">domain</code>, we’re setting the range of possible data values from our random data, and in <code class="highlighter-rouge">range</code> we’re telling D3 the range of our chart. <code class="highlighter-rouge">d3.max</code> is a D3 method for determining the maximum value of a dataset. It can take a function which D3 will use to give the max values of the X and Y coordinates.</p>
+
+<p>We use the scales to render the data circles and our axes.</p>
+
+<p>Let’s create the DataCircles component under <code class="highlighter-rouge">unfinished/src/components/data-circles.jsx</code></p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// unfinished/src/components/data-circles.jsx</span>
+<span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">renderCircles</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="nx">coords</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">circleProps</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">cx</span><span class="p">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">xScale</span><span class="p">(</span><span class="nx">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+      <span class="na">cy</span><span class="p">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">yScale</span><span class="p">(</span><span class="nx">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+      <span class="na">r</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="na">key</span><span class="p">:</span> <span class="nx">index</span>
+    <span class="p">};</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">circle</span> <span class="p">{...</span><span class="nx">circleProps</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="err">;
+</span>  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">g</span><span class="o">&gt;</span><span class="p">{</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">renderCircles</span><span class="p">(</span><span class="nx">props</span><span class="p">))</span> <span class="p">}</span><span class="o">&lt;</span><span class="sr">/g</span><span class="err">&gt;
+</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<p>In this component, we’re rendering a <code class="highlighter-rouge">g</code> element, the SVG equivalent to a <code class="highlighter-rouge">div</code>. Since we want to render a point for every set of X-Y coordinates, were must render multiple sibling elements which we wrap together in a <code class="highlighter-rouge">g</code> element for React to work. Inside of <code class="highlighter-rouge">g</code>, we’re mapping over the data and rendering a circle for each one using <code class="highlighter-rouge">renderCircles</code>. <code class="highlighter-rouge">renderCircles</code> creates an SVG <code class="highlighter-rouge">circle</code> element with a number of properties. Here’s where we’re setting the x and y coordinates (<code class="highlighter-rouge">cx</code> and <code class="highlighter-rouge">cy</code> respectively) with the D3 scales passed in from the scatter plot component. <code class="highlighter-rouge">r</code> is the radius of our circle, and key is something React requires us to do. Since we’re rendering identical sibling components, React’s diffing algorithm needs a way to keep track of them as it updates the DOM over and over. You can use any key you like, as long as it’s unique to the list. Here we’re just going to use the index of each element.</p>
+
+<p>Now, when we look at our browser, we see this:</p>
+
+<p><img src="https://reactjsnews.com/img/playing-with-react-and-d3/plot_points.png" alt="Plot Points Image"></p>
+
+<p>We can see our random data and randomize that data via user input. Awesome! But we’re missing a way to read this data. What we need are axes. Let’s create them now.</p>
+
+<p>Let’s open up <code class="highlighter-rouge">ScatterPlot.jsx</code> and add an <code class="highlighter-rouge">XYAxis</code> component</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// unfinished/src/components/scatter-plot.jsx</span>
+
+<span class="c1">// ...</span>
+
+<span class="kr">import</span> <span class="nx">XYAxis</span>       <span class="nx">from</span> <span class="s1">'./x-y-axis'</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">scales</span> <span class="o">=</span> <span class="p">{</span> <span class="na">xScale</span><span class="p">:</span> <span class="nx">xScale</span><span class="p">(</span><span class="nx">props</span><span class="p">),</span> <span class="na">yScale</span><span class="p">:</span> <span class="nx">yScale</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">};</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">svg</span> <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">width</span><span class="p">}</span> <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">height</span><span class="p">}</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">DataCircles</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span> <span class="p">{...</span><span class="nx">scales</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">XYAxis</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span> <span class="p">{...</span><span class="nx">scales</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/svg</span><span class="err">&gt;
+</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Now, let’s create the <code class="highlighter-rouge">XYAxis</code> component;</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// unfinished/src/components/x-y-axis.jsx</span>
+<span class="kr">import</span> <span class="nx">React</span>  <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Axis</span>   <span class="nx">from</span> <span class="s1">'./axis'</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">xSettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">translate</span><span class="p">:</span> <span class="err">`</span><span class="nx">translate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">$</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">height</span> <span class="o">-</span> <span class="nx">props</span><span class="p">.</span><span class="nx">padding</span><span class="p">})</span><span class="err">`</span><span class="p">,</span>
+    <span class="na">scale</span><span class="p">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">xScale</span><span class="p">,</span>
+    <span class="na">orient</span><span class="p">:</span> <span class="s1">'bottom'</span>
+  <span class="p">};</span>
+  <span class="kr">const</span> <span class="nx">ySettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">translate</span><span class="p">:</span> <span class="err">`</span><span class="nx">translate</span><span class="p">(</span><span class="nx">$</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">padding</span><span class="p">},</span> <span class="mi">0</span><span class="p">)</span><span class="err">`</span><span class="p">,</span>
+    <span class="na">scale</span><span class="p">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">yScale</span><span class="p">,</span>
+    <span class="na">orient</span><span class="p">:</span> <span class="s1">'left'</span>
+  <span class="p">};</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">g</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"xy-axis"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Axis</span> <span class="p">{...</span><span class="nx">xSettings</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">Axis</span> <span class="p">{...</span><span class="nx">ySettings</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/g</span><span class="err">&gt;
+</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<p>For simplicity’s sake, we’re creating two objects which will hold the props for each of our X-Y axes. Let’s create an axis component to explain what these props do. Go ahead and create <code class="highlighter-rouge">axis.jsx</code></p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// unfinished/src/components/x-y-axis.jsx</span>
+<span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">d3</span>    <span class="nx">from</span> <span class="s1">'d3'</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">Axis</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">renderAxis</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentDidUpdate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">renderAxis</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">renderAxis</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">node</span>  <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">refs</span><span class="p">.</span><span class="nx">axis</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">axis</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">svg</span><span class="p">.</span><span class="nx">axis</span><span class="p">().</span><span class="nx">orient</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">orient</span><span class="p">).</span><span class="nx">ticks</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">scale</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">scale</span><span class="p">);</span>
+    <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">node</span><span class="p">).</span><span class="nx">call</span><span class="p">(</span><span class="nx">axis</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">g</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"axis"</span> <span class="nx">ref</span><span class="o">=</span><span class="s2">"axis"</span> <span class="nx">transform</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">translate</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="sr">/g</span><span class="err">&gt;
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Our strategy up to this point has been to let React exclusively handle the DOM. This is a good general rule, but we should leave room for nuance. In this case, the math and work necessary in order to render an axis is quite complicated and D3 has abstracted that pretty nicely. We’re going to let D3 have access to the DOM in this case. And since we’re only going to render a maximum of 2 axis, the trade-off in terms of performance is negligible.</p>
+
+<p>We’re going to create a <code class="highlighter-rouge">g</code> element to hand over to D3 and its DOM manipulation. <code class="highlighter-rouge">transform</code> is an attribute of a <code class="highlighter-rouge">g</code> that defines a list of transform definitions applied to an element and an element’s children. We’re passing in a <code class="highlighter-rouge">translate</code> attribute that moves the <code class="highlighter-rouge">g</code> element to where we want it. SVG is similar to canvas in that x coordinates start at the top rather than at the bottom, so we have to account for this. Otherwise, our X-Axis would be right at the top of the chart. For the Y-Axis, we want to leave some room for rendering the tickmark values.</p>
+
+<p><code class="highlighter-rouge">componentDidMount()</code> is a special React lifecycle method that is called immediately after the React component is mounted on the DOM. It is only called on the initial render. When this component is now rendered on the DOM, we’re going to pass a real DOM node to D3 so it can work its magic. By adding a “ref” attribute to the <code class="highlighter-rouge">g</code> element, we can refer to it later via <code class="highlighter-rouge">this.refs</code>. Every time this component is re-rendered, we want D3 to re-draw the axis. That’s where <code class="highlighter-rouge">componentDidUpdate()</code> comes in. It’s called every time a component is re-rendered. You can learn more about lifecycle methods <a href="https://facebook.github.io/react/docs/component-specs.html">here</a>.</p>
+
+<p>Now, if we take a look at the browser again, we can see the axis, and when we randomize the data, they update automatically to reflect the changes.</p>
+
+<p><img src="https://reactjsnews.com/img/playing-with-react-and-d3/complete_chart.png" alt="Complete Chart Image"></p>
+
+<h2>Conclusion</h2>
+
+<p>This is but a short introduction to React and D3. If you want to learn more check out our upcoming workshop, <a href="http://bit.ly/1T0PG3b">React and D3</a>, a crash course in learning how to create data visualizations with these two in demand libraries. Reserve your spot now on Eventbrite and get 20% off admission. Learn more at the <a href="http://bit.ly/1T0PG3b">Eventbrite page</a></p>
+</div></article><article class="_3Ob1N" data-reactid="36"><h1 class="_1yWVz" data-reactid="37"><a href="https://reactjsnews.com/how-to-make-your-react-apps-10x-faster" data-reactid="38">How to Make Your React Apps 15x Faster</a></h1><div class="_21LXz" data-reactid="39">
+<p>Without any modifications, React is really fast as-is. There are, however, a few things that you can do to improve performance. While working at HelloSign, I discovered some quick fixes that made our apps incredibly snappy. With these simple changes, I was able to reduce render time from over 3000 milliseconds to less than 200 milliseconds.</p>
+
+<!--more-->
+
+<p>Without any modifications, React is really fast as-is. There are, however, a few things that you can do to improve performance. While working at HelloSign, I discovered some quick fixes that made our apps incredibly snappy. With these simple changes, I was able to reduce render time from over 3000 milliseconds to less than 200 milliseconds.</p>
+
+<p><strong>Editor’s Note:</strong></p>
+
+<p>Check out our upcoming <a href="http://www.reactuniversity.com/training">React University Workshops</a>. Our next workshop, <a href="http://www.reactuniversity.com/react-2016" title="React 2016">React 2016</a>, will be held on April 23 at <a href="http://microsoftreactor.com/">Microsoft Reactor</a> in San Francisco and will offer a deep dive into creating modern Single-Page Applications (SPA) using React, Redux, React Router, Immutable.js, and Webpack. Also, if you’re interested in learning the basics about what it takes to be a Data Visualization Engineer, check out <a href="http://www.reactuniversity.com/react-and-d3">React and D3</a>.</p>
+
+<h2>Introduction</h2>
+
+<p>HelloSign is a cloud-based electronic signature tool founded in 2010. As you can imagine, HelloSign is a very JavaScript-heavy codebase. A lot of client-side behavior is necessary to create a rich signing experience. Lately, we’ve moved much of our codebase toward React. In fact, in many places we’ve broken up our codebase into several single-page applications written in React.</p>
+
+<p>Although the HelloSign team was happy with React’s performance before I initially joined the project, I quickly found some low-hanging fruit that could improve runtime speed. Here are the steps you should take to see similar improvements in your own applications.</p>
+
+<h2>Create a Baseline Performance Measurement</h2>
+
+<p>Before you begin, you should take a baseline measurement. Optimizations are meaningless if you can’t verify the results of your modifications.</p>
+
+<p>Thankfully, Chrome has excellent developer tools to help. One, little-used feature of Chrome’s DevTools is the “Timeline” tool. It allows you to record and analyze all activity in your application. You can record interactions on the page, locate potential memory leaks, measure the total time it takes to perform a task, and identify areas of potential <a href="https://developers.google.com/web/fundamentals/performance/rendering/?hl=en">jank</a>. Best of all, the results can be recorded for comparison with your final benchmark.</p>
+
+<p>There’s actually a really awesome video on Chrome’s DevTools that goes into detail about the “Timeline” feature. You can view it <a href="http://forwardjs.com/university/real-time-performance-audit-with-chrome-devtools">here</a>.</p>
+
+<p>We chose to measure the time elapsed between the initial paint of our signer page to the final rendering of the entire page. The initial download of our bundles still needs some optimization, but we’re neither going to mess with nor measure this parameter. It’s fairly easy and consistent to test render time rather than trying to click areas around the page and trying to measure its performance in a repeatable way. Then, all we needed to do was to go to the signer page, open Chrome’s DevTools “Timeline” tab, and refresh the page.</p>
+
+<p>As a side note, make sure that when performing this test, the “Paint” and “Screenshots” boxes are checked so that you can see what the user sees as the page is being rendered.</p>
+
+<p>After all that, we determined that our rendering time from initial paint was a little over 3 seconds. Much too long. Luckily, there was little we had to do to make this quite a bit faster.</p>
+
+<p><img src="https://reactjsnews.com/img/10x-react-performance/performance-benchmark-1.png" alt="Performance Benchmark 1"></p>
+
+<h2>Set NODE_ENV to Production</h2>
+
+<p>This step is easy to get wrong, even if you are well-informed. React’s <a href="https://facebook.github.io/react/downloads.html#npm">documentation</a> provides an overview, but doesn’t provide many specifics. React has great developer warnings and error checking, but these are only intended for development; if you take a look at React’s source code, you’ll see a lot of <code class="highlighter-rouge">if (process.env.NODE_ENV != 'production')</code> checks. This is running extra code that is not needed by the end user, not to mention that calling <code class="highlighter-rouge">process.env.NODE_ENV</code> is extremely slow. For production environments, we can remove all this unnecessary code. Just keep in mind that you don’t want to do this in development because it will remove all those helpful developer warnings.</p>
+
+<p>If you’re using <a href="https://webpack.github.io/">Webpack</a>, you can use <a href="https://webpack.github.io/docs/list-of-plugins.html#defineplugin">DefinePlugin</a> to replace all instances of <code class="highlighter-rouge">process.env.NODE_ENV</code> with <code class="highlighter-rouge">'production'</code>, and then use the <a href="https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin">UglifyJsPlugin</a> to remove all the dead code that no longer runs. Here’s a sample setup that you might use:</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// webpack.config.js</span>
+  <span class="p">...</span>
+  <span class="nl">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">DefinePlugin</span><span class="p">({</span>
+      <span class="c1">// A common mistake is not stringifying the "production" string.</span>
+      <span class="s1">'process.env.NODE_ENV'</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="s1">'production'</span><span class="p">)</span>
+    <span class="p">}),</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">({</span>
+      <span class="na">compress</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">warnings</span><span class="p">:</span> <span class="kc">false</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="p">]</span>
+  <span class="p">...</span>
+</code></pre>
+</div>
+
+<h2>React Constant and Inline Elements Transforms</h2>
+
+<p>React 0.14 introduced support for certain transpile time optimizations with <a href="https://github.com/facebook/react/blob/master/CHANGELOG.md#new-features">Constant and Inline Element Babel Transforms</a>. <a href="http://babeljs.io/docs/plugins/transform-react-constant-elements/">React Constant Elements</a> treats JSX elements as values and hoists them to a higher scope. In other words, it hoists static elements and thereby reduces calls to <code class="highlighter-rouge">React.createClass</code>. <a href="https://babeljs.io/docs/plugins/transform-react-inline-elements/">React Inline Elements</a> converts JSX elements into the object literals that they eventually return. Again, this minimizes the runtime calls to <code class="highlighter-rouge">React.createClass</code>.</p>
+
+<p>The implementation is rather simple. We added our Babel configuration in our <code class="highlighter-rouge">package.json</code> file:</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// package.json</span>
+  <span class="p">...</span>
+  <span class="s2">"babel"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"env"</span><span class="err">:</span> <span class="p">{</span>
+      <span class="s2">"production"</span><span class="err">:</span> <span class="p">{</span>
+        <span class="s2">"plugins"</span><span class="err">:</span> <span class="p">[</span>
+          <span class="s2">"transform-react-constant-elements"</span><span class="p">,</span>
+          <span class="s2">"transform-react-inline-elements"</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">...</span>
+</code></pre>
+</div>
+
+<h2>Final Measurement / Conclusion</h2>
+
+<p>Lastly, you’ll want to run the benchmark again and compare it with that saved benchmark from before these optimizations. As you can see, the total runtime profile ends 200ms after initial paint! That’s 15 times faster!</p>
+
+<p><img src="https://reactjsnews.com/img/10x-react-performance/performance-benchmark-2.png" alt="Performance Benchmark 2"></p>
+</div></article><article class="_3Ob1N" data-reactid="40"><h1 class="_1yWVz" data-reactid="41"><a href="https://reactjsnews.com/redux-middleware" data-reactid="42">Building Redux Middleware</a></h1><div class="_21LXz" data-reactid="43">
+<p>After writing my post a few months ago on <a href="https://reactjsnews.com/your-first-redux-app">building your own redux app</a>, I have been asked a couple times to write a guide on creating redux middleware and how it works. This will be a quick post on how you can acheive anything with your own middleware!</p>
+
+<!--more-->
+
+<p>##Basic middleware</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code>
+<span class="kr">const</span> <span class="nx">customMiddleware</span> <span class="o">=</span> <span class="nx">store</span> <span class="o">=&gt;</span> <span class="nx">next</span> <span class="o">=&gt;</span> <span class="nx">action</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span> <span class="o">!==</span> <span class="s1">'custom'</span><span class="p">)</span> <span class="k">return</span> <span class="nx">next</span><span class="p">(</span><span class="nx">action</span><span class="p">)</span>
+  <span class="c1">//do stuff!</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Applying it:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">createStore</span><span class="p">,</span> <span class="nx">applyMiddleware</span><span class="p">,</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'redux'</span>
+<span class="kr">import</span> <span class="nx">reducer</span> <span class="nx">from</span> <span class="s1">'./reducer'</span>
+<span class="kr">import</span> <span class="nx">customMiddleware</span> <span class="nx">from</span> <span class="s1">'./customMiddleware'</span>
+
+<span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span>
+  <span class="nx">reducer</span><span class="p">,</span>
+  <span class="nx">applyMiddleware</span><span class="p">(</span><span class="nx">customMiddleware</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Whaaa? <code class="highlighter-rouge">store =&gt; next =&gt; action =&gt;</code> I know that looks confusing. Essentially you are building a chain of functions, it will look like this when it gets called:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="c1">//next looks something like this:</span>
+<span class="kd">let</span> <span class="nx">dispatched</span> <span class="o">=</span> <span class="kc">null</span>
+<span class="kd">let</span> <span class="nx">next</span> <span class="o">=</span> <span class="nx">actionAttempt</span> <span class="o">=&gt;</span> <span class="nx">dispatched</span> <span class="o">=</span> <span class="nx">actionAttempt</span> 
+
+<span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">customMiddleware</span><span class="p">(</span><span class="nx">store</span><span class="p">)(</span><span class="nx">next</span><span class="p">)</span>
+
+<span class="nx">dispatch</span><span class="p">({</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'custom'</span><span class="p">,</span>
+  <span class="na">value</span><span class="p">:</span> <span class="s1">'test'</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<p>All you are doing is chaining function calls and passing in the neccesary data. When I first saw this I was confused a little due to the long chain, but it made perfect sense after reading the article on <a href="http://redux.js.org/docs/recipes/WritingTests.html">writing redux tests</a>.</p>
+
+<p>So now that we understand how those chained functions work, let’s explain the first line of our middleware.</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span> <span class="o">!==</span> <span class="s1">'custom'</span><span class="p">)</span> <span class="k">return</span> <span class="nx">next</span><span class="p">(</span><span class="nx">action</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>There should be some way to tell what actions should go through your middleware. In this example, we are saying if the action’s type is not <code class="highlighter-rouge">custom</code> call next, which will pass it to any other middleware and then to the reducer.</p>
+
+<p>##Doing Cool stuff</p>
+
+<p>The official guide on <a href="http://redux.js.org/docs/advanced/Middleware.html">redux middleware</a> covers a few examples on this, I’m going to try to explain it in a more simple way.</p>
+
+<p>Say we want an action like this:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="nx">dispatch</span><span class="p">({</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'ajax'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'http://api.com'</span><span class="p">,</span>
+  <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="nx">state</span> <span class="o">=&gt;</span> <span class="p">({</span>
+    <span class="na">title</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">title</span>
+    <span class="na">description</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">description</span>
+  <span class="p">}),</span>
+  <span class="na">cb</span><span class="p">:</span> <span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'finished!'</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span>
+<span class="p">})</span>
+
+</code></pre>
+</div>
+
+<p>We want this to do a post request, and then call the <code class="highlighter-rouge">cb</code> function. It would look something like this:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="kr">import</span> <span class="nx">fetch</span> <span class="nx">from</span> <span class="s1">'isomorphic-fetch'</span>
+
+<span class="kr">const</span> <span class="nx">ajaxMiddleware</span> <span class="o">=</span> <span class="nx">store</span> <span class="o">=&gt;</span> <span class="nx">next</span> <span class="o">=&gt;</span> <span class="nx">action</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span> <span class="o">!==</span> <span class="s1">'ajax'</span><span class="p">)</span> <span class="k">return</span> <span class="nx">next</span><span class="p">(</span><span class="nx">action</span><span class="p">)</span>
+  
+  <span class="nx">fetch</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">method</span><span class="p">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">method</span><span class="p">,</span>
+    <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">body</span><span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">getState</span><span class="p">()))</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">json</span> <span class="o">=&gt;</span> <span class="nx">action</span><span class="p">.</span><span class="nx">cb</span><span class="p">(</span><span class="nx">json</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>It’s pretty simple really. You have access to every method redux offers in middleware. What if we wanted the <code class="highlighter-rouge">cb</code> function to have access to dispatching more actions? We could change that last line of the fetch function to this:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">json</span> <span class="o">=&gt;</span> <span class="nx">action</span><span class="p">.</span><span class="nx">cb</span><span class="p">(</span><span class="nx">json</span><span class="p">,</span> <span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<p>Now in the callback, we can do:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code>  <span class="nx">cb</span><span class="err">:</span> <span class="p">(</span><span class="nx">response</span><span class="p">,</span> <span class="nx">dispatch</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">dispatch</span><span class="p">(</span><span class="nx">newAction</span><span class="p">(</span><span class="nx">response</span><span class="p">))</span>
+
+</code></pre>
+</div>
+
+<p>As you can see, middleware is very easy to write in redux. You can pass store state back to actions, and so much more. If you need any help or if I didn’t go into detail enough, feel free to leave a comment below!</p>
+</div></article><article class="_3Ob1N" data-reactid="44"><h1 class="_1yWVz" data-reactid="45"><a href="https://reactjsnews.com/webpack-in-production" data-reactid="46">React Router &amp;amp; Webpack in Production</a></h1><div class="_21LXz" data-reactid="47">
+<p>I’ve been working on a pretty large <a href="https://github.com/reactjs/react-router">react-router</a> codebase at work. Currently it has around 50~ code splits, which as you can imagine, is a lot of routes. This is going to be a post on the things I’ve learned throughout building out my development / production config and how we are using webpack in production.</p>
+
+<!--more-->
+
+<p>###Initial Setup</p>
+
+<p>Before I really dive into how my webpack config is setup and the problems I’ve found, I’ll quickly go over how this app is setup. Currently, there’s one entry point and it looks like this:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">'react'</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-dom'</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">match</span><span class="p">,</span> <span class="nx">Router</span><span class="p">,</span> <span class="nx">browserHistory</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-router'</span>
+<span class="kr">import</span> <span class="nx">AsyncProps</span> <span class="nx">from</span> <span class="s1">'async-props'</span>
+<span class="kr">import</span> <span class="nx">routes</span> <span class="nx">from</span> <span class="s1">'../routes/index'</span>
+<span class="cm">/* globals document, window */</span>
+
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">pathname</span><span class="p">,</span> <span class="nx">search</span><span class="p">,</span> <span class="nx">hash</span> <span class="p">}</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span>
+<span class="kr">const</span> <span class="nx">location</span> <span class="o">=</span> <span class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="nx">pathname</span><span class="p">}</span><span class="nx">$</span><span class="p">{</span><span class="nx">search</span><span class="p">}</span><span class="nx">$</span><span class="p">{</span><span class="nx">hash</span><span class="p">}</span><span class="err">`</span>
+
+<span class="nx">match</span><span class="p">({</span> <span class="nx">routes</span><span class="p">,</span> <span class="nx">location</span> <span class="p">},</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Router</span>
+      <span class="nx">render</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">AsyncProps</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span><span class="sr">/&gt;</span><span class="err">}
+</span>      <span class="nx">routes</span><span class="o">=</span><span class="p">{</span><span class="nx">routes</span><span class="p">}</span>
+      <span class="nx">history</span><span class="o">=</span><span class="p">{</span><span class="nx">browserHistory</span><span class="p">}</span>
+    <span class="sr">/&gt;</span><span class="err">,
+</span>    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'app'</span><span class="p">)</span>
+  <span class="p">)</span>
+<span class="p">})</span>
+
+</code></pre>
+</div>
+
+<p>It looks like a standard react-router setup, except a couple things are different. For one, there’s way too many routes to have them all in this file, so we are importing the main route object into this file. Second, we are using <code class="highlighter-rouge">match</code> on the client side. Without matching first, the client side would try to render before the splits were downloaded causing an error. You can read a little more about match on the client <a href="https://github.com/reactjs/react-router/issues/1990#issuecomment-141350392">here</a>.</p>
+
+<p>Next, we are using Ryan Florence’s awesome <a href="https://github.com/ryanflorence/async-props">async-props</a> library for loading data into components. It allows me to load data from an api before the server renders components. It will pass the data down to the client for the client-side render, and then data will load as you navigate to new pages automatically.</p>
+
+<p>###Routes</p>
+
+<p>Our main routes file looks like this:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">component</span><span class="p">:</span> <span class="s1">'div'</span><span class="p">,</span>
+  <span class="na">path</span><span class="p">:</span> <span class="s1">'/'</span><span class="p">,</span>
+  <span class="na">indexRoute</span><span class="p">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./index'</span><span class="p">),</span>
+  <span class="na">childRoutes</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nx">require</span><span class="p">(</span><span class="s1">'./login'</span><span class="p">),</span>
+    <span class="nx">require</span><span class="p">(</span><span class="s1">'./account'</span><span class="p">),</span>
+    <span class="p">...</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>There’s a lot more require’s in our app of course. And these are nested pretty deep. The files referenced in the root file have more child routes, and those use 
+<code class="highlighter-rouge">require.ensure</code> which you can read about in the webpack docs on <a href="https://webpack.github.io/docs/code-splitting.html">code splitting</a>. It tells webpack to make a new bundle, and then load that bundle when require.ensure is called on the client. Here’s an example:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">require</span><span class="p">.</span><span class="nx">ensure</span> <span class="o">!==</span> <span class="s2">"function"</span><span class="p">)</span> <span class="nx">require</span><span class="p">.</span><span class="nx">ensure</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="p">{</span> <span class="nx">c</span><span class="p">(</span><span class="nx">require</span><span class="p">)</span> <span class="p">}</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">path</span><span class="p">:</span> <span class="s1">'account'</span><span class="p">,</span>
+  <span class="nx">getComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">require</span><span class="p">.</span><span class="nx">ensure</span><span class="p">([],</span> <span class="p">(</span><span class="nx">require</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">cb</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../../views/master/index.jsx'</span><span class="p">))</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="na">childRoutes</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nx">require</span><span class="p">(</span><span class="s1">'./settings'</span><span class="p">),</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>There’s a few things going on here. First, we have a function at the top that will polyfill <code class="highlighter-rouge">require.ensure</code>. Why? Well, on this project we are server rendering our whole site as well, which I would rather not do, but due to the type of site we are building: we have to. The next thing is the relative require path. I’m using this awesome <a href="https://github.com/jshanson7/babel-plugin-resolver">babel resolver plugin</a> along with webpack’s <a href="https://webpack.github.io/docs/configuration.html#resolve">resolve paths</a> so that I can import files like this:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="kr">import</span> <span class="nx">Header</span> <span class="nx">from</span> <span class="s1">'../../master/header'</span>
+<span class="c1">//becomes</span>
+<span class="kr">import</span> <span class="nx">Header</span> <span class="nx">from</span> <span class="s1">'master/header'</span>
+
+</code></pre>
+</div>
+
+<p>Why do I have to use a babel plugin AND webpack’s resolve feature? Once again, doing a server rendered app, the code is ran on the server and also through webpack. In this particular app, I haven’t had time to experiment with <a href="https://github.com/webpack/react-webpack-server-side-example">webpacking the server</a>. Anyways, if I didn’t use the babel plugin, errors would be thrown on the server, but webpack would work fine. This is one of the common things I have ran into while building this app.</p>
+
+<p>Realizing some things need to be done slightly different on the server or client. You may still be wondering why I am referencing the component as a relative path in the above route example, and that’s because the babel plugin I’m using only works with <code class="highlighter-rouge">import</code> and not <code class="highlighter-rouge">require</code>. My route objects are the one place that I have these “nasty” looking paths.</p>
+
+<p>##Webpack</p>
+
+<p>I was prompted to make this article after tweeting this out:</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">webpack splits vs AggressiveMergingPlugin({minSizeReduce: 1.0}) <a href="https://t.co/b6kxHEqNcO">pic.twitter.com/b6kxHEqNcO</a></p>— ReactJS News (@ReactJSNews) <a href="https://twitter.com/ReactJSNews/status/707970197563506688">March 10, 2016</a>
+</blockquote>
+<p>A couple people wanted a better explanation as to what’s happening here. When I was first building my production webpack config, even after using all of these plugins:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">CommonsChunkPlugin</span><span class="p">(</span><span class="s1">'vendor'</span><span class="p">,</span> <span class="s1">'vendor.js'</span><span class="p">),</span>
+<span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">OccurenceOrderPlugin</span><span class="p">(),</span>
+<span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">DedupePlugin</span><span class="p">(),</span>
+<span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">({</span>
+  <span class="na">compress</span><span class="p">:</span> <span class="p">{</span> <span class="na">warnings</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="na">comments</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">sourceMap</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">mangle</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">minimize</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}),</span>
+
+</code></pre>
+</div>
+
+<p>My bundle looked like this:</p>
+
+<p><img src="https://reactjsnews.com/img/webpack-production/before.png" alt="Webpack Output"></p>
+
+<p>That’s pretty huge if you think about it. And I’m not talking about the amount of bundles. I’m talking about the file size. After searching everywhere for a solution to get the bundle size down further, I found webpack’s <a href="https://webpack.github.io/docs/list-of-plugins.html#aggressivemergingplugin">AggressiveMergingPlugin</a>. This thing is a life saver. As you may have seen from the tweet, the output turns into this:</p>
+
+<p><img src="https://reactjsnews.com/img/webpack-production/after.png" alt="Webpack Output"></p>
+
+<p>Just having the main, vendor, and one other bundle brings the whole site under 1MB. I’m using the plugin to only merge files if the size reduction is more than 50%, which is the default.</p>
+
+<p>People talk about code splitting in webpack and think it’s really amazing to load the JS for the page you’re on and nothing more. It sounds great. The problem is that the file size is immensely bigger. If someone more familiar with webpack has a better idea as to why this is, I’d like a better explanation. It isn’t feasable to keep the splits instead of merging them. This site is pretty large, with a lot of routes as you can tell from the screenshots. Codesplitting without merging would cause way more waiting on the client side every time you navigate to a new page. Even if the JS was heavily cached, the first time you hit these pages it will have to load a 300kb bundle for some of them.</p>
+
+<p>##Caching</p>
+
+<p>That takes us to caching. We are about a month away from publicly launching this site, so we haven’t setup the workflow for pushing updates through a cdn, but that will be the end result. For now, in my webpack config, my output object looks like this:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="nx">output</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nl">path</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">'/public/assets/js/[hash]/'</span><span class="p">,</span>
+  <span class="nx">filename</span><span class="err">:</span> <span class="s1">'[name].js'</span><span class="p">,</span>
+  <span class="nx">chunkFilename</span><span class="err">:</span> <span class="s1">'[id].js'</span><span class="p">,</span>
+  <span class="nx">publicPath</span><span class="err">:</span> <span class="s1">'/assets/js/[hash]/'</span>
+<span class="p">},</span>
+</code></pre>
+</div>
+
+<p>This is in the production config of course. This way I can cache the files and when I update the code, the hash will change and the browser won’t be caching the old code. I pass in the hash as an env variable at runtime to that the server has the correct path to the assets folder.</p>
+
+<p>##Problems</p>
+
+<p>There were a few big problems I came across while building out a server rendered app with dynamic routes. The first was page titles. How am I supposed to have the right title on the client and on the initial server render? Thankfully, Ryan has yet another solution. <a href="https://github.com/ryanflorence/react-title-component">react-title-component</a> solves this perfectly.</p>
+
+<p>The next was, how do I hit an api, wait for the response on server render, load new data on route changes, and of course, do this at the component level. As I mentioned before, <a href="https://github.com/ryanflorence/async-props">async-props</a> solves this problem too. It will give you route info so that you can make requests based on things in the url.</p>
+
+<p>The next problem is one that I haven’t fully solved. Webpack is getting really slow. It takes around 20 seconds on a maxed out macbook 15” to build code in production. On the server, it takes more like a minute! If I’m in development mode, it takes around 10 seconds to make the initial build, and sometimes it lags on building the splits on code change. If anyone has insight into this I would love to hear it.</p>
+
+<p>This one goes along with the webpack one, and it is reloading the server. I haven’t tried to webpack the server but I hear doing so works great for this. I don’t think it would fix the problem with webpack being slow though, and in fact it would probably make it even slower.</p>
+
+<p>##Folder structure</p>
+
+<p>I almost forgot to throw this one in here! I’m really happy with the structure of this project. I have a views folder that has all of the same folders and file names as the routes folder. It makes it really easy to find things. These also correspond with the URL to the page. <code class="highlighter-rouge">/account/settings</code> will be in <code class="highlighter-rouge">views/account/settings.jsx</code> and <code class="highlighter-rouge">routes/account/settings.js</code>. The same is true for my tests folder.</p>
+
+<p>##Conclusion</p>
+
+<p>I hope this gave you a good glimpse at how webpack and react router work at a larger scale than you see most blog posts cover. If you have any questions or things that you would like me to talk about that I haven’t already, please leave a comment below and I will update this post! I’m sure that I forgot a few problems and tips writing this. I was thinking this would be a short post but it blew up on me!</p>
+</div></article><article class="_3Ob1N" data-reactid="48"><h1 class="_1yWVz" data-reactid="49"><a href="https://reactjsnews.com/react-and-ag-grid" data-reactid="50">React and ag-Grid - the Perfect Match</a></h1><div class="_21LXz" data-reactid="51">
+<h3>What is ag-Grid</h3>
+
+<p>ag-Grid is an enterprise JavaScript data grid with zero library dependencies, including no dependency for it’s rendering. You can build an application using just JavaScript and ag-Grid alone. The ‘ag’ stands for framework AGnostic.</p>
+
+<!--more-->
+
+<h3>And React?</h3>
+
+<p>Now ag-Grid is providing an optional React component and React rendering. ag-Grd is fully in bed with React and treats React as a first class component - meaning if you are using React, ag-Grid is NOT using any other framework to get the job done.</p>
+
+<p>React Components follow standard DOM interaction patterns using properties, events (callbacks) and an optional API for interacting with the components. React also uses immutability to assist state management. ag-Grid uses the same principles. ag-Grid’s core interface maps directly onto what is required by React making ag-Grid and React match perfectly.</p>
+
+<p>To demonstrate, lets break down the provided
+<a href="https://github.com/ceolter/ag-grid-react-example">example React and ag-Grid on Github</a>.
+(note: the example can be found running <a href="https://www.ag-grid.com/best-react-grid/index.php">here</a>)</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code>    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">&lt;</span><span class="nx">AgGridReact</span>
+
+                <span class="c1">// listen for events with React callbacks</span>
+                <span class="nx">onRowSelected</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onRowSelected</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span>
+                <span class="nx">onCellClicked</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onCellClicked</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span>
+
+                <span class="c1">// binding to properties within React State or Props</span>
+                <span class="nx">showToolPanel</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">showToolPanel</span><span class="p">}</span>
+                <span class="nx">quickFilterText</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">quickFilterText</span><span class="p">}</span>
+                <span class="nx">icons</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">icons</span><span class="p">}</span>
+
+                <span class="c1">// column definitions and row data are immutable, the grid</span>
+                <span class="c1">// will update when these lists change</span>
+                <span class="nx">columnDefs</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">columnDefs</span><span class="p">}</span>
+                <span class="nx">rowData</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">rowData</span><span class="p">}</span>
+
+                <span class="c1">// or provide props the old way with no binding</span>
+                <span class="nx">rowSelection</span><span class="o">=</span><span class="s2">"multiple"</span>
+                <span class="nx">enableSorting</span><span class="o">=</span><span class="s2">"true"</span>
+                <span class="nx">enableFilter</span><span class="o">=</span><span class="s2">"true"</span>
+                <span class="nx">rowHeight</span><span class="o">=</span><span class="s2">"22"</span>
+            <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="p">);</span>
+    <span class="p">}</span>
+</code></pre>
+</div>
+
+<h3>Component</h3>
+
+<p>The AgGridReact class is the React Component that provides the interface into ag-Grid.</p>
+
+<h3>Configuration mapped to Props</h3>
+
+<p>All of the configuration for ag-Grid is done through React props, as always taking values
+from the parent state and props. For example, the data to display is provided as the
+rowData property:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="o">&lt;</span><span class="nx">AgGridReact</span>
+    <span class="p">...</span>
+    <span class="nx">rowData</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">rowData</span><span class="p">}</span>
+    <span class="p">...</span>
+</code></pre>
+</div>
+
+<p>Refer to <a href="https://www.ag-grid.com/javascript-grid-properties/index.php">properties documentation</a> for all the properties.</p>
+
+<p>ag-Grid, behaving like a typical React application, treats rowData as immutable. So when
+you replace the rowData with a new array of data, the grid will pick this up
+automatically.</p>
+
+<h3>Events mapped to Callbacks</h3>
+
+<p>The ag-Grid component generates events to inform when things happen in the grid, such
+as rows are selected, cells are clicked etc. These events map onto React callbacks
+when you provide the callback through one of the props.</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="o">&lt;</span><span class="nx">AgGridReact</span>
+    <span class="p">...</span>
+    <span class="nx">onRowSelected</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onRowSelected</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span>
+    <span class="nx">onCellClicked</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onCellClicked</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span>
+    <span class="p">...</span>
+</code></pre>
+</div>
+
+<p>Refer to <a href="https://www.ag-grid.com/javascript-grid-events/index.php">events documentation</a> for all the events.</p>
+
+<h3>API</h3>
+
+<p>The grid is a stateful component and needs to allow you to change it’s state. For example,
+the grid keeps state as to what rows are selected, and you need to tell it to change
+this state by telling it what rows to select. To do this, you use the grid’s API.</p>
+
+<p>When the grid initialises it fires a ‘ready’ event that, as well as telling you the
+grid is ready, provides you with a reference to the API.</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="o">&lt;</span><span class="nx">AgGridReact</span>
+    <span class="p">...</span>
+    <span class="nx">onReady</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onReady</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span>
+    <span class="p">...</span>
+
+<span class="nx">onReady</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//store the api</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gridApi</span> <span class="o">=</span> <span class="nx">params</span><span class="p">.</span><span class="nx">api</span><span class="p">;</span>
+<span class="p">}</span>
+
+    <span class="c1">// then sometime  later</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gridApi</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>Refer to <a href="https://www.ag-grid.com/angular-grid-api/index.php">API documentation</a> for the full API.</p>
+
+<h3>In Grid Rendering</h3>
+
+<p>And then ag-Grid then goes further, it embraces React for rendering. That means you can 
+use React for custom cell rendering inside the grid. You provide ag-Grid with the React component
+and it knows what to do with to seamlessly integrate.</p>
+
+<p>The following shows the skills cellRenderer from the sample application. As you can see,
+it’s pure React, short, to the point, compact, nice!</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code><span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">SkillsCellRenderer</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">skills</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="kd">var</span> <span class="nx">rowData</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+        <span class="nx">RefData</span><span class="p">.</span><span class="nx">IT_SKILLS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="p">(</span><span class="nx">skill</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">rowData</span><span class="p">.</span><span class="nx">skills</span><span class="p">[</span><span class="nx">skill</span><span class="p">])</span> <span class="p">{</span>
+                <span class="nx">skills</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">img</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">skill</span><span class="p">}</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="s1">'images/skills/'</span> <span class="o">+</span> <span class="nx">skill</span> <span class="o">+</span> <span class="s1">'.png'</span><span class="p">}</span> <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="mi">16</span><span class="p">}</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">skill</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="se">)</span><span class="err">;
+</span>            <span class="p">}</span>
+        <span class="p">});</span>
+
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">skills</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/span&gt;</span><span class="err">;
+</span>    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3>Summary</h3>
+
+<p>ag-Grid and React match up perfectly, giving you an enterprise data grid for use inside you React application.</p>
+
+<p>To find out more about ag-Grid, visit <a href="http://www.ag-grid.com/">www.ag-grid.com</a>.</p>
+</div></article><article class="_3Ob1N" data-reactid="52"><h1 class="_1yWVz" data-reactid="53"><a href="https://reactjsnews.com/bring-your-animations-to-life-with-physics" data-reactid="54">Bring your animations to life with physics</a></h1><div class="_21LXz" data-reactid="55">
+<p>Improve your user’s experience with animations. Learn about CSS and Javascript animations and when to use them.</p>
+
+<!--more-->
+
+<h4>Getting started with animations</h4>
+
+<p>To animate is to transition the user interface from one display to another. Animation enhances user experience, providing feeback to user actions and making screens that haven’t been introduced before easier to understand.</p>
+
+<p>An example can be seen with this <a href="http://www.material-ui.com/#/components/date-picker">React Material UI datepicker</a>. 
+The animations respond to user input and inform the user with transitions that show they are moving back or forward when they change month or select a date.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2054503/12336337/ede568fe-bb68-11e5-8750-7cf50c46a7c7.gif" alt="materialpicker"></p>
+
+<p>This post will compare using CSS transitions based on time against using spring phsyics to animate transitions. We will use the example of transitioning a box from left to right (You could imagine this being a month view in a calendar that we slide in and out of view).</p>
+
+<h4>Example with no Animation</h4>
+
+<p>We will build on this example which doesn’t have any animation. Without animation the transition is jarring and doesn’t show the user where the item is moving from and to. Look at the code in the Babel tab and see that we use transform: translateX rather than setting the left position because left, top, right, bottom are positioned by the CPU and cause a repaint while items using translate are positioned by the GPU and therefore more performant.</p>
+
+<pre class="codepen" data-height="150" data-type="result" data-href="GoEKLN" data-user="TomClarkson" data-safe="true"> <code> </code> <a href="http://codepen.io/TomClarkson/pen/GoEKLN">Check out this Pen!</a> </pre>
+
+<h4>Using timed CSS animations</h4>
+
+<p>A CSS transition can be added to the properties of an element with the CSS transition property. Per the <a href="https://developer.mozilla.org/en/docs/Web/CSS/transition">Mozilla docs for transition</a>, we can pass the duration we want the transition to take and a cubic bezier timing function. In this case I have set the duration to 0.5s and used the default timing function of ease.</p>
+
+<pre class="codepen" data-height="150" data-type="result" data-href="xZrZJp" data-user="TomClarkson" data-safe="true"> <code> </code> <a href="http://codepen.io/TomClarkson/pen/xZrZJp">Check out this Pen!</a> </pre>
+
+<h4>Cubic Bezier</h4>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2054503/12335516/79b72d54-bb64-11e5-8fbe-b2a9e6715ea9.png" alt="Cubic Bezier Curve"></p>
+
+<p>A cubic bezier curve is a timing function that starts at position 0 and time 0 and ends at 1,1. It accepts four arguments (x1, y1, x2, y2), which are the two control points to determine the shape of the curve. As you can see above, the ease function accelerates at the start and then decelerates at the middle, causing the animation to ‘ease’ as it finishes. The ease function is just shorthand for cubic-bezier(0.25,0.1,0.25,1). If you want to prove this, re-run this example after changing line 18 to:</p>
+
+<div class="language-js highlighter-rouge">
+<pre class="highlight"><code>  <span class="nx">transition</span><span class="err">:</span> <span class="s1">'0.5s cubic-bezier(0.25, 0.1, 0.25, 1)'</span>
+</code></pre>
+</div>
+
+<p>The <a href="http://cubic-bezier.com/">cubic bezier site by Lea Verou</a> is a great resource for experimenting with different timing functions. Below I have compared a linear function against the ease function.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2054503/12336020/f5c3568c-bb66-11e5-84e8-762a41ba4d58.gif" alt="cubicbeziercom"></p>
+
+<p>Chrome dev tools allow you to experiment with different curves and also control the speed of animations as seen below.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2054503/12336063/4134261e-bb67-11e5-8bbd-4981028659a7.gif" alt="chromebez"></p>
+
+<h4>Why you should use spring physics in animations</h4>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2054503/12336758/ff68ac10-bb6a-11e5-9560-15737d665b4d.gif" alt="damped_spring"></p>
+
+<p>As cubic bezier functions only give you two points of control, it doesn’t give the developer enough control to model real life movement. However, by controlling the animation with Javascript, we have full control and can use Hooke’s law which expresses how springs extends and contract. Spring animation is already very popular and can be used to provide lively animations in iOS core animation, and in Facebook’s Pop and Rebound libraries.</p>
+
+<p>Look at the cubic bezier animations on the left taken from <a href="http://framerjs.com/learn/basics/animation/">framerjs</a>, compared with the spring animation on the right. The spring animation has a bounce effect - which is not possible with a cubic bezier function. You could acheive this animation with CSS by using key frames, but you would have to hard code the key frame values and duration of the animation.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2054503/12362208/f52638fa-bc26-11e5-895e-59c0ad611928.gif" alt="framer"></p>
+
+<p>React Motion implements a terse API for you to use spring animation which can be used on the web and with React Native. You have the option to specify the start value (in this case, 0) and the spring physics values you want to animate to. React Motion runs in a request animation frame. The Motion component will keep calling your function to render your animated component with a style object that has the calculated values for each frame. In the example below I have destructured the x property and rendered it in the component.</p>
+
+<pre class="codepen" data-height="150" data-type="result" data-href="EPwWOg" data-user="TomClarkson" data-safe="true"> <code> </code> <a href="http://codepen.io/TomClarkson/pen/EPwWOg">Check out this Pen!</a> </pre>
+
+<h5>Continuous fluid interfaces</h5>
+
+<p>In the excellent talk on the <a href="https://www.youtube.com/watch?v=1tavDv5hXpo">state animation in React</a>, Cheng Lou, the creator, highlighted a quote from a former UIKit engineer at Apple.</p>
+
+<blockquote class="twitter-tweet" lang="en-gb">
+<p lang="en" dir="ltr">Animation APIs parameterized by eg duration and curve are fundamentally opposed to continuous, fluid interactivity.</p>— Andy Matuschak (@andy_matuschak) <a href="https://twitter.com/andy_matuschak/status/566736015188963328">February 14, 2015</a>
+</blockquote>
+
+<p>In the talk, Cheng used an example of animating an opening menu to illustrate this point - “For example, if you have a menu deploy animation that takes 500 milliseconds, and half-way the user clicks on something, and you toggle it back to its initial hidden state, why should this way back also be 500 milliseconds? And also, what should the curve be: ease-in, linear? It is not very clear”.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2054503/12363885/3f87eebc-bc30-11e5-9ceb-40e2ad34700f.gif" alt="calendardemosmall"></p>
+
+<p>The need for a fluid interface is what made me look into react-motion. We are currently building a calendar at <a href="http://fergusapp.com/">Fergus</a> which requires the ability to respond to drag events and clicks moving the calendar in different directions and by different distances. When we prototyped this with CSS transitions, it was janky and felt slow.</p>
+
+<p>Compare how fluid the spring motion animation is against the CSS animations by clicking the ‘Run animation’ button multiple times in quick succession.</p>
+
+<pre class="codepen" data-height="450" data-type="result" data-href="dGVvEJ" data-user="TomClarkson" data-safe="true"> <code> </code> <a href="http://codepen.io/TomClarkson/pen/dGVvEJ">Check out this Pen!</a> </pre>
+
+<h4>Configuring React Motion</h4>
+
+<p>The React Motion spring takes two arguments: stiffness and damping (which defaut to 120 and 17, respectively). Four <a href="https://github.com/chenglou/react-motion/blob/master/src/presets.js">presets</a> are provided: noWobble, gentle, wobbly, and stiff. By adjusting the stiffness and damping below, you can watch how these factors change the animation.</p>
+
+<pre class="codepen" data-height="300" data-type="result" data-href="OMxmQL" data-user="TomClarkson" data-safe="true"> <code> </code> <a href="http://codepen.io/TomClarkson/pen/OMxmQL">Check out this Pen!</a> </pre>
+
+<h4>When to use CSS Animations</h4>
+
+<p>As Cheng said in his talk, CSS animations are better for animations that you don’t want to stop or adjust after they are triggered - such as Twitter’s exploding heart animation. This is because CSS animations are more performant. React Motion does incur the cost of having your app re-rendered every animation frame which could be a problem if your application is not performant.</p>
+</div></article><article class="_3Ob1N" data-reactid="56"><h1 class="_1yWVz" data-reactid="57"><a href="https://reactjsnews.com/NgRepeat-Equivalent-in-React" data-reactid="58">Is There a React Equivalent for Angular’s ng-repeat?</a></h1><div class="_21LXz" data-reactid="59">
+<p>If you’re familiar with AngularJS you already understand many of the principles necessary to get started with React. In this post, I’ll demonstrate how to write the equivalent of an ngRepeat inside a React component.</p>
+
+<!--more-->
+
+<p>This post originally appeared on my <a href="http://angulartoreact.com/ng-repeat-react-equivalent">Angular to React</a> site where you’ll find more resources like this to help Angular Developers get up to speed quickly on React.</p>
+
+<h1>Is There a React Equivalent for Angular’s ng-repeat?</h1>
+
+<h4>Yes. React doesn’t use a proprietary construct to iterate over a collection of data. Instead, it relies on native Javascript iterators to generate repeating blocks of UI. Keep reading below for code samples and further explanation.</h4>
+
+<p>If you’ve been developing Angular applications for any amount of time, you’ve likely used the <code class="highlighter-rouge">ng-repeat</code> directive. Generating repeating blocks of UI from a data structure is a cornerstone of web development regardless of language or framework.</p>
+
+<p>The AngularJS team wrapped up a really convenient and powerful piece of iterative magic in the <code class="highlighter-rouge">ng-repeat</code> directive. With very little code, you can create dynamic lists that stay in sync with a collection of data. Just so we’re on the same page, here’s what the Angular code looks like:</p>
+
+<h5>AngularJS Code Sample for <code class="highlighter-rouge">ng-repeat</code>
+</h5>
+
+<p>Assume you have an array like this:</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="s2">"Matthew"</span><span class="p">,</span> <span class="na">link</span><span class="p">:</span> <span class="s2">"https://bible.com/1/mat.1"</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="s2">"Mark"</span><span class="p">,</span> <span class="na">link</span><span class="p">:</span> <span class="s2">"https://bible.com/1/mrk.1"</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="s2">"Luke"</span><span class="p">,</span> <span class="na">link</span><span class="p">:</span> <span class="s2">"https://bible.com/1/luk.1"</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span> <span class="na">link</span><span class="p">:</span> <span class="s2">"https://bible.com/1/jhn.1"</span> <span class="p">}</span>
+<span class="p">];</span>
+</code></pre>
+</div>
+
+<p>In Angular 1.x, to create a <code class="highlighter-rouge">ul</code> with an <code class="highlighter-rouge">li</code> for each item in the array you would put the following code in your controller:</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s2">"NgRepeatDemoCtrl"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$scope</span><span class="p">.</span><span class="nx">items</span> <span class="o">=</span> <span class="nx">items</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Then, in your view, you could use the <code class="highlighter-rouge">ng-repeat</code> directive like this:</p>
+
+<div class="language-html highlighter-rouge">
+<pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">ng-repeat=</span><span class="s">"item in items"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">ng-href=</span><span class="s">""</span><span class="nt">&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+</div>
+
+<h5>React Alternative to <code class="highlighter-rouge">ng-repeat</code>
+</h5>
+
+<p>To perform the same task in React you just need to think natively. Under the hood <code class="highlighter-rouge">ng-repeat</code> is just using a native Javascript iterator. You can use the same sort of native iterator directly in React. For just example, I’ll use <code class="highlighter-rouge">Array.map</code>. Here’s an example:</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">var</span> <span class="nx">RepeatModule</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="na">getDefaultProps</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="na">items</span><span class="p">:</span> <span class="p">[]</span> <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="na">render</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">listItems</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="s2">"{item.name}"</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">"{item.link}"</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>      <span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+          <span class="p">{</span><span class="nx">listItems</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>In this example, <code class="highlighter-rouge">Array.map</code> iterates through every item contained in <code class="highlighter-rouge">items</code> and executes a function that returns a DOM element. <em>(Technically, it’s a virtual DOM element, but that’s a different discussion.)</em>   Every <code class="highlighter-rouge">li</code> that is returned from inside of the map function gets added to a new array and finally returned as the value of the <code class="highlighter-rouge">Array.map()</code> function. The result of that function is stored in the <code class="highlighter-rouge">listItems</code> variable. When React calls the render method on our component, we generate an array of list items and then insert them into our <code class="highlighter-rouge">ul</code> using a single pair of enclosing curly braces.</p>
+
+<h5>Try It Out Yourself Using <a href="http://jsfiddle.net/zqef96hu/2/">This JSFiddle</a>
+</h5>
+</div></article></div></div><div class="_2NP0J" data-reactid="60"><div class="_2AyN4" data-reactid="61"><a class="_17M03" href="https://gitter.im/kriasoft/react-starter-kit" data-reactid="62">Ask a question</a><span class="_2n9Qd" data-reactid="63">|</span><a class="_17M03" href="https://github.com/kriasoft/react-starter-kit/issues/new" data-reactid="64">Report an issue</a></div></div><div class="_3Jihw" data-reactid="65"><div class="n1bVC" data-reactid="66"><span class="_2mr6B" data-reactid="67">© TReactr</span><span class="_3HO-I" data-reactid="68">·</span><a href="/" class="_1sUkm" data-reactid="69">Home</a><span class="_3HO-I" data-reactid="70">·</span><a href="/admin" class="_1sUkm" data-reactid="71">Admin</a><span class="_3HO-I" data-reactid="72">·</span><a href="/privacy" class="_1sUkm" data-reactid="73">Privacy</a><span class="_3HO-I" data-reactid="74">·</span><a href="/not-found" class="_1sUkm" data-reactid="75">Not Found</a></div></div></div></div><script src="/assets/vendor.aa81c644.js"></script><script src="/assets/client.298d916b.js"></script></body></html>
