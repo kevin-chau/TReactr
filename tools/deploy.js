@@ -14,8 +14,10 @@ import { makeDir } from './lib/fs';
 import run from './run';
 
 // GitHub Pages
+
+// Heroku
 const remote = {
-  name: 'github',
+  name: 'heroku',
   url: 'https://github.com/kevinchau321/TReactr.git',
   branch: 'heroku',
   website: 'https://treactr.herokuapp.com/',
