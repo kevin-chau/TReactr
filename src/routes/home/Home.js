@@ -24,7 +24,7 @@ class Home extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>Treactr</h1>
+          <h1>TReactr</h1>
           <p> TReactor is a javscript digital DJ mixing application built for
           the modern web, based on the legendary UI from Native Instruments&#39; Traktor. </p>
         </div>
