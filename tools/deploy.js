@@ -28,6 +28,7 @@ const remote = {
   url: 'https://git.heroku.com/treactr.git',
   branch: 'master',
   website: 'https://treactr.herokuapp.com/',
+  static: false,
 };
 
 // Azure Web Apps
