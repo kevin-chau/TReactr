@@ -29,10 +29,10 @@ class Home extends React.Component {
 
           <div>
             <p> Sliders </p>
-            <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={log} />
-            <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={log} />
-            <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={log} />
-            <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={log} />
+            <Slider max={127} onChange={log} />
+            <Slider max={127} onChange={log} />
+            <Slider max={127} onChange={log} />
+            <Slider max={127} onChange={log} />
           </div>
 
         </div>
