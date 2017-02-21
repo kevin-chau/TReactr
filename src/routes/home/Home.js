@@ -11,8 +11,6 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
-// const style = { float: 'left', width: 160, height: 400, marginBottom: 160, marginLeft: 50 };
-
 function log(value) {
   console.log(value); //eslint-disable-line
 }
