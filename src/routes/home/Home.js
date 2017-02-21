@@ -11,7 +11,7 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
-const style = { float: 'left', width: 160, height: 400, marginBottom: 160, marginLeft: 50 };
+// const style = { float: 'left', width: 160, height: 400, marginBottom: 160, marginLeft: 50 };
 
 function log(value) {
   console.log(value); //eslint-disable-line
@@ -27,9 +27,12 @@ class Home extends React.Component {
           <p> TReactr is a javascript digital DJ mixing application built for
           the modern web, based on the legendary UI from Native Instruments&#39; Traktor. </p>
 
-          <div style={style}>
-            <p> Slider </p>
-            <Slider vertical min={0} onChange={log} defaultValue={20} />
+          <div>
+            <p> Sliders </p>
+            <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={log} />
+            <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={log} />
+            <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={log} />
+            <Slider tipTransitionName="rc-slider-tooltip-zoom-down" onChange={log} />
           </div>
 
         </div>
