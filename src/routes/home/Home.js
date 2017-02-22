@@ -11,7 +11,7 @@ import Slider from 'rc-slider';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
-const style = { float: 'left', width: 160, height: 400, marginBottom: 160, marginLeft: 50 };
+const style = { float: 'left', width: 75, height: 400, marginBottom: 100 };
 const parentStyle = { overflow: 'hidden' };
 
 class Home extends React.Component {
@@ -19,6 +19,7 @@ class Home extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
+          <link rel="stylesheet" href="stylesheets/rc-slider.css" />
           <div>
             <h1>TReactr</h1>
             <p> TReactr is a javascript digital DJ mixing application built for
