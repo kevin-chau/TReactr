@@ -1,0 +1,12 @@
+.FX_Knobs {
+  background-color: #353939;
+  padding: 10px;
+  border: solid 2px #000;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: #8f9091;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
