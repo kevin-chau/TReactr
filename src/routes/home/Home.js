@@ -14,7 +14,6 @@ import s from './Home.css';
 
 const sliderStyle = { float: 'left', width: 75, height: 400, marginBottom: 100 };
 const knobStyle = { float: 'left', width: 50 };
-const parentStyle = { overflow: 'hidden' };
 
 class Home extends React.Component {
   constructor(props) {
@@ -27,7 +26,7 @@ class Home extends React.Component {
         <div className={s.container}>
           <link rel="stylesheet" href="stylesheets/rc-slider.css" />
 
-          <div className="volume_sliders" style={parentStyle}>
+          <div className={s.volume_sliders}>
             <div id="volume_A" style={sliderStyle}>
               <p>Deck A</p>
               <Slider vertical max={127} />
@@ -46,7 +45,7 @@ class Home extends React.Component {
             </div>
           </div>
 
-          <div className="FX1_Knobs" style={parentStyle}>
+          <div className={s.FX1_Knobs}>
             <div style={knobStyle}>
               <Knob
                 value={this.state.FX1_DryWet}
