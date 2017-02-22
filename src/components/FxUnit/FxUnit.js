@@ -3,17 +3,17 @@ import Knob from 'react-canvas-knob';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './FxUnit.css';
 
-const knobStyle = { float: 'left', width: 50 };
-
 class FxUnit extends React.Component {
   constructor(props) {
     super(props);
     this.state = { FX_DryWet: 63, FX_Knob1: 63, FX_Knob2: 63, FX_Knob3: 63 };
+    this.KNOB_THICKNESS = 0.2;
   }
+
   render() {
     return (
       <div className={s.FX_Knobs}>
-        <div style={knobStyle}>
+        <div className={s.knob}>
           <Knob
             value={this.state.FX_DryWet}
             onChange={(newValue) => {
@@ -22,13 +22,15 @@ class FxUnit extends React.Component {
             angleOffset={-150}
             angleArc={300}
             max={127}
-            thickness={0.25}
+            thickness={this.KNOB_THICKNESS}
             width={36}
             displayInput={false}
+            bgColor={'#595856'}
+            fgColor={'#FF8400'}
           />
-          <p>D/W</p>
+          <p className={s.knob_label}>D/W</p>
         </div>
-        <div style={knobStyle}>
+        <div className={s.knob}>
           <Knob
             value={this.state.FX_Knob1}
             onChange={(newValue) => {
@@ -37,13 +39,15 @@ class FxUnit extends React.Component {
             angleOffset={-150}
             angleArc={300}
             max={127}
-            thickness={0.25}
+            thickness={this.KNOB_THICKNESS}
             width={36}
             displayInput={false}
+            bgColor={'#595856'}
+            fgColor={'#FF8400'}
           />
-          <p>K1</p>
+          <p className={s.knob_label}>K1</p>
         </div>
-        <div style={knobStyle}>
+        <div className={s.knob}>
           <Knob
             value={this.state.FX_Knob2}
             onChange={(newValue) => {
@@ -52,13 +56,15 @@ class FxUnit extends React.Component {
             angleOffset={-150}
             angleArc={300}
             max={127}
-            thickness={0.25}
+            thickness={this.KNOB_THICKNESS}
             width={36}
             displayInput={false}
+            bgColor={'#595856'}
+            fgColor={'#FF8400'}
           />
-          <p>K2</p>
+          <p className={s.knob_label}>K2</p>
         </div>
-        <div style={knobStyle}>
+        <div className={s.knob}>
           <Knob
             value={this.state.FX_Knob3}
             onChange={(newValue) => {
@@ -67,11 +73,13 @@ class FxUnit extends React.Component {
             angleOffset={-150}
             angleArc={300}
             max={127}
-            thickness={0.25}
+            thickness={this.KNOB_THICKNESS}
             width={36}
             displayInput={false}
+            bgColor={'#595856'}
+            fgColor={'#FF8400'}
           />
-          <p>K3</p>
+          <p className={s.knob_label}>K3</p>
         </div>
       </div>
     );

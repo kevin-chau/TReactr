@@ -6,7 +6,18 @@
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   color: #8f9091;
-  width: 200px;
-  height: 100px;
+  width: auto;
+  height: auto;
   overflow: hidden;
+}
+
+p.knob_label {
+  margin: auto;
+  font-size: 50%;
+  text-align: center;
+}
+
+.knob {
+  float: left;
+  margin: 10px;
 }
