@@ -12,92 +12,103 @@ import Knob from 'react-canvas-knob';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
-const style = { float: 'left', width: 75, height: 400, marginBottom: 100 };
+const sliderStyle = { float: 'left', width: 75, height: 400, marginBottom: 100 };
+const knobStyle = { float: 'left', width: 50 };
 const parentStyle = { overflow: 'hidden' };
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hi_value: 63, mid_value: 63, lo_value: 63 };
+    this.state = { FX1_DryWet: 63, FX1_Knob1: 63, FX1_Knob2: 63, FX1_Knob3: 63 };
   }
-  handleHIChange = (newValue) => {
-    this.setState({ hi_value: newValue });
-  };
-  handleMIDChange = (newValue) => {
-    this.setState({ mid_value: newValue });
-  };
-  handleLOChange = (newValue) => {
-    this.setState({ lo_value: newValue });
-  };
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
           <link rel="stylesheet" href="stylesheets/rc-slider.css" />
-          <div className="Title">
-            <h1>TReactr</h1>
-            <p> TReactr is a javascript digital DJ mixing application built for
-            the modern web, based on the legendary UI from Native Instruments&#39; Traktor. </p>
-          </div>
-          <div className="sliders" style={parentStyle}>
-            <div style={style}>
+
+          <div className="volume_sliders" style={parentStyle}>
+            <div id="volume_A" style={sliderStyle}>
               <p>Deck A</p>
               <Slider vertical max={127} />
             </div>
-            <div style={style}>
+            <div id="volume_B" style={sliderStyle}>
               <p>Deck B</p>
               <Slider vertical max={127} />
             </div>
-            <div style={style}>
+            <div id="volume_C" style={sliderStyle}>
               <p>Deck C</p>
               <Slider vertical max={127} />
             </div>
-            <div style={style}>
+            <div id="volume_D" style={sliderStyle}>
               <p>Deck D</p>
               <Slider vertical max={127} />
             </div>
           </div>
-          <div className="knobs">
-            <div>
-              <p>HI</p>
+
+          <div className="FX1_Knobs" style={parentStyle}>
+            <div style={knobStyle}>
               <Knob
-                value={this.state.hi_value}
-                onChange={this.handleHIChange}
+                value={this.state.FX1_DryWet}
+                onChange={(newValue) => {
+                  this.setState({ FX1_DryWet: newValue });
+                }}
                 angleOffset={-150}
                 angleArc={300}
                 max={127}
                 thickness={0.25}
                 width={36}
-                disableTextInput
+                displayInput={false}
               />
+              <p>D/W</p>
             </div>
-            <div>
-              <p>MID</p>
+            <div style={knobStyle}>
               <Knob
-                value={this.state.mid_value}
-                onChange={this.handleMIDChange}
+                value={this.state.FX1_Knob1}
+                onChange={(newValue) => {
+                  this.setState({ FX1_Knob1: newValue });
+                }}
                 angleOffset={-150}
                 angleArc={300}
                 max={127}
                 thickness={0.25}
                 width={36}
-                disableTextInput
+                displayInput={false}
               />
+              <p>Knob 1</p>
             </div>
-            <div>
-              <p>LO</p>
+            <div style={knobStyle}>
               <Knob
-                value={this.state.lo_value}
-                onChange={this.handleLOChange}
+                value={this.state.FX1_Knob2}
+                onChange={(newValue) => {
+                  this.setState({ FX1_Knob2: newValue });
+                }}
                 angleOffset={-150}
                 angleArc={300}
                 max={127}
                 thickness={0.25}
                 width={36}
-                disableTextInput
+                displayInput={false}
               />
+              <p>Knob 2</p>
+            </div>
+            <div style={knobStyle}>
+              <Knob
+                value={this.state.FX1_Knob3}
+                onChange={(newValue) => {
+                  this.setState({ FX1_Knob3: newValue });
+                }}
+                angleOffset={-150}
+                angleArc={300}
+                max={127}
+                thickness={0.25}
+                width={36}
+                displayInput={false}
+              />
+              <p>Knob 3</p>
             </div>
           </div>
+
         </div>
       </div>
     );
