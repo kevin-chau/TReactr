@@ -6,33 +6,42 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE.txt file in the root directory of this source tree.
  */
-import Slider from 'rc-slider';
 import React from 'react';
+import Slider from 'rc-slider';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
-function log(value) {
-  console.log(value); //eslint-disable-line
-}
+const style = { float: 'left', width: 160, height: 400, marginBottom: 160, marginLeft: 50 };
+const parentStyle = { overflow: 'hidden' };
 
 class Home extends React.Component {
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
-
-          <h1>TReactr</h1>
-          <p> TReactr is a javascript digital DJ mixing application built for
-          the modern web, based on the legendary UI from Native Instruments&#39; Traktor. </p>
-
           <div>
-            <p> Sliders </p>
-            <Slider max={127} onChange={log} />
-            <Slider max={127} onChange={log} />
-            <Slider max={127} onChange={log} />
-            <Slider max={127} onChange={log} />
+            <h1>TReactr</h1>
+            <p> TReactr is a javascript digital DJ mixing application built for
+            the modern web, based on the legendary UI from Native Instruments&#39; Traktor. </p>
           </div>
-
+          <div style={parentStyle}>
+            <div style={style}>
+              <p> Deck A </p>
+              <Slider vertical max={127} />
+            </div>
+            <div style={style}>
+              <p> Deck B </p>
+              <Slider vertical max={127} />
+            </div>
+            <div style={style}>
+              <p> Deck C </p>
+              <Slider vertical max={127} />
+            </div>
+            <div style={style}>
+              <p> Deck D </p>
+              <Slider vertical max={127} />
+            </div>
+          </div>
         </div>
       </div>
     );
