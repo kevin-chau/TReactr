@@ -9,6 +9,10 @@
 
 @import '../../components/variables.css';
 
+:global {
+  @import './slider.css';
+}
+
 .root {
   padding-left: 20px;
   padding-right: 20px;

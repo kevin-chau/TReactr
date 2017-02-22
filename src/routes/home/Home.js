@@ -19,7 +19,6 @@ class Home extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <link rel="stylesheet" href="stylesheets/rc-slider.css" />
 
           <div className={s.volume_sliders}>
             <div id="volume_A" style={sliderStyle}>
