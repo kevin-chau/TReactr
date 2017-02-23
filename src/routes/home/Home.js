@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 import React from 'react';
-import Slider from 'rc-slider';
+import Slider from 'treactr-slider';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import FxUnit from '../../components/FxUnit';
 import s from './Home.css';

@@ -10,7 +10,7 @@
 @import '../../components/variables.css';
 
 :global {
-  @import './slider.css';
+  @import 'treactr-slider/dist/treactr-slider.css';
 }
 
 .root {
