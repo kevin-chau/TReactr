@@ -2,16 +2,24 @@
   @import 'treactr-toggle/style.css';
 }
 
-.FX_box {
+.FX_Unit_Box {
   margin: 2px;
-  background-color: #353939;
+
+  /* Background Gradient */
+  background: -webkit-linear-gradient(#373b3c, #313334);
+  background: -moz-linear-gradient(#373b3c, #313334);
+  background-color: #373b3c;
+  background-image: linear-gradient(#373b3c, #313334);
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 7px;
-  border: solid 2px #000;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+
+  /* Border */
+  border-bottom: solid 1px #2a2d2e;
+  border-top: solid 1px #434748;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   color: #8f9091;
   width: auto;
   height: auto;

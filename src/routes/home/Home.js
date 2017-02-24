@@ -20,13 +20,18 @@ class Home extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
 
-          <div name="FX Units" style={{ overflow: 'hidden' }}>
+          <div className={s.FX_container} style={{ overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
               <FxUnit id="FX1" />
             </div>
+
+            <div className={s.FX_Filler} style={{ float: 'left' }} />
+
             <div style={{ float: 'right' }}>
               <FxUnit id="FX2" />
             </div>
+
+            <div className={s.FX_Filler} style={{ float: 'right' }} />
           </div>
 
           <div className={s.volume_sliders}>

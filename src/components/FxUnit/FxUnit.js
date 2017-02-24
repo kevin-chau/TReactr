@@ -22,7 +22,7 @@ class FxUnit extends React.Component {
 
   render() {
     return (
-      <div className={s.FX_box}>
+      <div className={s.FX_Unit_Box}>
 
         <div className={s.knob}>
           <Knob
