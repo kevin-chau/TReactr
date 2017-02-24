@@ -1,5 +1,5 @@
 import React from 'react';
-import Knob from 'react-canvas-knob';
+import Knob from 'treactr-canvas-knob';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './FxUnit.css';
 
@@ -19,14 +19,6 @@ class FxUnit extends React.Component {
             onChange={(newValue) => {
               this.setState({ FX_DryWet: newValue });
             }}
-            angleOffset={-150}
-            angleArc={300}
-            max={127}
-            thickness={this.KNOB_THICKNESS}
-            width={36}
-            displayInput={false}
-            bgColor={'#595856'}
-            fgColor={'#FF8400'}
           />
           <p className={s.knob_label}>D/W</p>
         </div>
@@ -36,14 +28,6 @@ class FxUnit extends React.Component {
             onChange={(newValue) => {
               this.setState({ FX_Knob1: newValue });
             }}
-            angleOffset={-150}
-            angleArc={300}
-            max={127}
-            thickness={this.KNOB_THICKNESS}
-            width={36}
-            displayInput={false}
-            bgColor={'#595856'}
-            fgColor={'#FF8400'}
           />
           <p className={s.knob_label}>K1</p>
         </div>
@@ -53,14 +37,6 @@ class FxUnit extends React.Component {
             onChange={(newValue) => {
               this.setState({ FX_Knob2: newValue });
             }}
-            angleOffset={-150}
-            angleArc={300}
-            max={127}
-            thickness={this.KNOB_THICKNESS}
-            width={36}
-            displayInput={false}
-            bgColor={'#595856'}
-            fgColor={'#FF8400'}
           />
           <p className={s.knob_label}>K2</p>
         </div>
@@ -70,14 +46,6 @@ class FxUnit extends React.Component {
             onChange={(newValue) => {
               this.setState({ FX_Knob3: newValue });
             }}
-            angleOffset={-150}
-            angleArc={300}
-            max={127}
-            thickness={this.KNOB_THICKNESS}
-            width={36}
-            displayInput={false}
-            bgColor={'#595856'}
-            fgColor={'#FF8400'}
           />
           <p className={s.knob_label}>K3</p>
         </div>

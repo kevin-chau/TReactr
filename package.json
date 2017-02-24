@@ -36,11 +36,11 @@
     "pretty-error": "^2.0.2",
     "query-string": "^4.3.1",
     "react": "^15.4.2",
-    "react-canvas-knob": "^0.3.0",
     "react-dom": "^15.4.2",
     "sequelize": "^3.30.1",
     "source-map-support": "^0.4.11",
     "sqlite3": "^3.1.8",
+    "treactr-canvas-knob": "^0.3.1",
     "treactr-slider": "^6.1.4",
     "universal-router": "^2.0.0",
     "whatwg-fetch": "^2.0.2"
