@@ -1,6 +1,13 @@
-.FX_Knobs {
+:global {
+  @import 'treactr-toggle/style.css';
+}
+
+.FX_box {
+  margin: 2px;
   background-color: #353939;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
   border: solid 2px #000;
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -19,5 +26,6 @@ p.knob_label {
 
 .knob {
   float: left;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

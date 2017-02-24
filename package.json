@@ -42,6 +42,7 @@
     "sqlite3": "^3.1.8",
     "treactr-canvas-knob": "^0.3.1",
     "treactr-slider": "^6.1.4",
+    "treactr-toggle": "^3.0.0",
     "universal-router": "^2.0.0",
     "whatwg-fetch": "^2.0.2"
   },

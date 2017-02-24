@@ -20,6 +20,15 @@ class Home extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
 
+          <div name="FX Units" style={{ overflow: 'hidden' }}>
+            <div style={{ float: 'left' }}>
+              <FxUnit id="FX1" />
+            </div>
+            <div style={{ float: 'right' }}>
+              <FxUnit id="FX2" />
+            </div>
+          </div>
+
           <div className={s.volume_sliders}>
             <div id="volume_A" style={sliderStyle}>
               <p>Deck A</p>
@@ -36,15 +45,6 @@ class Home extends React.Component {
             <div id="volume_D" style={sliderStyle}>
               <p>Deck D</p>
               <Slider vertical max={127} />
-            </div>
-          </div>
-
-          <div name="FX Units" style={{ overflow: 'hidden' }}>
-            <div style={{ float: 'left' }}>
-              <FxUnit id="FX1" />
-            </div>
-            <div style={{ float: 'right' }}>
-              <FxUnit id="FX2" />
             </div>
           </div>
 
