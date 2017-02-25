@@ -10,6 +10,7 @@ import React from 'react';
 import Slider from 'treactr-slider';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import FxUnit from '../../components/FxUnit';
+import Mixer from '../../components/Mixer';
 import s from './Home.css';
 
 const sliderStyle = { float: 'left', width: 75, height: 400, marginBottom: 100 };
@@ -32,6 +33,17 @@ class Home extends React.Component {
             </div>
 
             <div className={s.FX_Filler} style={{ float: 'right' }} />
+          </div>
+
+          <div className={s.Mixer_container} style={{ overflow: 'hidden', float: 'left' }}>
+            <div style={{ float: 'left' }}>
+              <Mixer id="MixerA" />
+            </div>
+          </div>
+          <div className={s.Mixer_container} style={{ overflow: 'hidden' }}>
+            <div style={{ float: 'left' }}>
+              <Mixer id="MixerB" />
+            </div>
           </div>
 
           <div className={s.volume_sliders}>

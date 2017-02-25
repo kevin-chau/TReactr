@@ -13,6 +13,9 @@
   @import 'treactr-slider/dist/treactr-slider.css';
 }
 
+/***********
+ FX UNIT
+***********/
 .FX_container {
   background: #000;
 }
@@ -38,6 +41,15 @@
   height: 76px;
   width: 10%;
   overflow: hidden;
+}
+
+/***********
+ FX UNIT
+***********/
+.Mixer_container {
+  background: #000;
+  margin: 10px;
+  width: 81px;
 }
 
 .root {

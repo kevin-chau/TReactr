@@ -1,8 +1,4 @@
-:global {
-  @import 'treactr-toggle/style.css';
-}
-
-.FX_Unit_Box {
+.Mixer_Box {
   margin: 2px;
 
   /* Background Gradient */
@@ -33,7 +29,6 @@ p.knob_label {
 }
 
 .knob {
-  float: left;
   margin-left: 10px;
   margin-right: 10px;
 }
