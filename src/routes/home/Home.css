@@ -18,6 +18,11 @@
 ***********/
 .FX_container {
   background: #000;
+  width: auto;
+  height: auto;
+  padding: 1px;
+  margin: 1px;
+  overflow: hidden;
 }
 
 .FX_Filler {

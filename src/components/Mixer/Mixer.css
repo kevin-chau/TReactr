@@ -22,10 +22,29 @@
   overflow: hidden;
 }
 
-p.knob_label {
-  margin: auto;
-  font-size: 50%;
+p {
+  color: #bdbdbd;
+  margin: 2px 1px;
+  font-size: 0.5em;
   text-align: center;
+}
+
+.knob_label {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 6px;
+  background-color: #1d1e1e;
+  width: 47px;
+  height: 11px;
+  border-radius: 3px 6px 6px 3px;
+  text-align: center;
+}
+
+.knob_label p {
+  color: #bdbd;
+  margin: 0 1px;
+  margin-left: 8px;
+  font-size: 0.5em;
 }
 
 .knob {

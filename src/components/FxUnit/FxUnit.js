@@ -1,6 +1,6 @@
 import React from 'react';
 import { Knob } from 'treactr-canvas-knob';
-import Toggle from 'treactr-toggle';
+import { Toggle } from 'treactr-toggle';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './FxUnit.css';
 
