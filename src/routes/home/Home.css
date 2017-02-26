@@ -48,15 +48,6 @@
   overflow: hidden;
 }
 
-/***********
- FX UNIT
-***********/
-.Mixer_container {
-  background: #000;
-  margin: 10px;
-  width: auto;
-}
-
 .root {
   padding: 10px;
 }

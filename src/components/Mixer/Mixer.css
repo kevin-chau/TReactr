@@ -58,3 +58,10 @@ p {
   margin-bottom: 25px;
   margin-top: 10px;
 }
+
+.Mixer_container {
+  background: #000;
+  margin: 10px;
+  width: 162px;
+  overflow: hidden;
+}

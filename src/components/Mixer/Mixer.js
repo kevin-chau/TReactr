@@ -28,7 +28,7 @@ class Mixer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={s.Mixer_container} >
         {/* EQ/Volume Box */}
         <div className={s.Mixer_Box} style={{ float: 'right' }}>
           <div className={s.knob}>
