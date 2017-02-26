@@ -9,10 +9,6 @@
 
 @import '../../components/variables.css';
 
-:global {
-  @import 'treactr-slider/dist/treactr-slider.css';
-}
-
 /***********
  FX UNIT
 ***********/
