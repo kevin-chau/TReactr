@@ -6,7 +6,7 @@ TReactr is a javascript digital DJ mixing application built for the modern web, 
 <img src="public/screenshot.png"></img>
 
 ## Features:
-Treactr was build with Node.js, Express, GraphQL, React.js, Babel, PostCSS, Webpack, and Browsersync.
+Treactr was built with Node.js, Express, GraphQL, React.js, Babel, PostCSS, Webpack, and Browsersync.
 
 ## Install:
 
