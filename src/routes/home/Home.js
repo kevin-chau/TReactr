@@ -7,13 +7,10 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 import React from 'react';
-import Slider from 'treactr-slider';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import FxUnit from '../../components/FxUnit';
 import Mixer from '../../components/Mixer';
 import s from './Home.css';
-
-const sliderStyle = { float: 'left', width: 75, height: 400, marginBottom: 100 };
 
 class Home extends React.Component {
   render() {
@@ -40,28 +37,10 @@ class Home extends React.Component {
               <Mixer id="MixerA" />
             </div>
           </div>
+
           <div className={s.Mixer_container} style={{ overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
-              <Mixer id="MixerB" />
-            </div>
-          </div>
-
-          <div className={s.volume_sliders}>
-            <div id="volume_A" style={sliderStyle}>
-              <p>Deck A</p>
-              <Slider vertical max={127} />
-            </div>
-            <div id="volume_B" style={sliderStyle}>
-              <p>Deck B</p>
-              <Slider vertical max={127} />
-            </div>
-            <div id="volume_C" style={sliderStyle}>
-              <p>Deck C</p>
-              <Slider vertical max={127} />
-            </div>
-            <div id="volume_D" style={sliderStyle}>
-              <p>Deck D</p>
-              <Slider vertical max={127} />
+              <Mixer id="MixerC" />
             </div>
           </div>
 

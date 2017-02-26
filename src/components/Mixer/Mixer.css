@@ -51,3 +51,10 @@ p {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.slider {
+  width: auto;
+  height: 150px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
