@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiDirectionalKnob } from 'treactr-canvas-knob';
-import { Kill } from 'treactr-toggle';
+import { Kill, FxToggle1, FxToggle2 } from 'treactr-toggle';
 import Slider from 'treactr-slider';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Mixer.css';
@@ -15,6 +15,7 @@ class Mixer extends React.Component {
       low: 63,
       filter: 63,
       gain: 63,
+      key: 63,
       pan: 63,
 
       // Buttons
@@ -23,6 +24,10 @@ class Mixer extends React.Component {
       mid_kill: false,
       filter_kill: false,
       gain_kill: false,
+      key_kill: false,
+
+      // Volume
+      volume: 63,
     };
   }
 
@@ -89,7 +94,14 @@ class Mixer extends React.Component {
             <p>LO</p>
           </div>
           <div className={s.slider}>
-            <Slider vertical max={127} />
+            <Slider
+              vertical
+              value={this.state.volume}
+              onChange={(newValue) => {
+                this.setState({ volume: newValue });
+              }}
+              max={127}
+            />
           </div>
         </div>
 
@@ -133,6 +145,51 @@ class Mixer extends React.Component {
             </div>
             <p>FILTER</p>
           </div>
+        </div>
+
+        {/* FX Toggle Select Box */}
+        <div className={s.Mixer_Box} style={{ float: 'left', width: '57px' }}>
+          <div style={{ margin: '2px 1px 0px 4px', float: 'left' }}>
+            <FxToggle1 />
+          </div>
+          <div style={{ margin: '2px', marginBottom: '0px', float: 'left' }}>
+            <FxToggle2 />
+          </div>
+          <p>FX</p>
+        </div>
+
+        {/* Key/ Pan Box */}
+        <div className={s.Mixer_Box} style={{ float: 'left' }}>
+          <div className={s.knob}>
+            <BiDirectionalKnob
+              value={this.state.key}
+              onChange={(newValue) => {
+                this.setState({ key: newValue });
+              }}
+            />
+          </div>
+          <div className={s.knob_label}>
+            <div style={{ float: 'right' }}>
+              <Kill
+                defaultChecked={this.state.key_kill}
+                onChange={(newValue) => {
+                  this.setState({ key_kill: newValue.target.checked });
+                }}
+              />
+            </div>
+            <p>KEY</p>
+          </div>
+          <div className={s.knob} style={{ marginLeft: '13px' }}>
+            <BiDirectionalKnob
+              value={this.state.pan}
+              onChange={(newValue) => {
+                this.setState({ pan: newValue });
+              }}
+              width={29}
+              height={29}
+            />
+          </div>
+          <p>PAN</p>
         </div>
 
       </div>
