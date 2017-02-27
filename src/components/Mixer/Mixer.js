@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiDirectionalKnob } from 'treactr-canvas-knob';
-import { Kill, FxToggle1, FxToggle2 } from 'treactr-toggle';
+import { Kill, FxToggle1, FxToggle2, ToggleMonitorCue } from 'treactr-toggle';
 import Slider from 'treactr-slider';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Mixer.css';
@@ -149,13 +149,15 @@ class Mixer extends React.Component {
 
         {/* FX Toggle Select Box */}
         <div className={s.Mixer_Box} style={{ float: 'left', width: '57px' }}>
-          <div style={{ margin: '2px 1px 0px 4px', float: 'left' }}>
-            <FxToggle1 />
+          <div style={{ marginTop: '5px', marginBottom: '2px' }}>
+            <div style={{ margin: '2px 1px 0px 4px', float: 'left' }}>
+              <FxToggle1 />
+            </div>
+            <div style={{ margin: '2px', marginBottom: '0px', float: 'left' }}>
+              <FxToggle2 />
+            </div>
+            <p style={{ fontSize: '.6em' }}>FX</p>
           </div>
-          <div style={{ margin: '2px', marginBottom: '0px', float: 'left' }}>
-            <FxToggle2 />
-          </div>
-          <p>FX</p>
         </div>
 
         {/* Key/ Pan Box */}
@@ -179,6 +181,9 @@ class Mixer extends React.Component {
             </div>
             <p>KEY</p>
           </div>
+          <div style={{ margin: '17px 0 20px 11px' }}>
+            <ToggleMonitorCue />
+          </div>
           <div className={s.knob} style={{ marginLeft: '13px' }}>
             <BiDirectionalKnob
               value={this.state.pan}
@@ -189,7 +194,7 @@ class Mixer extends React.Component {
               height={29}
             />
           </div>
-          <p>PAN</p>
+          <p style={{ marginBottom: '2px' }}>PAN</p>
         </div>
 
       </div>
