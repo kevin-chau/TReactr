@@ -17,15 +17,15 @@ If you don't already have `yarn` you can install it with:
 To install Treactr, use:
 
     yarn
-    
+
 This is equivalent to `yarn install` or `npm install`.
 
 ## Run:
-To start the dev server, use:
+To start the dev server and launch Treactr in your browser, use:
 
     yarn start
 
-This is equivalent to `npm start` if you do not wish to use `yarn`. 
+This is equivalent to `npm start`.
 
 For a full list of scripts that can be ran with `yarn` or `npm`, see `package.json`.
 
