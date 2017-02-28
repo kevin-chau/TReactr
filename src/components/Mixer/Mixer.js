@@ -6,6 +6,16 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Mixer.css';
 
 class Mixer extends React.Component {
+  static propTypes = {
+    side: React.PropTypes.string,
+    otherside: React.PropTypes.string,
+  };
+
+  static defaultProps = {
+    side: 'left',
+    otherside: 'right',
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -25,6 +35,9 @@ class Mixer extends React.Component {
       filter_kill: false,
       gain_kill: false,
       key_kill: false,
+      fx1_on: false,
+      fx2_on: false,
+      cue_on: false,
 
       // Volume
       volume: 63,
@@ -35,7 +48,7 @@ class Mixer extends React.Component {
     return (
       <div className={s.Mixer_container} >
         {/* EQ/Volume Box */}
-        <div className={s.Mixer_Box} style={{ float: 'right' }}>
+        <div className={s.Mixer_Box} style={{ float: this.props.otherside }}>
           <div className={s.knob}>
             <BiDirectionalKnob
               value={this.state.high}
@@ -106,7 +119,7 @@ class Mixer extends React.Component {
         </div>
 
         {/* Gain/Filter Box */}
-        <div className={s.Mixer_Box} style={{ float: 'left' }}>
+        <div className={s.Mixer_Box} style={{ float: this.props.side, marginBottom: '2px' }}>
           <div className={s.knob}>
             <BiDirectionalKnob
               value={this.state.gain}
@@ -148,20 +161,30 @@ class Mixer extends React.Component {
         </div>
 
         {/* FX Toggle Select Box */}
-        <div className={s.Mixer_Box} style={{ float: 'left', width: '57px' }}>
+        <div className={s.Mixer_Box} style={{ float: this.props.side, width: '57px', margin: '2px 0' }}>
           <div style={{ marginTop: '5px', marginBottom: '2px' }}>
             <div style={{ margin: '2px 1px 0px 4px', float: 'left' }}>
-              <FxToggle1 />
+              <FxToggle1
+                defaultChecked={this.state.fx1_on}
+                onChange={(newValue) => {
+                  this.setState({ fx1_on: newValue.target.checked });
+                }}
+              />
             </div>
             <div style={{ margin: '2px', marginBottom: '0px', float: 'left' }}>
-              <FxToggle2 />
+              <FxToggle2
+                defaultChecked={this.state.fx2_on}
+                onChange={(newValue) => {
+                  this.setState({ fx2_on: newValue.target.checked });
+                }}
+              />
             </div>
             <p style={{ fontSize: '.6em' }}>FX</p>
           </div>
         </div>
 
         {/* Key/ Pan Box */}
-        <div className={s.Mixer_Box} style={{ float: 'left' }}>
+        <div className={s.Mixer_Box} style={{ float: this.props.side, marginTop: '2px' }}>
           <div className={s.knob}>
             <BiDirectionalKnob
               value={this.state.key}
@@ -181,8 +204,13 @@ class Mixer extends React.Component {
             </div>
             <p>KEY</p>
           </div>
-          <div style={{ margin: '17px 0 20px 11px' }}>
-            <ToggleMonitorCue />
+          <div style={{ margin: '17px 5px 20px 5px' }}>
+            <ToggleMonitorCue
+              defaultChecked={this.state.cue_on}
+              onChange={(newValue) => {
+                this.setState({ cue_on: newValue.target.checked });
+              }}
+            />
           </div>
           <div className={s.knob} style={{ marginLeft: '13px' }}>
             <BiDirectionalKnob

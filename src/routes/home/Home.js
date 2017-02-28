@@ -32,13 +32,30 @@ class Home extends React.Component {
             <div className={s.FX_Filler} style={{ float: 'right' }} />
           </div>
 
-          <div style={{ overflow: 'hidden' }}>
-            <div style={{ float: 'left' }}>
+          <div style={{ overflow: 'hidden', textAlign: 'center', height: '367px' }}>
+            <div style={{ display: 'inline-block' }}>
               <Mixer id="MixerA" />
             </div>
 
-            <div style={{ float: 'left' }}>
+            <div style={{ display: 'inline-block' }}>
+              <Mixer
+                id="MixerB"
+                side="right"
+                otherside="left"
+              />
+            </div>
+          </div>
+          <div style={{ overflow: 'hidden', textAlign: 'center', height: '367px' }}>
+            <div style={{ display: 'inline-block' }}>
               <Mixer id="MixerC" />
+            </div>
+
+            <div style={{ display: 'inline-block' }}>
+              <Mixer
+                id="MixerD"
+                side="right"
+                otherside="left"
+              />
             </div>
           </div>
 
