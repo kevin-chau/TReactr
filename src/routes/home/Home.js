@@ -10,6 +10,7 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import FxUnit from '../../components/FxUnit';
 import Mixer from '../../components/Mixer';
+import Deck from '../../components/Deck';
 import s from './Home.css';
 
 class Home extends React.Component {
@@ -32,30 +33,42 @@ class Home extends React.Component {
             <div className={s.FX_Filler} style={{ float: 'right' }} />
           </div>
 
-          <div style={{ overflow: 'hidden', textAlign: 'center', height: '367px' }}>
-            <div style={{ display: 'inline-block' }}>
-              <Mixer id="MixerA" />
+          <div style={{ margin: '0 auto', width: '88%', overflow: 'hidden' }}>
+            <div style={{ float: 'left' }}>
+              <Deck />
             </div>
+            <div name="centercolumn">
+              <div style={{ float: 'left' }}>
+                <div name="AB" style={{ height: '367px' }}>
+                  <div style={{ display: 'inline-block' }}>
+                    <Mixer id="MixerA" />
+                  </div>
 
-            <div style={{ display: 'inline-block' }}>
-              <Mixer
-                id="MixerB"
-                side="right"
-                otherside="left"
-              />
-            </div>
-          </div>
-          <div style={{ overflow: 'hidden', textAlign: 'center', height: '367px' }}>
-            <div style={{ display: 'inline-block' }}>
-              <Mixer id="MixerC" />
-            </div>
+                  <div style={{ display: 'inline-block' }}>
+                    <Mixer
+                      id="MixerB"
+                      side="right"
+                      otherside="left"
+                    />
+                  </div>
+                </div>
+                <div name="CD" style={{ height: '367px' }}>
+                  <div style={{ display: 'inline-block' }}>
+                    <Mixer id="MixerC" />
+                  </div>
 
-            <div style={{ display: 'inline-block' }}>
-              <Mixer
-                id="MixerD"
-                side="right"
-                otherside="left"
-              />
+                  <div style={{ display: 'inline-block' }}>
+                    <Mixer
+                      id="MixerD"
+                      side="right"
+                      otherside="left"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style={{ float: 'left' }}>
+              <Deck />
             </div>
           </div>
 
