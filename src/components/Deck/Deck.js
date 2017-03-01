@@ -16,17 +16,30 @@ class Deck extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      volume: 0,
+    };
+  }
+
+  getVolume() {
+    console.log(`volume is: ${this.state.volume}`);
+    return this.state.volume;
+  }
+
+  setVolume(val) {
+    this.state.volume = val;
   }
 
   render() {
+    console.log(this.state.volume);
     return (
       <div className={s.container}>
         <ReactPlayer
           url="https://www.youtube.com/watch?v=lp00DMy3aVw"
           playing
-          width="380"
-          height="213"
+          width="380px"
+          height="213px"
+          volume={this.state.volume}
         />
       </div>
     );
