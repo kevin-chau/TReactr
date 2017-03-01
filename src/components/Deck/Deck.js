@@ -21,16 +21,14 @@ class Deck extends React.Component {
 
   render() {
     return (
-      // Actual Song
-      // <ReactPlayer url="https://www.youtube.com/watch?v=WUG2guLUtuo" playing />
-      <ReactPlayer
-        url="https://www.youtube.com/watch?v=lp00DMy3aVw"
-        playing
-        width="320"
-        height="180"
-      />
-      // Dummy
-      // <div style={{ backgroundColor: 'blue', width:'320', height:'180'  }}/>
+      <div className={s.container}>
+        <ReactPlayer
+          url="https://www.youtube.com/watch?v=lp00DMy3aVw"
+          playing
+          width="380"
+          height="213"
+        />
+      </div>
     );
   }
 }

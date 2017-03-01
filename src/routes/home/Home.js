@@ -33,7 +33,7 @@ class Home extends React.Component {
             <div className={s.FX_Filler} style={{ float: 'right' }} />
           </div>
 
-          <div style={{ margin: '0 auto', width: '88%', overflow: 'hidden' }}>
+          <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
               <Deck />
             </div>
