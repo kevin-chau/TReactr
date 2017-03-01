@@ -35,7 +35,7 @@ class Home extends React.Component {
 
           <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
-              <Deck />;
+              <Deck />
             </div>
             <div name="centercolumn">
               <div style={{ float: 'left' }}>
