@@ -17,12 +17,12 @@ class Deck extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      volume: .5
-    }
+      volume: 0.5,
+    };
   }
 
-  setVolume = e => {
-    this.setState({ volume: parseFloat(e.target.value) })
+  setVolume = (e) => {
+    this.setState({ volume: parseFloat(e.target.value) });
   }
 
   render() {
