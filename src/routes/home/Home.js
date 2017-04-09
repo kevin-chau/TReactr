@@ -13,7 +13,29 @@ import Mixer from '../../components/Mixer';
 import Deck from '../../components/Deck';
 import s from './Home.css';
 
+/* eslint-disable react/jsx-no-bind */
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      VolumeA: 0.5,
+      VolumeB: 0.5,
+    };
+  }
+
+  changeVolumeA(newVolume) {
+    this.setState({
+      VolumeA: newVolume,
+    });
+  }
+
+  changeVolumeB(newVolume) {
+    this.setState({
+      VolumeB: newVolume,
+    });
+  }
+
+
   render() {
     return (
       <div className={s.root}>
@@ -35,31 +57,41 @@ class Home extends React.Component {
 
           <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
-              <Deck />
+              <Deck
+                name="DeckA"
+                VolumeA={this.state.VolumeA}
+                changeVolumeA={this.changeVolumeA.bind(this)}
+              />
             </div>
             <div name="centercolumn">
               <div style={{ float: 'left' }}>
                 <div name="AB" style={{ height: '367px' }}>
                   <div style={{ display: 'inline-block' }}>
-                    <Mixer id="MixerA" />
+                    <Mixer
+                      name="MixerA"
+                      VolumeA={this.state.VolumeA}
+                      changeVolumeA={this.changeVolumeA.bind(this)}
+                    />
                   </div>
 
                   <div style={{ display: 'inline-block' }}>
                     <Mixer
-                      id="MixerB"
+                      name="MixerB"
                       side="right"
                       otherside="left"
+                      VolumeB={this.state.VolumeB}
+                      changeVolumeB={this.changeVolumeB.bind(this)}
                     />
                   </div>
                 </div>
                 <div name="CD" style={{ height: '367px' }}>
                   <div style={{ display: 'inline-block' }}>
-                    <Mixer id="MixerC" />
+                    <Mixer name="MixerC" />
                   </div>
 
                   <div style={{ display: 'inline-block' }}>
                     <Mixer
-                      id="MixerD"
+                      name="MixerD"
                       side="right"
                       otherside="left"
                     />
@@ -68,7 +100,11 @@ class Home extends React.Component {
               </div>
             </div>
             <div style={{ float: 'left' }}>
-              <Deck />
+              <Deck
+                name="DeckB"
+                VolumeA={this.state.VolumeA}
+                changeVolumeA={this.changeVolumeA.bind(this)}
+              />
             </div>
           </div>
 
