@@ -102,8 +102,8 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <Deck
                 name="DeckB"
-                VolumeA={this.state.VolumeA}
-                changeVolumeA={this.changeVolumeA.bind(this)}
+                VolumeB={this.state.VolumeB}
+                changeVolumeB={this.changeVolumeB.bind(this)}
               />
             </div>
           </div>

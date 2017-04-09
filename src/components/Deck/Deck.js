@@ -6,12 +6,10 @@ import s from './Deck.css';
 class Deck extends React.Component {
   static propTypes = {
     name: React.PropTypes.string,
-    side: React.PropTypes.string,
   };
 
   static defaultProps = {
-    name: 'A',
-    side: 'left',
+    name: 'Deck',
   };
 
   constructor(props) {
@@ -26,17 +24,32 @@ class Deck extends React.Component {
   }
 
   render() {
-    return (
-      <div className={s.container}>
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=aUWYDaVp92I"
-          playing
-          width="380px"
-          height="213px"
-          volume={this.props.VolumeA}
-        />
-      </div>
-    );
+    if (this.props.name === 'DeckA') {
+      return (
+        <div className={s.container}>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=aUWYDaVp92I"
+            playing
+            width="380px"
+            height="213px"
+            volume={this.props.VolumeA}
+          />
+        </div>
+      );
+    } else if (this.props.name === 'DeckB') {
+      return (
+        <div className={s.container}>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
+            playing
+            width="380px"
+            height="213px"
+            volume={this.props.VolumeB}
+          />
+        </div>
+      );
+    }
+    return null;
   }
 }
 
