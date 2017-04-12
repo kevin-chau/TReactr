@@ -1,12 +1,12 @@
 # TReactr
-A Traktor clone in React.js
+A Traktor clone in React
 
 <a href="https://treactr.herokuapp.com"><img src="public/screenshot.png"></img></a>
 
 TReactr is a javascript digital DJ mixing application built for the modern web, based on the legendary UI from Native Instruments' Traktor.
 
 ## Features:
-Treactr was made with Node.js, Express, GraphQL, React.js, Babel, ESLint, PostCSS, Webpack, and Browsersync.
+Treactr was made with Node.js, Express, GraphQL, React, Babel, ESLint, PostCSS, Webpack, and Browsersync.
 
 ## Install:
 This project uses `yarn` for managing packages, running build scripts, and starting the development server.

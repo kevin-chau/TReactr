@@ -27,7 +27,7 @@ class Header extends React.Component {
           </Link>
           <div className={s.banner}>
             <h1 className={s.bannerTitle}>TReactr</h1>
-            <p className={s.bannerDesc}>A Traktor clone in React.js</p>
+            <p className={s.bannerDesc}>A Traktor clone in React</p>
           </div>
         </div>
       </div>
