@@ -45,7 +45,7 @@ p {
 .CrossFader_container {
   background: #242828;
   border: solid 1px #000;
-  width: 235px;
+  width: 1000px;
   overflow: hidden;
 }
 
@@ -63,7 +63,7 @@ p {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   color: #8f9091;
-  width: 235px;
+  width: 1000px;
   height: 44px;
   overflow: hidden;
 }

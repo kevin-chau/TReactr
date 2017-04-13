@@ -100,10 +100,6 @@ class Home extends React.Component {
                   </div>
                 </div> {/* End CD Mixer*/}
 
-                <div style={{ display: 'inline-block' }}>
-                  <CrossFader />
-                </div>
-
               </div>
 
             </div> {/* End Center Column */}
@@ -115,6 +111,11 @@ class Home extends React.Component {
               />
             </div>
           </div>
+
+          <div style={{ display: 'inline-block' }}>
+            <CrossFader />
+          </div>
+
         </div>
       </div>
     );
