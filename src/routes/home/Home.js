@@ -11,6 +11,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import FxUnit from '../../components/FxUnit';
 import Mixer from '../../components/Mixer';
 import Deck from '../../components/Deck';
+import CrossFader from '../../components/CrossFader';
 import s from './Home.css';
 
 /* eslint-disable react/jsx-no-bind */
@@ -83,7 +84,8 @@ class Home extends React.Component {
                       changeVolumeB={this.changeVolumeB.bind(this)}
                     />
                   </div>
-                </div>
+                </div> {/* End AB Mixer */}
+
                 <div name="CD" style={{ height: '367px' }}>
                   <div style={{ display: 'inline-block' }}>
                     <Mixer name="MixerC" />
@@ -96,9 +98,15 @@ class Home extends React.Component {
                       otherside="left"
                     />
                   </div>
+                </div> {/* End CD Mixer*/}
+
+                <div style={{ display: 'inline-block' }}>
+                  <CrossFader />
                 </div>
+
               </div>
-            </div>
+
+            </div> {/* End Center Column */}
             <div style={{ float: 'left' }}>
               <Deck
                 name="DeckB"
@@ -107,7 +115,6 @@ class Home extends React.Component {
               />
             </div>
           </div>
-
         </div>
       </div>
     );
