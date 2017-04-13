@@ -69,7 +69,7 @@
     "stylefmt": "^5.1.2",
     "stylelint": "^7.9.0",
     "treactr-canvas-knob": "^0.3.6",
-    "treactr-slider": "^6.1.6",
+    "treactr-slider": "^7.0.1",
     "treactr-toggle": "^3.0.8",
     "universal-router": "^2.0.0",
     "url-loader": "^0.5.8",
