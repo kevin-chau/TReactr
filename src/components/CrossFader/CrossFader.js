@@ -21,7 +21,6 @@ class CrossFader extends React.Component {
         <div className={s.CrossFader_Box} >
           <div className={s.slider}>
             <Slider
-              vertical
               value={this.state.position}
               max={127}
               onChange={(newValue) => {
