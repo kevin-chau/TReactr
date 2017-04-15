@@ -4,8 +4,6 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Deck.css';
 import { auth } from '../../config';
 
-require('dotenv').load();
-
 class Deck extends React.Component {
   static propTypes = {
     name: React.PropTypes.string,
@@ -27,8 +25,6 @@ class Deck extends React.Component {
   }
 
   render() {
-    console.log(auth.soundcloud);
-    console.log(process.env.SOUNDCLOUD_CLIENT_ID);
     if (this.props.name === 'DeckA') {
       return (
         <div className={s.container}>
