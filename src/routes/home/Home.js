@@ -157,8 +157,6 @@ class Home extends React.Component {
             </div>
           </div>
 
-
-
           <div style={{ display: 'inline-block' }}>
             <CrossFader />
           </div>
