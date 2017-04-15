@@ -21,6 +21,8 @@ class Home extends React.Component {
     this.state = {
       VolumeA: 0.5,
       VolumeB: 0.5,
+      VolumeC: 0.5,
+      VolumeD: 0.5,
     };
   }
 
@@ -36,6 +38,17 @@ class Home extends React.Component {
     });
   }
 
+  changeVolumeC(newVolume) {
+    this.setState({
+      VolumeC: newVolume,
+    });
+  }
+
+  changeVolumeD(newVolume) {
+    this.setState({
+      VolumeD: newVolume,
+    });
+  }
 
   render() {
     return (
@@ -55,6 +68,10 @@ class Home extends React.Component {
 
             <div className={s.FX_Filler} style={{ float: 'right' }} />
           </div>
+
+
+          {/* AB */}
+
 
           <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
@@ -85,23 +102,7 @@ class Home extends React.Component {
                     />
                   </div>
                 </div> {/* End AB Mixer */}
-
-                <div name="CD" style={{ height: '367px' }}>
-                  <div style={{ display: 'inline-block' }}>
-                    <Mixer name="MixerC" />
-                  </div>
-
-                  <div style={{ display: 'inline-block' }}>
-                    <Mixer
-                      name="MixerD"
-                      side="right"
-                      otherside="left"
-                    />
-                  </div>
-                </div> {/* End CD Mixer*/}
-
               </div>
-
             </div> {/* End Center Column */}
             <div style={{ float: 'left' }}>
               <Deck
@@ -111,6 +112,52 @@ class Home extends React.Component {
               />
             </div>
           </div>
+
+
+          {/* CD */}
+
+
+          <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
+            <div style={{ float: 'left' }}>
+              <Deck
+                name="DeckC"
+                VolumeA={this.state.VolumeA}
+                changeVolumeC={this.changeVolumeC.bind(this)}
+              />
+            </div>
+            <div name="centercolumn">
+              <div style={{ float: 'left' }}>
+                <div name="CD" style={{ height: '367px' }}>
+                  <div style={{ display: 'inline-block' }}>
+                    <Mixer
+                      name="MixerC"
+                      VolumeC={this.state.VolumeC}
+                      changeVolumeC={this.changeVolumeC.bind(this)}
+                    />
+                  </div>
+
+                  <div style={{ display: 'inline-block' }}>
+                    <Mixer
+                      name="MixerD"
+                      side="right"
+                      otherside="left"
+                      VolumeD={this.state.VolumeD}
+                      changeVolumeD={this.changeVolumeD.bind(this)}
+                    />
+                  </div>
+                </div> {/* End CD Mixer */}
+              </div>
+            </div> {/* End Center Column */}
+            <div style={{ float: 'left' }}>
+              <Deck
+                name="DeckD"
+                VolumeD={this.state.VolumeD}
+                changeVolumeD={this.changeVolumeD.bind(this)}
+              />
+            </div>
+          </div>
+
+
 
           <div style={{ display: 'inline-block' }}>
             <CrossFader />

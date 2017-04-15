@@ -41,7 +41,28 @@ class Deck extends React.Component {
         <div className={s.container}>
           <ReactPlayer
             url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
-            playing
+            width="380px"
+            height="213px"
+            volume={this.props.VolumeB}
+          />
+        </div>
+      );
+    } else if (this.props.name === 'DeckC') {
+      return (
+        <div className={s.container}>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
+            width="380px"
+            height="213px"
+            volume={this.props.VolumeB}
+          />
+        </div>
+      );
+    } else if (this.props.name === 'DeckD') {
+      return (
+        <div className={s.container}>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
             width="380px"
             height="213px"
             volume={this.props.VolumeB}
