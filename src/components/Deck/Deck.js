@@ -33,7 +33,7 @@ class Deck extends React.Component {
             showArtwork: true,
             clientId: auth.soundcloud.id,
           }}
-          volume={this.props.volume}
+          volume={this.props.volume / 127}
         />
       </div>
     );

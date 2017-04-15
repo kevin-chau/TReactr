@@ -19,7 +19,7 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      VolumeA: 0.5,
+      VolumeA: 63,
       VolumeB: 0.0,
       VolumeC: 0.0,
       VolumeD: 0.0,
@@ -90,6 +90,7 @@ class Home extends React.Component {
                   <div style={{ display: 'inline-block' }}>
                     <Mixer
                       name="MixerA"
+                      volume={this.state.VolumeA}
                       VolumeA={this.state.VolumeA}
                       changeVolumeA={this.changeVolumeA.bind(this)}
                     />
@@ -100,6 +101,7 @@ class Home extends React.Component {
                       name="MixerB"
                       side="right"
                       otherside="left"
+                      volume={this.state.VolumeB}
                       VolumeB={this.state.VolumeB}
                       changeVolumeB={this.changeVolumeB.bind(this)}
                     />
@@ -127,7 +129,7 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <Deck
                 name="DeckC"
-                url="https://soundcloud.com/rlgrime/halloween-v"
+                url="https://www.youtube.com/watch?v=WUG2guLUtuo"
                 volume={this.state.VolumeC}
                 VolumeC={this.state.VolumeC}
                 changeVolumeC={this.changeVolumeC.bind(this)}
@@ -139,6 +141,7 @@ class Home extends React.Component {
                   <div style={{ display: 'inline-block' }}>
                     <Mixer
                       name="MixerC"
+                      volume={this.state.VolumeC}
                       VolumeC={this.state.VolumeC}
                       changeVolumeC={this.changeVolumeC.bind(this)}
                     />
@@ -149,6 +152,7 @@ class Home extends React.Component {
                       name="MixerD"
                       side="right"
                       otherside="left"
+                      volume={this.state.VolumeD}
                       VolumeD={this.state.VolumeD}
                       changeVolumeD={this.changeVolumeD.bind(this)}
                     />
