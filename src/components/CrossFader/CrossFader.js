@@ -20,6 +20,9 @@ class CrossFader extends React.Component {
         {/* EQ/Volume Box */}
         <div className={s.CrossFader_Box} >
           <div className={s.slider}>
+            <div className={s.xf_top_border} >
+              <hr style={{backgroundColor: '#fff', width: '150px'}}></hr>
+            </div>
             <Slider
               value={this.state.position}
               max={127}
@@ -27,6 +30,9 @@ class CrossFader extends React.Component {
                 this.setState({ position: newValue });
               }}
             />
+            <div className={s.xf_bottom_border}>
+              <hr style={{backgroundColor: '#fff', width: '150px'}}></hr>
+            </div>
           </div>
         </div>
       </div>

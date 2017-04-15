@@ -62,6 +62,12 @@
   .rc-slider-handle:hover {
     border-color: #2b2d2d;
   }
+
+  /*hr {
+    width: 20%;
+    height: 80%;
+    background: #c22;
+  }*/
 /*
   .rc-slider-handle-active:active {
     border-color: #57c5f7;
@@ -151,7 +157,7 @@ p {
 
 .slider {
   width: 150px;
-  margin: 15px auto;
+  margin: 7px auto;
 }
 
 .CrossFader_container {
@@ -178,4 +184,14 @@ p {
   width: 1000px;
   height: 44px;
   overflow: hidden;
+}
+
+.xf_top_border {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.xf_bottom_border {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
