@@ -28,7 +28,7 @@ class Deck extends React.Component {
       return (
         <div className={s.container}>
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=aUWYDaVp92I"
+            url="https://www.youtube.com/watch?v=h--P8HzYZ74"
             playing
             width="380px"
             height="213px"

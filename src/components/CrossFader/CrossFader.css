@@ -34,6 +34,20 @@
   .rc-slider-rail {
     background-color: #0b0c0c;
   }
+
+  .rc-slider-handle {
+    background-color: #2b2d2d;
+    position: absolute;
+    margin-left: -16px;
+    margin-top: -5px;
+    width: 37px;
+    height: 12px;
+    cursor: pointer;
+    border-radius: 2px;
+    border: solid 1px #2b2d2d;
+    border-top: solid 1px #3d3e3e;
+    box-shadow: 0 0 0 1px black;
+  }
 }
 
 p {
