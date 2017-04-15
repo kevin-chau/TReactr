@@ -2,6 +2,9 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Deck.css';
+import { auth } from '../../config';
+
+require('dotenv').load();
 
 class Deck extends React.Component {
   static propTypes = {
@@ -24,12 +27,13 @@ class Deck extends React.Component {
   }
 
   render() {
+    console.log(auth.soundcloud);
+    console.log(process.env.SOUNDCLOUD_CLIENT_ID);
     if (this.props.name === 'DeckA') {
       return (
         <div className={s.container}>
           <ReactPlayer
             url="https://www.youtube.com/watch?v=h--P8HzYZ74"
-            playing
             width="380px"
             height="213px"
             volume={this.props.VolumeA}
@@ -51,10 +55,15 @@ class Deck extends React.Component {
       return (
         <div className={s.container}>
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
+            url="https://soundcloud.com/rlgrime/halloween-v"
+            playing
+            soundcloudConfig={{
+              showArtwork: true,
+              clientId: auth.soundcloud.id,
+            }}
             width="380px"
             height="213px"
-            volume={this.props.VolumeB}
+            volume={this.props.VolumeC}
           />
         </div>
       );
@@ -62,10 +71,13 @@ class Deck extends React.Component {
       return (
         <div className={s.container}>
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
+            url="https://soundcloud.com/in-love-with-a-ghost/we-ve-never-met-but-can-we-have-a-coffee-or-something"
+            soundcloudConfig={{
+              showArtwork: true,
+            }}
             width="380px"
             height="213px"
-            volume={this.props.VolumeB}
+            volume={this.props.VolumeD}
           />
         </div>
       );

@@ -8,3 +8,4 @@ ncp-debug.log
 npm-debug.log
 stats.json
 report.html
+.env

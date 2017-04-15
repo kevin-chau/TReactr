@@ -30,6 +30,7 @@
     "cookie-parser": "^1.4.3",
     "core-js": "^2.4.1",
     "css-loader": "^0.26.2",
+    "dotenv": "^4.0.0",
     "eslint": "^3.16.1",
     "eslint-loader": "^1.6.3",
     "eslint-plugin-css-modules": "^2.6.0",
