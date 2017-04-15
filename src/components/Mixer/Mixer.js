@@ -40,7 +40,7 @@ class Mixer extends React.Component {
       cue_on: false,
 
       // Volume
-      volume: 63,
+      volume: this.props.volume,
     };
   }
 

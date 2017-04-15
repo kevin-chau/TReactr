@@ -20,9 +20,9 @@ class Home extends React.Component {
     super(props);
     this.state = {
       VolumeA: 0.5,
-      VolumeB: 0.5,
-      VolumeC: 0.5,
-      VolumeD: 0.5,
+      VolumeB: 0.0,
+      VolumeC: 0.0,
+      VolumeD: 0.0,
     };
   }
 
@@ -77,6 +77,9 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <Deck
                 name="DeckA"
+                playing
+                url="https://www.youtube.com/watch?v=h--P8HzYZ74"
+                volume={this.state.VolumeA}
                 VolumeA={this.state.VolumeA}
                 changeVolumeA={this.changeVolumeA.bind(this)}
               />
@@ -107,6 +110,9 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <Deck
                 name="DeckB"
+                playing
+                url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
+                volume={this.state.VolumeB}
                 VolumeB={this.state.VolumeB}
                 changeVolumeB={this.changeVolumeB.bind(this)}
               />
@@ -121,6 +127,8 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <Deck
                 name="DeckC"
+                url="https://soundcloud.com/rlgrime/halloween-v"
+                volume={this.state.VolumeC}
                 VolumeC={this.state.VolumeC}
                 changeVolumeC={this.changeVolumeC.bind(this)}
               />
@@ -151,6 +159,8 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <Deck
                 name="DeckD"
+                url="https://soundcloud.com/in-love-with-a-ghost/we-ve-never-met-but-can-we-have-a-coffee-or-something"
+                volume={this.state.VolumeD}
                 VolumeD={this.state.VolumeD}
                 changeVolumeD={this.changeVolumeD.bind(this)}
               />

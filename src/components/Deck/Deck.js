@@ -15,9 +15,6 @@ class Deck extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      volume: 0.5,
-    };
   }
 
   setVolume = (e) => {
@@ -25,60 +22,21 @@ class Deck extends React.Component {
   }
 
   render() {
-    if (this.props.name === 'DeckA') {
-      return (
-        <div className={s.container}>
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=h--P8HzYZ74"
-            width="380px"
-            height="213px"
-            volume={this.props.VolumeA}
-          />
-        </div>
-      );
-    } else if (this.props.name === 'DeckB') {
-      return (
-        <div className={s.container}>
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
-            width="380px"
-            height="213px"
-            volume={this.props.VolumeB}
-          />
-        </div>
-      );
-    } else if (this.props.name === 'DeckC') {
-      return (
-        <div className={s.container}>
-          <ReactPlayer
-            url="https://soundcloud.com/rlgrime/halloween-v"
-            playing
-            soundcloudConfig={{
-              showArtwork: true,
-              clientId: auth.soundcloud.id,
-            }}
-            width="380px"
-            height="213px"
-            volume={this.props.VolumeC}
-          />
-        </div>
-      );
-    } else if (this.props.name === 'DeckD') {
-      return (
-        <div className={s.container}>
-          <ReactPlayer
-            url="https://soundcloud.com/in-love-with-a-ghost/we-ve-never-met-but-can-we-have-a-coffee-or-something"
-            soundcloudConfig={{
-              showArtwork: true,
-            }}
-            width="380px"
-            height="213px"
-            volume={this.props.VolumeD}
-          />
-        </div>
-      );
-    }
-    return null;
+    return (
+      <div className={s.container}>
+        <ReactPlayer
+          url={this.props.url}
+          playing={this.props.playing}
+          width="380px"
+          height="213px"
+          soundcloudConfig={{
+            showArtwork: true,
+            clientId: auth.soundcloud.id,
+          }}
+          volume={this.props.volume}
+        />
+      </div>
+    );
   }
 }
 
