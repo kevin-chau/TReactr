@@ -7,6 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
+import dotenv from 'dotenv';
 import path from 'path';
 import webpack from 'webpack';
 import AssetsPlugin from 'assets-webpack-plugin';
@@ -30,6 +31,9 @@ if (isAnalyse) {
 } else if (!isDebug) {
   analyzerMode = 'static';
 }
+
+// Load variables from .env file
+dotenv.config();
 
 //
 // Common configuration chunk to be used for both
@@ -194,6 +198,7 @@ const clientConfig = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': isDebug ? '"development"' : '"production"',
       'process.env.BROWSER': true,
+      'process.env.SOUNDCLOUD_CLIENT_ID': JSON.stringify(process.env.SOUNDCLOUD_CLIENT_ID),
       __DEV__: isDebug,
     }),
 

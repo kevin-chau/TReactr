@@ -9,10 +9,6 @@
 
 /* eslint-disable max-len */
 
-import dotenv from 'dotenv';
-
-dotenv.load();
-
 export const port = process.env.PORT || 3000;
 export const host = process.env.WEBSITE_HOSTNAME || `localhost:${port}`;
 
@@ -47,11 +43,5 @@ export const auth = {
   twitter: {
     key: process.env.TWITTER_CONSUMER_KEY || 'Ie20AZvLJI2lQD5Dsgxgjauns',
     secret: process.env.TWITTER_CONSUMER_SECRET || 'KTZ6cxoKnEakQCeSpZlaUCJWGAlTEBJj0y2EMkUBujA7zWSvaQ',
-  },
-
-  // https://developers.soundcloud.com/
-  soundcloud: {
-    id: process.env.SOUNDCLOUD_CLIENT_ID,
-    secret: process.env.SOUNDCLOUD_CLIENT_SECRET,
   },
 };

@@ -80,8 +80,6 @@ class Home extends React.Component {
                 playing
                 url="https://www.youtube.com/watch?v=h--P8HzYZ74"
                 volume={this.state.VolumeA}
-                VolumeA={this.state.VolumeA}
-                changeVolumeA={this.changeVolumeA.bind(this)}
               />
             </div>
             <div name="centercolumn">
@@ -91,8 +89,7 @@ class Home extends React.Component {
                     <Mixer
                       name="MixerA"
                       volume={this.state.VolumeA}
-                      VolumeA={this.state.VolumeA}
-                      changeVolumeA={this.changeVolumeA.bind(this)}
+                      changeVolume={this.changeVolumeA.bind(this)}
                     />
                   </div>
 
@@ -102,8 +99,7 @@ class Home extends React.Component {
                       side="right"
                       otherside="left"
                       volume={this.state.VolumeB}
-                      VolumeB={this.state.VolumeB}
-                      changeVolumeB={this.changeVolumeB.bind(this)}
+                      changeVolume={this.changeVolumeB.bind(this)}
                     />
                   </div>
                 </div> {/* End AB Mixer */}
@@ -115,8 +111,6 @@ class Home extends React.Component {
                 playing
                 url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
                 volume={this.state.VolumeB}
-                VolumeB={this.state.VolumeB}
-                changeVolumeB={this.changeVolumeB.bind(this)}
               />
             </div>
           </div>
@@ -131,8 +125,6 @@ class Home extends React.Component {
                 name="DeckC"
                 url="https://www.youtube.com/watch?v=WUG2guLUtuo"
                 volume={this.state.VolumeC}
-                VolumeC={this.state.VolumeC}
-                changeVolumeC={this.changeVolumeC.bind(this)}
               />
             </div>
             <div name="centercolumn">
@@ -142,8 +134,7 @@ class Home extends React.Component {
                     <Mixer
                       name="MixerC"
                       volume={this.state.VolumeC}
-                      VolumeC={this.state.VolumeC}
-                      changeVolumeC={this.changeVolumeC.bind(this)}
+                      changeVolume={this.changeVolumeC.bind(this)}
                     />
                   </div>
 
@@ -153,8 +144,7 @@ class Home extends React.Component {
                       side="right"
                       otherside="left"
                       volume={this.state.VolumeD}
-                      VolumeD={this.state.VolumeD}
-                      changeVolumeD={this.changeVolumeD.bind(this)}
+                      changeVolume={this.changeVolumeD.bind(this)}
                     />
                   </div>
                 </div> {/* End CD Mixer */}
@@ -162,11 +152,10 @@ class Home extends React.Component {
             </div> {/* End Center Column */}
             <div style={{ float: 'left' }}>
               <Deck
+                playing
                 name="DeckD"
                 url="https://soundcloud.com/in-love-with-a-ghost/we-ve-never-met-but-can-we-have-a-coffee-or-something"
                 volume={this.state.VolumeD}
-                VolumeD={this.state.VolumeD}
-                changeVolumeD={this.changeVolumeD.bind(this)}
               />
             </div>
           </div>

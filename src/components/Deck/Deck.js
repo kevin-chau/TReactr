@@ -2,7 +2,6 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Deck.css';
-import { auth } from '../../config';
 
 class Deck extends React.Component {
   static propTypes = {
@@ -31,7 +30,7 @@ class Deck extends React.Component {
           height="213px"
           soundcloudConfig={{
             showArtwork: true,
-            clientId: auth.soundcloud.id,
+            clientId: process.env.SOUNDCLOUD_CLIENT_ID,
           }}
           volume={this.props.volume / 127}
         />

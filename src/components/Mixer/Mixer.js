@@ -112,15 +112,7 @@ class Mixer extends React.Component {
               value={this.state.volume}
               onChange={(newValue) => {
                 this.setState({ volume: newValue });
-                if (this.props.name == 'MixerA') {
-                  this.props.changeVolumeA(newValue);
-                } else if (this.props.name == 'MixerB') {
-                  this.props.changeVolumeB(newValue);
-                } else if (this.props.name == 'MixerC') {
-                  this.props.changeVolumeC(newValue);
-                } else if (this.props.name == 'MixerD') {
-                  this.props.changeVolumeD(newValue);
-                }
+                this.props.changeVolume(newValue);
               }}
               max={127}
             />
