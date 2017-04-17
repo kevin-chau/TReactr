@@ -1,19 +1,24 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import PropTypes from 'prop-types';
 import s from './Deck.css';
 
 class Deck extends React.Component {
   static propTypes = {
-    name: React.PropTypes.string,
+    url: PropTypes.string,
+    playing: PropTypes.bool,
+    volume: PropTypes.number,
   };
 
   static defaultProps = {
-    name: 'Deck',
+    url: '',
+    playing: false,
+    volume: 0,
   };
 
-  constructor(props) {
-    super(props);
+  componentDidMount() {
+    console.log('componentDidMount() called after render()');
   }
 
   setVolume = (e) => {
@@ -21,6 +26,7 @@ class Deck extends React.Component {
   }
 
   render() {
+    console.log('render() called before componentDidMount');
     return (
       <div className={s.container}>
         <ReactPlayer

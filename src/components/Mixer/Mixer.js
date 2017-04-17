@@ -3,17 +3,22 @@ import { BiDirectionalKnob } from 'treactr-canvas-knob';
 import { Kill, FxToggle1, FxToggle2, ToggleMonitorCue } from 'treactr-toggle';
 import Slider from 'treactr-slider';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import PropTypes from 'prop-types';
 import s from './Mixer.css';
 
 class Mixer extends React.Component {
   static propTypes = {
-    side: React.PropTypes.string,
-    otherside: React.PropTypes.string,
+    side: PropTypes.string,
+    otherside: PropTypes.string,
+    volume: PropTypes.number,
+    changeVolume: PropTypes.func,
   };
 
   static defaultProps = {
     side: 'left',
     otherside: 'right',
+    volume: 0,
+    changeVolume: null,
   };
 
   constructor(props) {
