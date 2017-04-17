@@ -1,7 +1,11 @@
 ## React Style Guide
 
 > This style guide comes as an addition to [Airbnb React/JSX Guide](https://github.com/airbnb/javascript/tree/master/react).
-> Feel free to modify it to suit your project's needs. 
+<<<<<<< HEAD
+> Feel free to modify it to suit your project's needs.
+=======
+> Feel free to modify it to suit your project's needs.
+>>>>>>> c442026a6b8df5af1a0b74d002a2cc5a71c4b168
 
 ### Table of Contents
 
@@ -33,7 +37,11 @@
 ```
 
 ```
-// components/Navigation/package.json 
+<<<<<<< HEAD
+// components/Navigation/package.json
+=======
+// components/Navigation/package.json
+>>>>>>> c442026a6b8df5af1a0b74d002a2cc5a71c4b168
 {
   "name:": "Navigation",
   "main": "./Navigation.js"
@@ -119,7 +127,12 @@ Navigation.propTypes = { items: PropTypes.array.isRequired };
 
 ```jsx
 // Navigation.js
+<<<<<<< HEAD
 import React, { PropTypes } from 'react';
+=======
+import React from 'react';
+import PropTypes from 'prop-types';
+>>>>>>> c442026a6b8df5af1a0b74d002a2cc5a71c4b168
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Navigation.scss';
 

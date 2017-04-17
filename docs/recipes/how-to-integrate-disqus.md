@@ -5,7 +5,12 @@ https://disqus.com/admin/create/
 #### `DisqusThread.js`
 
 ```js
+<<<<<<< HEAD
 import React, { PropTypes } from 'react';
+=======
+import React from 'react';
+import PropTypes from 'prop-types';
+>>>>>>> c442026a6b8df5af1a0b74d002a2cc5a71c4b168
 
 const SHORTNAME = 'example';
 const WEBSITE_URL = 'http://www.example.com';
