@@ -1,18 +1,82 @@
-:global {
-  @import 'treactr-toggle/style.css';
+@global-import 'treactr-slider/dist/treactr-slider.css';
+
+.rc-slider-vertical {
+  margin: auto;
 }
 
-.FX_Unit_Box {
-  margin: 2px;
+.rc-slider-vertical .rc-slider-rail {
+  margin-left: -8px;
+  height: 100%;
+  width: 19px;
+  background: linear-gradient(to bottom, #071212, #071212 50%, #313a3a 50%, #313a3a);
+  background-size: 100% 4px;
+  border: solid 3px #071212;
+  outline: solid 3px #4f5353;
+}
 
+.rc-slider-vertical .rc-slider-track {
+  margin-left: -8px;
+  width: 19px;
+  background-color: white;
+  opacity: 0;
+}
+
+.rc-slider-vertical .rc-slider-handle {
+  margin-left: -17px;
+  margin-bottom: -6px;
+}
+
+p {
+  color: #bdbdbd;
+  margin: 2px 1px;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+.knob_label {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 6px;
+  background-color: #1d1e1e;
+  width: 47px;
+  height: 11px;
+  border-radius: 3px 6px 6px 3px;
+  text-align: center;
+}
+
+.knob_label p {
+  color: #bdbd;
+  margin: 0 1px;
+  margin-left: 8px;
+  font-size: 0.5em;
+}
+
+.knob {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.slider {
+  width: auto;
+  height: 150px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.Mixer_container {
+  background: #242828;
+  border: solid 1px #000;
+  width: 118px;
+  overflow: hidden;
+}
+
+.Mixer_Box {
   /* Background Gradient */
   background: -webkit-linear-gradient(#373b3c, #313334);
   background: -moz-linear-gradient(#373b3c, #313334);
   background-color: #373b3c;
   background-image: linear-gradient(#373b3c, #313334);
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
 
   /* Border */
   border-bottom: solid 1px #2a2d2e;
@@ -24,16 +88,4 @@
   width: auto;
   height: auto;
   overflow: hidden;
-}
-
-p.knob_label {
-  margin: auto;
-  font-size: 50%;
-  text-align: center;
-}
-
-.knob {
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
 }

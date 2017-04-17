@@ -1,38 +1,36 @@
-:global {
-  @import 'treactr-slider/dist/treactr-slider.css';
+@global-import 'treactr-slider/dist/treactr-slider.css';
 
-  .rc-slider-vertical {
-    margin: auto;
-  }
+.rc-slider-vertical {
+  margin: auto;
+}
 
-  .rc-slider-vertical .rc-slider-rail {
-    margin-left: -8px;
-    height: 100%;
-    width: 19px;
-    background:
-      linear-gradient(
-        to bottom,
-        #071212,
-        #071212 50%,
-        #313a3a 50%,
-        #313a3a
-      );
-    background-size: 100% 4px;
-    border: solid 3px #071212;
-    outline: solid 3px #4f5353;
-  }
+.rc-slider-vertical .rc-slider-rail {
+  margin-left: -8px;
+  height: 100%;
+  width: 19px;
+  background:
+    linear-gradient(
+      to bottom,
+      #071212,
+      #071212 50%,
+      #313a3a 50%,
+      #313a3a
+    );
+  background-size: 100% 4px;
+  border: solid 3px #071212;
+  outline: solid 3px #4f5353;
+}
 
-  .rc-slider-vertical .rc-slider-track {
-    margin-left: -8px;
-    width: 19px;
-    background-color: white;
-    opacity: 0;
-  }
+.rc-slider-vertical .rc-slider-track {
+  margin-left: -8px;
+  width: 19px;
+  background-color: white;
+  opacity: 0;
+}
 
-  .rc-slider-vertical .rc-slider-handle {
-    margin-left: -17px;
-    margin-bottom: -6px;
-  }
+.rc-slider-vertical .rc-slider-handle {
+  margin-left: -17px;
+  margin-bottom: -6px;
 }
 
 p {
