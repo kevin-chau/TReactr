@@ -1,6 +1,6 @@
-:global {
-  @import 'treactr-slider/dist/treactr-slider.css';
+@global-import 'treactr-slider/dist/treactr-slider.css';
 
+:global {
   .rc-slider-vertical {
     margin: auto;
   }
