@@ -37,7 +37,7 @@
     "query-string": "^4.3.2",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
-    "react-player": "^0.14.3",
+    "react-player": "^0.15.0",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
     "sequelize": "^3.30.4",
