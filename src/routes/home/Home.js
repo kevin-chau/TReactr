@@ -23,6 +23,7 @@ class Home extends React.Component {
       VolumeB: 0.0,
       VolumeC: 0.0,
       VolumeD: 0.0,
+      LowD: 63,
     };
   }
 
@@ -47,6 +48,12 @@ class Home extends React.Component {
   changeVolumeD(newVolume) {
     this.setState({
       VolumeD: newVolume,
+    });
+  }
+
+  changeLowD(newLow) {
+    this.setState({
+      LowD: newLow,
     });
   }
 
@@ -144,7 +151,9 @@ class Home extends React.Component {
                       side="right"
                       otherside="left"
                       volume={this.state.VolumeD}
+                      low={this.state.LowD}
                       changeVolume={this.changeVolumeD.bind(this)}
+                      changeLow={this.changeLowD.bind(this)}
                     />
                   </div>
                 </div> {/* End CD Mixer */}
@@ -156,6 +165,7 @@ class Home extends React.Component {
                 name="DeckD"
                 url="https://soundcloud.com/in-love-with-a-ghost/we-ve-never-met-but-can-we-have-a-coffee-or-something"
                 volume={this.state.VolumeD}
+                low={this.state.LowD}
               />
             </div>
           </div>

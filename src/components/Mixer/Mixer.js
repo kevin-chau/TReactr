@@ -97,6 +97,7 @@ class Mixer extends React.Component {
               value={this.state.low}
               onChange={(newValue) => {
                 this.setState({ low: newValue });
+                this.props.changeLow(newValue);
               }}
             />
           </div>

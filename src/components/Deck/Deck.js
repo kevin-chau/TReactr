@@ -34,12 +34,23 @@ class Deck extends React.Component {
       // Create a gain node
       const gainNode = audioCtx.createGain();
       gainNode.gain.value = 1;
+      // set up the different audio nodes we will use for the app
+      // var analyser = audioCtx.createAnalyser();
+      // var distortion = audioCtx.createWaveShaper();
+      // var convolver = audioCtx.createConvolver();
+      const biquadFilter = audioCtx.createBiquadFilter();
 
-      // connect the AudioBufferSourceNode to the gainNode
-      // and the gainNode to the destination, so we can play the
-      // music and adjust the volume using the mouse cursor
-      source.connect(gainNode);
+      // connect the nodes together
+      source.connect(biquadFilter);
+      // analyser.connect(distortion);
+      // distortion.connect(biquadFilter);
+      biquadFilter.connect(gainNode);
+      // convolver.connect(gainNode);
       gainNode.connect(audioCtx.destination);
+
+      // Manipulate the Biquad filter
+      biquadFilter.type = 'lowpass';
+      biquadFilter.frequency.value = 2 * 21000 / 127;
     }
   }
 
