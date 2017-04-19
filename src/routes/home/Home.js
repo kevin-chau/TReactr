@@ -188,7 +188,7 @@ class Home extends React.Component {
               <Deck
                 playing
                 name="DeckD"
-                url="https://soundcloud.com/in-love-with-a-ghost/we-ve-never-met-but-can-we-have-a-coffee-or-something"
+                url="https://soundcloud.com/loudpvck/lit"
                 volume={this.state.VolumeD}
                 low={this.state.LowD}
               />

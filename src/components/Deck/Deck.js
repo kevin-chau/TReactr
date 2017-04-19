@@ -44,8 +44,8 @@ class Deck extends React.Component {
 
       // Create a Biquad Filter
       biquadFilter = audioCtx.createBiquadFilter();
-      biquadFilter.type = 'lowpass';
-      biquadFilter.frequency.value = 20000 * (this.props.low / 127);
+      biquadFilter.type = 'lowshelf';
+      biquadFilter.frequency.value = 500;
 
       // connect the nodes together
       source.connect(biquadFilter);
@@ -62,7 +62,7 @@ class Deck extends React.Component {
   }
 
   componentDidUpdate() {
-    biquadFilter.frequency.value = 20000 * (this.props.low / 127);
+    biquadFilter.gain.value = ((this.props.low * 16) / 127) - 8;
   }
 
   render() {
