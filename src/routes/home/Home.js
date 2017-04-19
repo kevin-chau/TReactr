@@ -24,6 +24,9 @@ class Home extends React.Component {
       VolumeC: 0.0,
       VolumeD: 0.0,
       LowD: 63,
+      LowC: 63,
+      LowB: 63,
+      LowA: 63,
     };
   }
 
@@ -54,6 +57,24 @@ class Home extends React.Component {
   changeLowD(newLow) {
     this.setState({
       LowD: newLow,
+    });
+  }
+
+  changeLowC(newLow) {
+    this.setState({
+      LowC: newLow,
+    });
+  }
+
+  changeLowB(newLow) {
+    this.setState({
+      LowB: newLow,
+    });
+  }
+
+  changeLowA(newLow) {
+    this.setState({
+      LowA: newLow,
     });
   }
 
@@ -97,6 +118,8 @@ class Home extends React.Component {
                       name="MixerA"
                       volume={this.state.VolumeA}
                       changeVolume={this.changeVolumeA.bind(this)}
+                      low={this.state.LowA}
+                      changeLow={this.changeLowA.bind(this)}
                     />
                   </div>
 
@@ -107,6 +130,8 @@ class Home extends React.Component {
                       otherside="left"
                       volume={this.state.VolumeB}
                       changeVolume={this.changeVolumeB.bind(this)}
+                      low={this.state.LowB}
+                      changeLow={this.changeLowB.bind(this)}
                     />
                   </div>
                 </div> {/* End AB Mixer */}
@@ -142,6 +167,8 @@ class Home extends React.Component {
                       name="MixerC"
                       volume={this.state.VolumeC}
                       changeVolume={this.changeVolumeC.bind(this)}
+                      low={this.state.LowC}
+                      changeLow={this.changeLowC.bind(this)}
                     />
                   </div>
 

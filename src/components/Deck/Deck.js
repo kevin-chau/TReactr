@@ -4,58 +4,61 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import PropTypes from 'prop-types';
 import s from './Deck.css';
 
+let audioCtx;
+let biquadFilter;
+
 class Deck extends React.Component {
   static propTypes = {
     url: PropTypes.string,
     playing: PropTypes.bool,
     volume: PropTypes.number,
     name: PropTypes.string,
+    low: PropTypes.number,
   };
 
   static defaultProps = {
     url: '',
     playing: false,
-    volume: 0,
+    volume: 20,
     name: '',
+    low: 20,
   };
 
   componentDidMount() {
     if (this.props.name === 'DeckD') {
-      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      // Create Audio Context
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+      // Select audio element
       const myAudio = document.querySelector('audio');
 
       // set to anonymous for CORS
       myAudio.crossOrigin = 'anonymous';
 
       // Create a MediaElementAudioSourceNode
-      // Feed the HTMLMediaElement into it
       const source = audioCtx.createMediaElementSource(myAudio);
 
       // Create a gain node
       const gainNode = audioCtx.createGain();
       gainNode.gain.value = 1;
-      // set up the different audio nodes we will use for the app
-      // var analyser = audioCtx.createAnalyser();
-      // var distortion = audioCtx.createWaveShaper();
-      // var convolver = audioCtx.createConvolver();
-      const biquadFilter = audioCtx.createBiquadFilter();
+
+      // Create a Biquad Filter
+      biquadFilter = audioCtx.createBiquadFilter();
+      biquadFilter.type = 'lowpass';
+      biquadFilter.frequency.value = 20000 * (this.props.low / 127);
 
       // connect the nodes together
       source.connect(biquadFilter);
-      // analyser.connect(distortion);
-      // distortion.connect(biquadFilter);
       biquadFilter.connect(gainNode);
-      // convolver.connect(gainNode);
       gainNode.connect(audioCtx.destination);
-
-      // Manipulate the Biquad filter
-      biquadFilter.type = 'lowpass';
-      biquadFilter.frequency.value = 2 * 21000 / 127;
     }
   }
 
-  setVolume = (e) => {
-    this.setState({ volume: parseFloat(e.target.value) });
+  componentDidUpdate() {
+    // console.log("low: " + this.props.low);
+    if (this.props.name === 'DeckD') {
+      biquadFilter.frequency.value = 20000 * (this.props.low / 127);
+    }
   }
 
   render() {

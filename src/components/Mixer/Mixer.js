@@ -12,6 +12,7 @@ class Mixer extends React.Component {
     otherside: PropTypes.string,
     volume: PropTypes.number,
     changeVolume: PropTypes.func,
+    changeLow: PropTypes.func,
   };
 
   static defaultProps = {
@@ -19,6 +20,7 @@ class Mixer extends React.Component {
     otherside: 'right',
     volume: 0,
     changeVolume: null,
+    changeLow: null,
   };
 
   constructor(props) {
