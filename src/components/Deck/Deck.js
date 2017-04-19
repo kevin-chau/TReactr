@@ -19,9 +19,9 @@ class Deck extends React.Component {
   static defaultProps = {
     url: '',
     playing: false,
-    volume: 20,
+    volume: 0,
     name: '',
-    low: 20,
+    low: 63,
   };
 
   componentDidMount() {
@@ -54,14 +54,20 @@ class Deck extends React.Component {
     }
   }
 
-  componentDidUpdate() {
-    // console.log("low: " + this.props.low);
-    if (this.props.name === 'DeckD') {
-      biquadFilter.frequency.value = 20000 * (this.props.low / 127);
+  shouldComponentUpdate(nextProps) {
+    if (this.props.volume === nextProps.volume && this.props.low === nextProps.low) {
+      return false;
     }
+    return true;
+  }
+
+  componentDidUpdate() {
+    biquadFilter.frequency.value = 20000 * (this.props.low / 127);
   }
 
   render() {
+    // console.log(`${this.props.name} volume: ${this.props.volume}`);
+    // console.log(`${this.props.name} low: ${this.props.low}`);
     return (
       <div className={s.container}>
         <ReactPlayer

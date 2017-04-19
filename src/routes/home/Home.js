@@ -19,7 +19,7 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      VolumeA: 63,
+      VolumeA: 0.0,
       VolumeB: 0.0,
       VolumeC: 0.0,
       VolumeD: 0.0,
@@ -105,7 +105,6 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <Deck
                 name="DeckA"
-                playing
                 url="https://www.youtube.com/watch?v=h--P8HzYZ74"
                 volume={this.state.VolumeA}
               />
@@ -140,7 +139,6 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <Deck
                 name="DeckB"
-                playing
                 url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
                 volume={this.state.VolumeB}
               />
