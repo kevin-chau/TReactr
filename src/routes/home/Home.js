@@ -27,6 +27,10 @@ class Home extends React.Component {
       LowC: 63,
       LowB: 63,
       LowA: 63,
+      HighD: 63,
+      HighC: 63,
+      HighB: 63,
+      HighA: 63,
     };
   }
 
@@ -78,6 +82,30 @@ class Home extends React.Component {
     });
   }
 
+  changeHighD(newHigh) {
+    this.setState({
+      HighD: newHigh,
+    });
+  }
+
+  changeHighC(newHigh) {
+    this.setState({
+      HighC: newHigh,
+    });
+  }
+
+  changeHighB(newHigh) {
+    this.setState({
+      HighB: newHigh,
+    });
+  }
+
+  changeHighA(newHigh) {
+    this.setState({
+      HighA: newHigh,
+    });
+  }
+
   render() {
     return (
       <div className={s.root}>
@@ -107,6 +135,8 @@ class Home extends React.Component {
                 name="DeckA"
                 url="https://www.youtube.com/watch?v=h--P8HzYZ74"
                 volume={this.state.VolumeA}
+                low={this.state.LowA}
+                high={this.state.HighA}
               />
             </div>
             <div name="centercolumn">
@@ -119,6 +149,8 @@ class Home extends React.Component {
                       changeVolume={this.changeVolumeA.bind(this)}
                       low={this.state.LowA}
                       changeLow={this.changeLowA.bind(this)}
+                      high={this.state.HighA}
+                      changeHigh={this.changeHighA.bind(this)}
                     />
                   </div>
 
@@ -131,6 +163,8 @@ class Home extends React.Component {
                       changeVolume={this.changeVolumeB.bind(this)}
                       low={this.state.LowB}
                       changeLow={this.changeLowB.bind(this)}
+                      high={this.state.HighB}
+                      changeHigh={this.changeHighB.bind(this)}
                     />
                   </div>
                 </div> {/* End AB Mixer */}
@@ -141,6 +175,8 @@ class Home extends React.Component {
                 name="DeckB"
                 url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
                 volume={this.state.VolumeB}
+                low={this.state.LowB}
+                high={this.state.HighB}
               />
             </div>
           </div>
@@ -155,6 +191,8 @@ class Home extends React.Component {
                 name="DeckC"
                 url="https://www.youtube.com/watch?v=WUG2guLUtuo"
                 volume={this.state.VolumeC}
+                low={this.state.LowC}
+                high={this.state.HighC}
               />
             </div>
             <div name="centercolumn">
@@ -167,6 +205,8 @@ class Home extends React.Component {
                       changeVolume={this.changeVolumeC.bind(this)}
                       low={this.state.LowC}
                       changeLow={this.changeLowC.bind(this)}
+                      high={this.state.HighC}
+                      changeHigh={this.changeHighC.bind(this)}
                     />
                   </div>
 
@@ -176,9 +216,11 @@ class Home extends React.Component {
                       side="right"
                       otherside="left"
                       volume={this.state.VolumeD}
-                      low={this.state.LowD}
                       changeVolume={this.changeVolumeD.bind(this)}
+                      low={this.state.LowD}
                       changeLow={this.changeLowD.bind(this)}
+                      high={this.state.HighD}
+                      changeHigh={this.changeHighD.bind(this)}
                     />
                   </div>
                 </div> {/* End CD Mixer */}
@@ -191,6 +233,7 @@ class Home extends React.Component {
                 url="https://soundcloud.com/loudpvck/lit"
                 volume={this.state.VolumeD}
                 low={this.state.LowD}
+                high={this.state.HighD}
               />
             </div>
           </div>

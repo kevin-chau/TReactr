@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import s from './Deck.css';
 
 let audioCtx;
-let biquadFilter;
+let biquadFilterLow;
+let biquadFilterMid;
+let biquadFilterHigh;
 
 class Deck extends React.Component {
   static propTypes = {
@@ -14,6 +16,7 @@ class Deck extends React.Component {
     volume: PropTypes.number,
     name: PropTypes.string,
     low: PropTypes.number,
+    high: PropTypes.number,
   };
 
   static defaultProps = {
@@ -22,6 +25,7 @@ class Deck extends React.Component {
     volume: 0,
     name: '',
     low: 63,
+    high: 63,
   };
 
   componentDidMount() {
@@ -42,32 +46,38 @@ class Deck extends React.Component {
       const gainNode = audioCtx.createGain();
       gainNode.gain.value = 1;
 
-      // Create a Biquad Filter
-      biquadFilter = audioCtx.createBiquadFilter();
-      biquadFilter.type = 'lowshelf';
-      biquadFilter.frequency.value = 500;
+      // Create a Biquad Filters
+      biquadFilterLow = audioCtx.createBiquadFilter();
+      biquadFilterLow.type = 'lowshelf';
+      biquadFilterLow.frequency.value = 500;
+      biquadFilterHigh = audioCtx.createBiquadFilter();
+      biquadFilterHigh.type = 'highshelf';
+      biquadFilterHigh.frequency.value = 2000;
 
       // connect the nodes together
-      source.connect(biquadFilter);
-      biquadFilter.connect(gainNode);
+      source.connect(biquadFilterLow);
+      biquadFilterLow.connect(biquadFilterHigh);
+      biquadFilterHigh.connect(gainNode);
       gainNode.connect(audioCtx.destination);
     }
   }
 
   shouldComponentUpdate(nextProps) {
-    if (this.props.volume === nextProps.volume && this.props.low === nextProps.low) {
+    if (this.props.volume === nextProps.volume && this.props.low === nextProps.low && this.props.high === nextProps.high) {
       return false;
     }
     return true;
   }
 
   componentDidUpdate() {
-    biquadFilter.gain.value = ((this.props.low * 16) / 127) - 8;
+    biquadFilterLow.gain.value = ((this.props.low * 16) / 127) - 8;
+    biquadFilterHigh.gain.value = ((this.props.high * 16) / 127) - 8;
   }
 
   render() {
     // console.log(`${this.props.name} volume: ${this.props.volume}`);
     // console.log(`${this.props.name} low: ${this.props.low}`);
+    // console.log(`${this.props.name} high: ${this.props.high}`);
     return (
       <div className={s.container}>
         <ReactPlayer

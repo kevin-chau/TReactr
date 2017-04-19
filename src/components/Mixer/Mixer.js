@@ -13,6 +13,7 @@ class Mixer extends React.Component {
     volume: PropTypes.number,
     changeVolume: PropTypes.func,
     changeLow: PropTypes.func,
+    changeHigh: PropTypes.func,
   };
 
   static defaultProps = {
@@ -21,6 +22,7 @@ class Mixer extends React.Component {
     volume: 0,
     changeVolume: null,
     changeLow: null,
+    changeHigh: null,
   };
 
   constructor(props) {
@@ -61,6 +63,7 @@ class Mixer extends React.Component {
               value={this.state.high}
               onChange={(newValue) => {
                 this.setState({ high: newValue });
+                this.props.changeHigh(newValue);
               }}
             />
           </div>
