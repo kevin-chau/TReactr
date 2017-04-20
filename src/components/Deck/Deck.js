@@ -16,6 +16,7 @@ class Deck extends React.Component {
     volume: PropTypes.number,
     name: PropTypes.string,
     low: PropTypes.number,
+    mid: PropTypes.number,
     high: PropTypes.number,
   };
 
@@ -25,6 +26,7 @@ class Deck extends React.Component {
     volume: 0,
     name: '',
     low: 63,
+    mid: 63,
     high: 63,
   };
 
@@ -49,21 +51,26 @@ class Deck extends React.Component {
       // Create a Biquad Filters
       biquadFilterLow = audioCtx.createBiquadFilter();
       biquadFilterLow.type = 'lowshelf';
-      biquadFilterLow.frequency.value = 500;
+      biquadFilterLow.frequency.value = 250;
+      biquadFilterMid = audioCtx.createBiquadFilter();
+      biquadFilterMid.type = 'peaking';
+      biquadFilterMid.Q.value = 10;
+      biquadFilterMid.frequency.value = 11000;
       biquadFilterHigh = audioCtx.createBiquadFilter();
       biquadFilterHigh.type = 'highshelf';
       biquadFilterHigh.frequency.value = 2000;
 
       // connect the nodes together
       source.connect(biquadFilterLow);
-      biquadFilterLow.connect(biquadFilterHigh);
+      biquadFilterLow.connect(biquadFilterMid);
+      biquadFilterMid.connect(biquadFilterHigh);
       biquadFilterHigh.connect(gainNode);
       gainNode.connect(audioCtx.destination);
     }
   }
 
   shouldComponentUpdate(nextProps) {
-    if (this.props.volume === nextProps.volume && this.props.low === nextProps.low && this.props.high === nextProps.high) {
+    if (JSON.stringify(this.props) === JSON.stringify(nextProps)) {
       return false;
     }
     return true;
@@ -71,13 +78,11 @@ class Deck extends React.Component {
 
   componentDidUpdate() {
     biquadFilterLow.gain.value = ((this.props.low * 16) / 127) - 8;
+    biquadFilterMid.gain.value = ((this.props.mid * 16) / 127) - 8;
     biquadFilterHigh.gain.value = ((this.props.high * 16) / 127) - 8;
   }
 
   render() {
-    // console.log(`${this.props.name} volume: ${this.props.volume}`);
-    // console.log(`${this.props.name} low: ${this.props.low}`);
-    // console.log(`${this.props.name} high: ${this.props.high}`);
     return (
       <div className={s.container}>
         <ReactPlayer
