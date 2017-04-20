@@ -54,8 +54,8 @@ class Deck extends React.Component {
       biquadFilterLow.frequency.value = 250;
       biquadFilterMid = audioCtx.createBiquadFilter();
       biquadFilterMid.type = 'peaking';
-      biquadFilterMid.Q.value = 10;
-      biquadFilterMid.frequency.value = 11000;
+      biquadFilterMid.Q.value = 1.0;
+      biquadFilterMid.frequency.value = 1100;
       biquadFilterHigh = audioCtx.createBiquadFilter();
       biquadFilterHigh.type = 'highshelf';
       biquadFilterHigh.frequency.value = 2000;
@@ -77,9 +77,9 @@ class Deck extends React.Component {
   }
 
   componentDidUpdate() {
-    biquadFilterLow.gain.value = ((this.props.low * 16) / 127) - 8;
-    biquadFilterMid.gain.value = ((this.props.mid * 16) / 127) - 8;
-    biquadFilterHigh.gain.value = ((this.props.high * 16) / 127) - 8;
+    biquadFilterLow.gain.value = ((this.props.low * 20) / 127) - 10;
+    biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
+    biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
   }
 
   render() {

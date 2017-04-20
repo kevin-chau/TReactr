@@ -13,6 +13,7 @@ class Mixer extends React.Component {
     volume: PropTypes.number,
     changeVolume: PropTypes.func,
     changeLow: PropTypes.func,
+    changeMid: PropTypes.func,
     changeHigh: PropTypes.func,
   };
 
@@ -22,6 +23,7 @@ class Mixer extends React.Component {
     volume: 0,
     changeVolume: null,
     changeLow: null,
+    changeMid: null,
     changeHigh: null,
   };
 
@@ -83,6 +85,7 @@ class Mixer extends React.Component {
               value={this.state.mid}
               onChange={(newValue) => {
                 this.setState({ mid: newValue });
+                this.props.changeMid(newValue);
               }}
             />
           </div>
