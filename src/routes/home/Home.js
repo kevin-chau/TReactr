@@ -222,8 +222,9 @@ class Home extends React.Component {
           <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
               <Deck
+                playing
                 name="DeckC"
-                url="https://www.youtube.com/watch?v=WUG2guLUtuo"
+                url="https://soundcloud.com/loudpvck/lit"
                 volume={this.state.VolumeC}
                 low={this.state.LowC}
                 mid={this.state.MidC}

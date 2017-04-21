@@ -31,13 +31,20 @@ class Deck extends React.Component {
   };
 
   componentDidMount() {
-    if (this.props.name === 'DeckD') {
+    if (this.props.url.includes('soundcloud')) {
       // Create Audio Context
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
 
       // Select audio element
-      const myAudio = document.querySelector('audio');
-
+      const audioElementList = document.querySelectorAll('audio');
+      let myAudio;
+      if (this.props.name === 'DeckC') {
+        myAudio = audioElementList[0];
+      } else if (this.props.name === 'DeckD') {
+        myAudio = audioElementList[1];
+      }
       // set to anonymous for CORS
       myAudio.crossOrigin = 'anonymous';
 
