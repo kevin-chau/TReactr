@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import s from './Deck.css';
 
 let audioCtx;
-let biquadFilterLow;
-let biquadFilterMid;
-let biquadFilterHigh;
+// let biquadFilterLow;
+// let biquadFilterMid;
+// let biquadFilterHigh;
 
 class Deck extends React.Component {
   static propTypes = {
@@ -56,22 +56,22 @@ class Deck extends React.Component {
       gainNode.gain.value = 1;
 
       // Create a Biquad Filters
-      biquadFilterLow = audioCtx.createBiquadFilter();
-      biquadFilterLow.type = 'lowshelf';
-      biquadFilterLow.frequency.value = 250;
-      biquadFilterMid = audioCtx.createBiquadFilter();
-      biquadFilterMid.type = 'peaking';
-      biquadFilterMid.Q.value = 1.0;
-      biquadFilterMid.frequency.value = 1100;
-      biquadFilterHigh = audioCtx.createBiquadFilter();
-      biquadFilterHigh.type = 'highshelf';
-      biquadFilterHigh.frequency.value = 2000;
+      this.biquadFilterLow = audioCtx.createBiquadFilter();
+      this.biquadFilterLow.type = 'lowshelf';
+      this.biquadFilterLow.frequency.value = 250;
+      this.biquadFilterMid = audioCtx.createBiquadFilter();
+      this.biquadFilterMid.type = 'peaking';
+      this.biquadFilterMid.Q.value = 1.0;
+      this.biquadFilterMid.frequency.value = 1100;
+      this.biquadFilterHigh = audioCtx.createBiquadFilter();
+      this.biquadFilterHigh.type = 'highshelf';
+      this.biquadFilterHigh.frequency.value = 2000;
 
       // connect the nodes together
-      source.connect(biquadFilterLow);
-      biquadFilterLow.connect(biquadFilterMid);
-      biquadFilterMid.connect(biquadFilterHigh);
-      biquadFilterHigh.connect(gainNode);
+      source.connect(this.biquadFilterLow);
+      this.biquadFilterLow.connect(this.biquadFilterMid);
+      this.biquadFilterMid.connect(this.biquadFilterHigh);
+      this.biquadFilterHigh.connect(gainNode);
       gainNode.connect(audioCtx.destination);
     }
   }
@@ -84,10 +84,14 @@ class Deck extends React.Component {
   }
 
   componentDidUpdate() {
-    biquadFilterLow.gain.value = ((this.props.low * 20) / 127) - 10;
-    biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
-    biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
+    this.biquadFilterLow.gain.value = ((this.props.low * 20) / 127) - 10;
+    this.biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
+    this.biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
   }
+
+  biquadFilterLow;
+  biquadFilterMid;
+  biquadFilterHigh;
 
   render() {
     return (
