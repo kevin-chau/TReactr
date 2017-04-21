@@ -84,9 +84,11 @@ class Deck extends React.Component {
   }
 
   componentDidUpdate() {
-    this.biquadFilterLow.gain.value = ((this.props.low * 20) / 127) - 10;
-    this.biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
-    this.biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
+    if (this.props.url.includes('soundcloud')) {
+      this.biquadFilterLow.gain.value = ((this.props.low * 20) / 127) - 10;
+      this.biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
+      this.biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
+    }
   }
 
   biquadFilterLow;
