@@ -160,8 +160,9 @@ class Home extends React.Component {
           <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
               <Deck
+                playing
                 name="DeckA"
-                url="https://www.youtube.com/watch?v=h--P8HzYZ74"
+                url="https://www.youtube.com/watch?v=h--P8HzYZ74?html5=1"
                 volume={this.state.VolumeA}
                 low={this.state.LowA}
                 mid={this.state.MidA}
@@ -205,8 +206,9 @@ class Home extends React.Component {
             </div> {/* End Center Column */}
             <div style={{ float: 'left' }}>
               <Deck
+                playing
                 name="DeckB"
-                url="https://www.youtube.com/watch?v=j6sSQq7a_Po"
+                url="https://www.youtube.com/watch?v=j6sSQq7a_Po?html5=1"
                 volume={this.state.VolumeB}
                 low={this.state.LowB}
                 mid={this.state.MidB}

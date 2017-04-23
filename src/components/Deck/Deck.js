@@ -74,6 +74,17 @@ class Deck extends React.Component {
       this.biquadFilterHigh.connect(gainNode);
       gainNode.connect(audioCtx.destination);
     }
+
+    if (this.props.url.includes('youtube')) {
+      // Create Audio Context
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+
+      // Select audio element
+      const videoElementList = document.querySelectorAll('video');
+      console.log(videoElementList);
+    }
   }
 
   shouldComponentUpdate(nextProps) {

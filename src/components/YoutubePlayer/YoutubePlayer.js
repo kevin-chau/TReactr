@@ -9,9 +9,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'hls.js';
 import 'mediaelement';
-import 'mediaelement/build/mediaelementplayer.min.css';
-import 'mediaelement/build/mediaelement-flash-video.swf';
+// import 'mediaelement/build/mediaelementplayer.min.css';
+// import 'mediaelement/build/mediaelement-flash-video.swf';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './YoutubePlayer.css';
 
@@ -58,19 +59,21 @@ class YoutubePlayer extends React.Component {
               </audio>`
               ;
 
-    return (<div dangerouslySetInnerHTML={{ __html: mediaHtml }} />);
+    return (
+      <div dangerouslySetInnerHTML={{ __html: mediaHtml }} />
+    );
   }
 
   componentDidMount() {
-    let loaded = false;
-    if (!loaded) {
-      const tag = document.createElement('script');
-      tag.src = '//www.youtube.com/player_api';
-      const firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-      loaded = true;
-    }
-    
+    // let loaded = false;
+    // if (!loaded) {
+    //   const tag = document.createElement('script');
+    //   tag.src = '//www.youtube.com/player_api';
+    //   const firstScriptTag = document.getElementsByTagName('script')[0];
+    //   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    //   loaded = true;
+    // }
+
     const { MediaElementPlayer } = global;
 
     if (!MediaElementPlayer) {
