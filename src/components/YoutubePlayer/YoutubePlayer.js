@@ -9,90 +9,97 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'hls.js';
-import 'mediaelement';
-// import 'mediaelement/build/mediaelementplayer.min.css';
-// import 'mediaelement/build/mediaelement-flash-video.swf';
+import $ from 'jquery';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './YoutubePlayer.css';
 
 class YoutubePlayer extends React.Component {
-  state = {}
-
-  success(media, node) {
-      // Your action when media was successfully loaded
-  }
-
-  error(media) {
-      // Your action when media had an error loading
-  }
-
   render() {
-    const
-      props = this.props,
-      sources = JSON.parse(props.sources),
-      tracks = JSON.parse(props.tracks),
-      sourceTags = [],
-      tracksTags = []
-      ;
-
-    for (let i = 0, total = sources.length; i < total; i++) {
-      const source = sources[i];
-      sourceTags.push(`<source src="${source.src}" type="${source.type}">`);
-    }
-
-    for (let i = 0, total = tracks.length; i < total; i++) {
-      const track = tracks[i];
-      tracksTags.push(`<track src="${track.src}" kind="${track.kind}" srclang="${track.lang}"${(track.label ? ` label=${track.label}` : '')}>`);
-    }
-
-    const
-      mediaBody = `${sourceTags.join('\n')}
-              ${tracksTags.join('\n')}`,
-      mediaHtml = props.mediaType === 'video' ?
-              `<video id="${props.id}" width="${props.width}" height="${props.height}"${(props.poster ? ` poster=${props.poster}` : '')}
-                  ${(props.controls ? ' controls' : '')}${(props.preload ? ` preload="${props.preload}"` : '')}>
-                  ${mediaBody}
-              </video>` :
-              `<audio id="${props.id}" width="${props.width}" controls>
-                  ${mediaBody}
-              </audio>`
-              ;
-
-    return (
-      <div dangerouslySetInnerHTML={{ __html: mediaHtml }} />
-    );
+    return(
+      <video controls="true">
+        <source src="https://www.youtube.com/watch?v=WbJNkH-pDd8" type="video/mp4" />
+      </video>
+    )
   }
-
   componentDidMount() {
-    // let loaded = false;
-    // if (!loaded) {
-    //   const tag = document.createElement('script');
-    //   tag.src = '//www.youtube.com/player_api';
-    //   const firstScriptTag = document.getElementsByTagName('script')[0];
-    //   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    //   loaded = true;
-    // }
-
-    const { MediaElementPlayer } = global;
-
-    if (!MediaElementPlayer) {
-      return;
+    function defer(method) {
+      if (true)
+          method();
+      else
+          setTimeout(function() {
+              defer(method)
+          }, 50);
     }
 
-    const options = Object.assign({}, JSON.parse(this.props.options), {
-      	// Read the Notes below for more explanation about how to set up the path for shims
-      pluginPath: './static/media/',
-      success: media => this.success(media),
-      error: media => this.error(media),
+    var videos = document.querySelectorAll("video");
+
+    console.log("GOT TO HERE BITCH!");
+
+    var mp4downloadlink;
+
+    var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+
+    var done = 0;
+
+    defer(function() {
+        function doCORSRequest(options, printResult) {
+            var x = new XMLHttpRequest();
+            x.open('GET', cors_api_url + 'youtubeinmp4.com/redirect.php?video=a4lZp14I3zE');
+            x.onload = x.onerror = function() {
+                var content = $(x.responseText).find('.downloadButtons');
+                console.log("mp4 download link (1) is : " + $(content[0]).attr('href'));
+                mp4downloadlink = $(content[0]).attr('href');
+                done = 1;
+            };
+            x.send(options.data);
+        }
+        (function() {
+            doCORSRequest({
+                method: 'GET',
+            });
+        })();
     });
 
-    this.setState({ player: new MediaElementPlayer(this.props.id, options) });
-  }
+    function checkFlag() {
+        if (done === 0) {
+            window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
+        } else {
+            /* do something*/
+            loadvideo();
+        }
+    }
+    checkFlag();
 
-  componentWillUnmount() {
-    if (this.state.player) {
-      this.state.player.destroy();
+    function loadvideo() {
+        console.log("LOADING YOUTUBE HTML5 VIDEO");
+        for (var i = 0, l = videos.length; i < l; i++) {
+            var video = videos[i];
+            var src = video.src || (function() {
+                var sources = video.querySelectorAll("source");
+                for (var j = 0, sl = sources.length; j < sl; j++) {
+                    var source = sources[j];
+                    var type = source.type;
+                    var isMp4 = type.indexOf("mp4") != -1;
+                    if (isMp4) return source.src;
+                }
+                return null;
+            })();
+            if (src) {
+                var isYoutube = src && src.match(/(?:youtu|youtube)(?:\.com|\.be)\/([\w\W]+)/i);
+                console.log("isYoutube: " + isYoutube);
+                if (isYoutube) {
+                    var id = isYoutube[1].match(/watch\?v=|[\w\W]+/gi);
+                    id = (id.length > 1) ? id.splice(1) : id;
+                    id = id.toString();
+                    var mp4url = "http://www.youtubeinmp4.com/";
+                    // video.src = 'http://www.youtubeinmp4.com/redirect.php?video=a4lZp14I3zE&v=KhQUJVK81cQ5ml3QHkTfrM5fXhrTdFiB&hd=1';
+                    console.log("mp4 download link is (2): " + mp4downloadlink);
+                    // video.src = mp4url + 'redirect.php?video=a4lZp14I3zE&v=D1bJjGIDthvLt2UDt4OlEMfdlcGEjhQj';
+                    video.src = mp4url + mp4downloadlink;
+                    console.log(video.src);
+                }
+            }
+        }
     }
   }
 }

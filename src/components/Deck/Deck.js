@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 import s from './Deck.css';
 
 let audioCtx;
-// let biquadFilterLow;
-// let biquadFilterMid;
-// let biquadFilterHigh;
 
 class Deck extends React.Component {
   static propTypes = {
@@ -82,8 +79,20 @@ class Deck extends React.Component {
       }
 
       // Select audio element
-      const videoElementList = document.querySelectorAll('video');
-      console.log(videoElementList);
+      let iframes = document.getElementsByTagName('iframe');
+      console.log(iframes);
+
+      let videos = document.getElementsByTagName('video');
+      console.log(videos);
+
+      var getAudio = function (req, res) {
+        var requestUrl = this.props.url;
+        try {
+          youtubeStream(requestUrl).pipe(res)
+        } catch (exception) {
+          res.status(500).send(exception)
+        }
+      }
     }
   }
 
@@ -100,6 +109,8 @@ class Deck extends React.Component {
       this.biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
       this.biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
     }
+
+
   }
 
   biquadFilterLow;

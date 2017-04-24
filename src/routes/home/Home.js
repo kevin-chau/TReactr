@@ -12,6 +12,7 @@ import FxUnit from '../../components/FxUnit';
 import Mixer from '../../components/Mixer';
 import Deck from '../../components/Deck';
 import CrossFader from '../../components/CrossFader';
+import YoutubePlayer from '../../components/YoutubePlayer';
 import s from './Home.css';
 
 /* eslint-disable react/jsx-no-bind */
@@ -283,6 +284,10 @@ class Home extends React.Component {
 
           <div style={{ display: 'inline-block' }}>
             <CrossFader />
+          </div>
+
+          <div>
+            <YoutubePlayer />
           </div>
 
         </div>
