@@ -17,7 +17,7 @@ class YoutubePlayer extends React.Component {
   render() {
     return(
       <video controls="true">
-        <source src="https://www.youtube.com/watch?v=WbJNkH-pDd8" type="video/mp4" />
+        <source src="https://www.youtube.com/watch?v=FM7MFYoylVs" type="video/mp4" />
       </video>
     )
   }
@@ -44,7 +44,22 @@ class YoutubePlayer extends React.Component {
     defer(function() {
         function doCORSRequest(options, printResult) {
             var x = new XMLHttpRequest();
-            x.open('GET', cors_api_url + 'youtubeinmp4.com/redirect.php?video=a4lZp14I3zE');
+            var src = videos[0].querySelector('source').src;
+            console.log("video url is: " + src);
+
+            var id;
+
+            if (src) {
+                var isYoutube = src && src.match(/(?:youtu|youtube)(?:\.com|\.be)\/([\w\W]+)/i);
+                console.log("isYoutube: " + isYoutube);
+                if (isYoutube) {
+                    id = isYoutube[1].match(/watch\?v=|[\w\W]+/gi);
+                    id = (id.length > 1) ? id.splice(1) : id;
+                    id = id.toString();
+                }
+            }
+
+            x.open('GET', cors_api_url + 'youtubeinmp4.com/redirect.php?video=' + id);
             x.onload = x.onerror = function() {
                 var content = $(x.responseText).find('.downloadButtons');
                 console.log("mp4 download link (1) is : " + $(content[0]).attr('href'));
@@ -74,31 +89,8 @@ class YoutubePlayer extends React.Component {
         console.log("LOADING YOUTUBE HTML5 VIDEO");
         for (var i = 0, l = videos.length; i < l; i++) {
             var video = videos[i];
-            var src = video.src || (function() {
-                var sources = video.querySelectorAll("source");
-                for (var j = 0, sl = sources.length; j < sl; j++) {
-                    var source = sources[j];
-                    var type = source.type;
-                    var isMp4 = type.indexOf("mp4") != -1;
-                    if (isMp4) return source.src;
-                }
-                return null;
-            })();
-            if (src) {
-                var isYoutube = src && src.match(/(?:youtu|youtube)(?:\.com|\.be)\/([\w\W]+)/i);
-                console.log("isYoutube: " + isYoutube);
-                if (isYoutube) {
-                    var id = isYoutube[1].match(/watch\?v=|[\w\W]+/gi);
-                    id = (id.length > 1) ? id.splice(1) : id;
-                    id = id.toString();
-                    var mp4url = "http://www.youtubeinmp4.com/";
-                    // video.src = 'http://www.youtubeinmp4.com/redirect.php?video=a4lZp14I3zE&v=KhQUJVK81cQ5ml3QHkTfrM5fXhrTdFiB&hd=1';
-                    console.log("mp4 download link is (2): " + mp4downloadlink);
-                    // video.src = mp4url + 'redirect.php?video=a4lZp14I3zE&v=D1bJjGIDthvLt2UDt4OlEMfdlcGEjhQj';
-                    video.src = mp4url + mp4downloadlink;
-                    console.log(video.src);
-                }
-            }
+            var mp4url = "http://www.youtubeinmp4.com/";
+            video.src = mp4url + mp4downloadlink;
         }
     }
   }
