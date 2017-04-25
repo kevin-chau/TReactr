@@ -1,0 +1,6 @@
+{
+  "name": "SoundcloudDeck",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Deck.js"
+}

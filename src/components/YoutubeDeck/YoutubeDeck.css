@@ -1,0 +1,11 @@
+@import '../../components/variables.css';
+
+p {
+  color: #bdbdbd;
+}
+
+.container {
+  width: 380px;
+  height: 214px;
+  background-color: black;
+}
