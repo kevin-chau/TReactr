@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import PropTypes from 'prop-types';
 import Deck from '../Deck';
+import YoutubePlayer from '../YoutubePlayer';
 import s from './YoutubeDeck.css';
 
 let audioCtx;
@@ -80,20 +81,20 @@ class YoutubeDeck extends Deck {
       }
 
       // Select audio element
-      let iframes = document.getElementsByTagName('iframe');
+      const iframes = document.getElementsByTagName('iframe');
       console.log(iframes);
 
-      let videos = document.getElementsByTagName('video');
+      const videos = document.getElementsByTagName('video');
       console.log(videos);
 
-      var getAudio = function (req, res) {
-        var requestUrl = this.props.url;
+      const getAudio = function (req, res) {
+        const requestUrl = this.props.url;
         try {
-          youtubeStream(requestUrl).pipe(res)
+          youtubeStream(requestUrl).pipe(res);
         } catch (exception) {
-          res.status(500).send(exception)
+          res.status(500).send(exception);
         }
-      }
+      };
     }
   }
 
@@ -110,8 +111,6 @@ class YoutubeDeck extends Deck {
       this.biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
       this.biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
     }
-
-
   }
 
   biquadFilterLow;
@@ -120,21 +119,13 @@ class YoutubeDeck extends Deck {
 
   render() {
     return (
-      <div className={s.container}>
-        <ReactPlayer
+      <div className={s.container} style={{ height: '213px', width: '380px' }}>
+        <YoutubePlayer
           url={this.props.url}
-          playing={this.props.playing}
-          width="380px"
-          height="213px"
-          soundcloudConfig={{
-            showArtwork: true,
-            clientId: process.env.SOUNDCLOUD_CLIENT_ID,
-          }}
-          volume={this.props.volume / 127}
         />
       </div>
     );
   }
 }
 
-export default withStyles(s)(Deck);
+export default withStyles(s)(YoutubeDeck);

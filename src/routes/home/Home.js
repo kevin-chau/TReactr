@@ -12,7 +12,7 @@ import FxUnit from '../../components/FxUnit';
 import Mixer from '../../components/Mixer';
 import Deck from '../../components/Deck';
 import CrossFader from '../../components/CrossFader';
-import YoutubePlayer from '../../components/YoutubePlayer';
+import YoutubeDeck from '../../components/YoutubeDeck';
 import s from './Home.css';
 
 /* eslint-disable react/jsx-no-bind */
@@ -160,10 +160,10 @@ class Home extends React.Component {
 
           <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
-              <Deck
+              <YoutubeDeck
                 playing
                 name="DeckA"
-                url="https://www.youtube.com/watch?v=h--P8HzYZ74?html5=1"
+                url="https://www.youtube.com/watch?v=FM7MFYoylVs"
                 volume={this.state.VolumeA}
                 low={this.state.LowA}
                 mid={this.state.MidA}
@@ -284,10 +284,6 @@ class Home extends React.Component {
 
           <div style={{ display: 'inline-block' }}>
             <CrossFader />
-          </div>
-
-          <div>
-            <YoutubePlayer />
           </div>
 
         </div>

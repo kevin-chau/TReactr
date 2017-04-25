@@ -16,8 +16,8 @@ import s from './YoutubePlayer.css';
 class YoutubePlayer extends React.Component {
   render() {
     return (
-      <video controls="true">
-        <source src="https://www.youtube.com/watch?v=FM7MFYoylVs" type="video/mp4" />
+      <video width="380" height="213" controls="true" autoPlay>
+        <source src={this.props.url} type="video/mp4" />
       </video>
     );
   }
@@ -36,7 +36,7 @@ class YoutubePlayer extends React.Component {
 
     let mp4downloadlink;
 
-    const cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+    const cors_api_url = 'https://kevins-cors-anywhere.herokuapp.com/';
 
     let done = 0;
 

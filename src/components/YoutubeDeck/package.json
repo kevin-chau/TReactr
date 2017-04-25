@@ -2,5 +2,5 @@
   "name": "YoutubeDeck",
   "version": "0.0.0",
   "private": true,
-  "main": "./Deck.js"
+  "main": "./YoutubeDeck.js"
 }
