@@ -30,25 +30,27 @@ class YoutubeDeck extends Deck {
   };
 
   componentDidMount() {
-    if (this.props.url.includes('soundcloud')) {
+    // This if statement isn't necessary since we know the source is Youtube
+    if (this.props.url.includes('youtube')) {
       // Create Audio Context
       if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        audioCtx = new (window.AudioContext)();
       }
 
       // Select audio element
-      const audioElementList = document.querySelectorAll('audio');
-      let myAudio;
-      if (this.props.name === 'DeckC') {
-        myAudio = audioElementList[0];
-      } else if (this.props.name === 'DeckD') {
-        myAudio = audioElementList[1];
+      const videoElementList = document.querySelectorAll('video');
+      let myVideo;
+      if (this.props.name === 'DeckA') {
+        myVideo = videoElementList[0];
+      } else if (this.props.name === 'DeckB') {
+        myVideo = videoElementList[1];
       }
       // set to anonymous for CORS
-      myAudio.crossOrigin = 'anonymous';
-
+      // myVideo.crossOrigin = 'anonymous';
+      // console.log(myVideo);
+      //
       // Create a MediaElementAudioSourceNode
-      const source = audioCtx.createMediaElementSource(myAudio);
+      // const source = audioCtx.createMediaElementSource(myVideo);
 
       // Create a gain node
       const gainNode = audioCtx.createGain();
@@ -67,34 +69,11 @@ class YoutubeDeck extends Deck {
       this.biquadFilterHigh.frequency.value = 2000;
 
       // connect the nodes together
-      source.connect(this.biquadFilterLow);
+      // source.connect(this.biquadFilterLow);
       this.biquadFilterLow.connect(this.biquadFilterMid);
       this.biquadFilterMid.connect(this.biquadFilterHigh);
       this.biquadFilterHigh.connect(gainNode);
       gainNode.connect(audioCtx.destination);
-    }
-
-    if (this.props.url.includes('youtube')) {
-      // Create Audio Context
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-
-      // Select audio element
-      const iframes = document.getElementsByTagName('iframe');
-      console.log(iframes);
-
-      const videos = document.getElementsByTagName('video');
-      console.log(videos);
-
-      const getAudio = function (req, res) {
-        const requestUrl = this.props.url;
-        try {
-          youtubeStream(requestUrl).pipe(res);
-        } catch (exception) {
-          res.status(500).send(exception);
-        }
-      };
     }
   }
 
@@ -106,7 +85,7 @@ class YoutubeDeck extends Deck {
   }
 
   componentDidUpdate() {
-    if (this.props.url.includes('soundcloud')) {
+    if (this.props.url.includes('youtube')) {
       this.biquadFilterLow.gain.value = ((this.props.low * 20) / 127) - 10;
       this.biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
       this.biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
