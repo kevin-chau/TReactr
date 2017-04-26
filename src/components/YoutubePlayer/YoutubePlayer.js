@@ -32,8 +32,6 @@ class YoutubePlayer extends React.Component {
 
     const videos = document.querySelectorAll('video');
 
-    console.log('GOT TO HERE BITCH!');
-
     let mp4downloadlink;
 
     const cors_api_url = 'https://kevins-cors-anywhere.herokuapp.com/';
@@ -88,7 +86,7 @@ class YoutubePlayer extends React.Component {
       console.log('LOADING YOUTUBE HTML5 VIDEO');
       for (let i = 0, l = videos.length; i < l; i++) {
         const video = videos[i];
-        const mp4url = 'http://www.youtubeinmp4.com/';
+        const mp4url = 'https://www.youtubeinmp4.com/';
         video.src = mp4url + mp4downloadlink;
       }
     }

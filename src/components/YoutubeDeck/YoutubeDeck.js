@@ -46,11 +46,11 @@ class YoutubeDeck extends Deck {
         myVideo = videoElementList[1];
       }
       // set to anonymous for CORS
-      // myVideo.crossOrigin = 'anonymous';
+      myVideo.crossOrigin = 'anonymous';
       // console.log(myVideo);
       //
       // Create a MediaElementAudioSourceNode
-      // const source = audioCtx.createMediaElementSource(myVideo);
+      const videosource = audioCtx.createMediaElementSource(myVideo);
 
       // Create a gain node
       const gainNode = audioCtx.createGain();
@@ -69,7 +69,7 @@ class YoutubeDeck extends Deck {
       this.biquadFilterHigh.frequency.value = 2000;
 
       // connect the nodes together
-      // source.connect(this.biquadFilterLow);
+      videosource.connect(this.biquadFilterLow);
       this.biquadFilterLow.connect(this.biquadFilterMid);
       this.biquadFilterMid.connect(this.biquadFilterHigh);
       this.biquadFilterHigh.connect(gainNode);

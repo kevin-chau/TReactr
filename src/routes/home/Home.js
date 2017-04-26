@@ -163,7 +163,7 @@ class Home extends React.Component {
               <YoutubeDeck
                 playing
                 name="DeckA"
-                url="https://www.youtube.com/watch?v=FM7MFYoylVs"
+                url="https://www.youtube.com/watch?v=vbylJ3Ai7-M"
                 volume={this.state.VolumeA}
                 low={this.state.LowA}
                 mid={this.state.MidA}
