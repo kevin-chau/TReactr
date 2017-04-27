@@ -7,6 +7,12 @@ import s from './SoundcloudDeck.css';
 
 let audioCtx;
 
+function scale(OldValue, OldMin, OldMax, NewMin ,NewMax)
+{
+    var NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin;
+    return NewValue;
+}
+
 class SoundcloudDeck extends Deck {
   static propTypes = {
     url: PropTypes.string,
@@ -16,6 +22,8 @@ class SoundcloudDeck extends Deck {
     low: PropTypes.number,
     mid: PropTypes.number,
     high: PropTypes.number,
+    lowpass: PropTypes.number,
+    highpass: PropTypes.number,
   };
 
   static defaultProps = {
@@ -26,6 +34,8 @@ class SoundcloudDeck extends Deck {
     low: 63,
     mid: 63,
     high: 63,
+    lowpass: 63,
+    highpass: 63,
   };
 
   componentDidMount() {
@@ -49,8 +59,8 @@ class SoundcloudDeck extends Deck {
     const source = audioCtx.createMediaElementSource(myAudio);
 
     // Create a gain node
-    const gainNode = audioCtx.createGain();
-    gainNode.gain.value = 1;
+    this.gainNode = audioCtx.createGain();
+    this.gainNode.gain.value = 1;
 
     // Create a Biquad Filters
     this.biquadFilterLow = audioCtx.createBiquadFilter();
@@ -63,15 +73,26 @@ class SoundcloudDeck extends Deck {
     this.biquadFilterHigh = audioCtx.createBiquadFilter();
     this.biquadFilterHigh.type = 'highshelf';
     this.biquadFilterHigh.frequency.value = 2000;
+    this.biquadFilterLowpass = audioCtx.createBiquadFilter();
+    this.biquadFilterLowpass.type = 'lowpass';
+    this.biquadFilterLowpass.Q.value = .71;
+    this.biquadFilterLowpass.frequency.value = 22000;
+    this.biquadFilterHighpass = audioCtx.createBiquadFilter();
+    this.biquadFilterHighpass.type = 'highpass';
+    this.biquadFilterHighpass.Q.value = .71;
+    this.biquadFilterHighpass.frequency.value = 0;
+
 
     // connect the nodes together
     source.connect(this.biquadFilterLow);
     this.biquadFilterLow.connect(this.biquadFilterMid);
     this.biquadFilterMid.connect(this.biquadFilterHigh);
-    this.biquadFilterHigh.connect(gainNode);
-    gainNode.connect(audioCtx.destination);
+    this.biquadFilterHigh.connect(this.biquadFilterLowpass);
+    this.biquadFilterLowpass.connect(this.biquadFilterHighpass);
+    this.biquadFilterHighpass.connect(this.gainNode);
+    this.gainNode.connect(audioCtx.destination);
   }
-  
+
   shouldComponentUpdate(nextProps) {
     if (JSON.stringify(this.props) === JSON.stringify(nextProps)) {
       return false;
@@ -80,16 +101,19 @@ class SoundcloudDeck extends Deck {
   }
 
   componentDidUpdate() {
-    if (this.props.url.includes('soundcloud')) {
-      this.biquadFilterLow.gain.value = ((this.props.low * 20) / 127) - 10;
-      this.biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
-      this.biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
-    }
+    this.biquadFilterLow.gain.value = ((this.props.low * 20) / 127) - 10;
+    this.biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
+    this.biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
+    this.biquadFilterHighpass.frequency.value = this.props.highpass <= 63 ? 0 : scale(this.props.highpass, 63, 127, 0, 22000);
+    this.biquadFilterLowpass.frequency.value = this.props.lowpass >= 63 ? 22000 : scale(this.props.lowpass, 0, 63, 0, 22000);
   }
 
   biquadFilterLow;
   biquadFilterMid;
   biquadFilterHigh;
+  biquadFilterLowpass;
+  biquadFilterHighpass;
+  gainNode;
 
   render() {
     return (

@@ -15,6 +15,8 @@ class Mixer extends React.Component {
     changeLow: PropTypes.func,
     changeMid: PropTypes.func,
     changeHigh: PropTypes.func,
+    changeLowpass: PropTypes.func,
+    changeHighpass: PropTypes.func,
   };
 
   static defaultProps = {
@@ -25,6 +27,8 @@ class Mixer extends React.Component {
     changeLow: null,
     changeMid: null,
     changeHigh: null,
+    changeLowpass: null,
+    changeHighpass: null,
   };
 
   constructor(props) {
@@ -159,6 +163,8 @@ class Mixer extends React.Component {
               value={this.state.filter}
               onChange={(newValue) => {
                 this.setState({ filter: newValue });
+                this.props.changeLowpass(newValue);
+                this.props.changeHighpass(newValue);
               }}
             />
           </div>

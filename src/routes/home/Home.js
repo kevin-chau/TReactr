@@ -37,104 +37,46 @@ class Home extends React.Component {
       HighC: 63,
       HighB: 63,
       HighA: 63,
+      LowpassA: 63,
+      LowpassB: 63,
+      LowpassC: 63,
+      LowpassD: 63,
+      HighpassA: 63,
+      HighpassB: 63,
+      HighpassC: 63,
+      HighpassD: 63,
     };
   }
 
-  changeVolumeA(newVolume) {
-    this.setState({
-      VolumeA: newVolume,
-    });
-  }
+  changeVolumeA = (newVolume) => { this.setState({ VolumeA: newVolume }); };
+  changeVolumeB = (newVolume) => { this.setState({ VolumeB: newVolume }); };
+  changeVolumeC = (newVolume) => { this.setState({ VolumeC: newVolume }); };
+  changeVolumeD = (newVolume) => { this.setState({ VolumeD: newVolume }); };
 
-  changeVolumeB(newVolume) {
-    this.setState({
-      VolumeB: newVolume,
-    });
-  }
+  changeLowA = (newLow) => { this.setState({ LowA: newLow }); };
+  changeLowB = (newLow) => { this.setState({ LowB: newLow }); };
+  changeLowC = (newLow) => { this.setState({ LowC: newLow }); };
+  changeLowD = (newLow) => { this.setState({ LowD: newLow }); };
 
-  changeVolumeC(newVolume) {
-    this.setState({
-      VolumeC: newVolume,
-    });
-  }
+  changeMidA = (newMid) => { this.setState({ MidA: newMid }); };
+  changeMidB = (newMid) => { this.setState({ MidB: newMid }); };
+  changeMidC = (newMid) => { this.setState({ MidC: newMid }); };
+  changeMidD = (newMid) => { this.setState({ MidD: newMid }); };
 
-  changeVolumeD(newVolume) {
-    this.setState({
-      VolumeD: newVolume,
-    });
-  }
+  changeHighA = (newHigh) => { this.setState({ HighA: newHigh }); };
+  changeHighB = (newHigh) => { this.setState({ HighB: newHigh }); };
+  changeHighC = (newHigh) => { this.setState({ HighC: newHigh }); };
+  changeHighD = (newHigh) => { this.setState({ HighD: newHigh }); };
 
-  changeLowD(newLow) {
-    this.setState({
-      LowD: newLow,
-    });
-  }
+  changeLowpassA = (newLowpass) => { this.setState({ LowpassA: newLowpass }); };
+  changeLowpassB = (newLowpass) => { this.setState({ LowpassB: newLowpass }); };
+  changeLowpassC = (newLowpass) => { this.setState({ LowpassC: newLowpass }); };
+  changeLowpassD = (newLowpass) => { this.setState({ LowpassD: newLowpass }); };
 
-  changeLowC(newLow) {
-    this.setState({
-      LowC: newLow,
-    });
-  }
-
-  changeLowB(newLow) {
-    this.setState({
-      LowB: newLow,
-    });
-  }
-
-  changeLowA(newLow) {
-    this.setState({
-      LowA: newLow,
-    });
-  }
-
-  changeMidD(newMid) {
-    this.setState({
-      MidD: newMid,
-    });
-  }
-
-  changeMidC(newMid) {
-    this.setState({
-      MidC: newMid,
-    });
-  }
-
-  changeMidB(newMid) {
-    this.setState({
-      MidB: newMid,
-    });
-  }
-
-  changeMidA(newMid) {
-    this.setState({
-      MidA: newMid,
-    });
-  }
-
-  changeHighD(newHigh) {
-    this.setState({
-      HighD: newHigh,
-    });
-  }
-
-  changeHighC(newHigh) {
-    this.setState({
-      HighC: newHigh,
-    });
-  }
-
-  changeHighB(newHigh) {
-    this.setState({
-      HighB: newHigh,
-    });
-  }
-
-  changeHighA(newHigh) {
-    this.setState({
-      HighA: newHigh,
-    });
-  }
+  changeHighpassA = (newHighpass) => { this.setState({ HighpassA: newHighpass }); };
+  changeHighpassB = (newHighpass) => { this.setState({ HighpassB: newHighpass }); };
+  changeHighpassC = (newHighpass) => { this.setState({ HighpassC: newHighpass }); };
+  changeHighpassD = (newHighpass) => { this.setState({ HighpassD: newHighpass }); };
 
   render() {
     return (
@@ -185,6 +127,10 @@ class Home extends React.Component {
                       changeLow={this.changeLowA.bind(this)}
                       high={this.state.HighA}
                       changeHigh={this.changeHighA.bind(this)}
+                      lowpass={this.state.LowpassA}
+                      changeLowpass={this.changeLowpassA.bind(this)}
+                      highpass={this.state.HighpassA}
+                      changeHighpass={this.changeHighpassA.bind(this)}
                     />
                   </div>
 
@@ -201,6 +147,10 @@ class Home extends React.Component {
                       changeMid={this.changeMidB.bind(this)}
                       high={this.state.HighB}
                       changeHigh={this.changeHighB.bind(this)}
+                      lowpass={this.state.LowpassB}
+                      changeLowpass={this.changeLowpassB.bind(this)}
+                      highpass={this.state.HighpassB}
+                      changeHighpass={this.changeHighpassB.bind(this)}
                     />
                   </div>
                 </div> {/* End AB Mixer */}
@@ -233,6 +183,8 @@ class Home extends React.Component {
                 low={this.state.LowC}
                 mid={this.state.MidC}
                 high={this.state.HighC}
+                lowpass={this.state.LowpassC}
+                highpass={this.state.HighpassC}
               />
             </div>
             <div name="centercolumn">
@@ -249,6 +201,10 @@ class Home extends React.Component {
                       changeMid={this.changeMidC.bind(this)}
                       high={this.state.HighC}
                       changeHigh={this.changeHighC.bind(this)}
+                      lowpass={this.state.LowpassC}
+                      changeLowpass={this.changeLowpassC.bind(this)}
+                      highpass={this.state.HighpassC}
+                      changeHighpass={this.changeHighpassC.bind(this)}
                     />
                   </div>
 
@@ -265,13 +221,17 @@ class Home extends React.Component {
                       changeMid={this.changeMidD.bind(this)}
                       high={this.state.HighD}
                       changeHigh={this.changeHighD.bind(this)}
+                      lowpass={this.state.LowpassD}
+                      changeLowpass={this.changeLowpassD.bind(this)}
+                      highpass={this.state.HighpassD}
+                      changeHighpass={this.changeHighpassD.bind(this)}
                     />
                   </div>
                 </div> {/* End CD Mixer */}
               </div>
             </div> {/* End Center Column */}
             <div style={{ float: 'left' }}>
-              <Deck
+              <SoundcloudDeck
                 playing
                 name="DeckD"
                 url="https://soundcloud.com/skrillex/torro-torro-make-a-move-skrillex-remix"
@@ -279,6 +239,9 @@ class Home extends React.Component {
                 low={this.state.LowD}
                 mid={this.state.MidD}
                 high={this.state.HighD}
+                high={this.state.HighD}
+                lowpass={this.state.LowpassD}
+                highpass={this.state.HighpassD}
               />
             </div>
           </div>
