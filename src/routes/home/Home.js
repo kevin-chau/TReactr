@@ -239,7 +239,6 @@ class Home extends React.Component {
                 low={this.state.LowD}
                 mid={this.state.MidD}
                 high={this.state.HighD}
-                high={this.state.HighD}
                 lowpass={this.state.LowpassD}
                 highpass={this.state.HighpassD}
               />
