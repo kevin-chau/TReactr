@@ -29,74 +29,49 @@ class SoundcloudDeck extends Deck {
   };
 
   componentDidMount() {
-    if (this.props.url.includes('soundcloud')) {
-      // Create Audio Context
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-
-      // Select audio element
-      const audioElementList = document.querySelectorAll('audio');
-      let myAudio;
-      if (this.props.name === 'DeckC') {
-        myAudio = audioElementList[0];
-      } else if (this.props.name === 'DeckD') {
-        myAudio = audioElementList[1];
-      }
-      // set to anonymous for CORS
-      myAudio.crossOrigin = 'anonymous';
-
-      // Create a MediaElementAudioSourceNode
-      const source = audioCtx.createMediaElementSource(myAudio);
-
-      // Create a gain node
-      const gainNode = audioCtx.createGain();
-      gainNode.gain.value = 1;
-
-      // Create a Biquad Filters
-      this.biquadFilterLow = audioCtx.createBiquadFilter();
-      this.biquadFilterLow.type = 'lowshelf';
-      this.biquadFilterLow.frequency.value = 250;
-      this.biquadFilterMid = audioCtx.createBiquadFilter();
-      this.biquadFilterMid.type = 'peaking';
-      this.biquadFilterMid.Q.value = 1.0;
-      this.biquadFilterMid.frequency.value = 1100;
-      this.biquadFilterHigh = audioCtx.createBiquadFilter();
-      this.biquadFilterHigh.type = 'highshelf';
-      this.biquadFilterHigh.frequency.value = 2000;
-
-      // connect the nodes together
-      source.connect(this.biquadFilterLow);
-      this.biquadFilterLow.connect(this.biquadFilterMid);
-      this.biquadFilterMid.connect(this.biquadFilterHigh);
-      this.biquadFilterHigh.connect(gainNode);
-      gainNode.connect(audioCtx.destination);
+    // Create Audio Context
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     }
 
-    if (this.props.url.includes('youtube')) {
-      // Create Audio Context
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-
-      // Select audio element
-      const iframes = document.getElementsByTagName('iframe');
-      console.log(iframes);
-
-      const videos = document.getElementsByTagName('video');
-      console.log(videos);
-
-      const getAudio = function (req, res) {
-        const requestUrl = this.props.url;
-        try {
-          youtubeStream(requestUrl).pipe(res);
-        } catch (exception) {
-          res.status(500).send(exception);
-        }
-      };
+    // Select audio element
+    const audioElementList = document.querySelectorAll('audio');
+    let myAudio;
+    if (this.props.name === 'DeckC') {
+      myAudio = audioElementList[0];
+    } else if (this.props.name === 'DeckD') {
+      myAudio = audioElementList[1];
     }
+    // set to anonymous for CORS
+    myAudio.crossOrigin = 'anonymous';
+
+    // Create a MediaElementAudioSourceNode
+    const source = audioCtx.createMediaElementSource(myAudio);
+
+    // Create a gain node
+    const gainNode = audioCtx.createGain();
+    gainNode.gain.value = 1;
+
+    // Create a Biquad Filters
+    this.biquadFilterLow = audioCtx.createBiquadFilter();
+    this.biquadFilterLow.type = 'lowshelf';
+    this.biquadFilterLow.frequency.value = 250;
+    this.biquadFilterMid = audioCtx.createBiquadFilter();
+    this.biquadFilterMid.type = 'peaking';
+    this.biquadFilterMid.Q.value = 1.0;
+    this.biquadFilterMid.frequency.value = 1100;
+    this.biquadFilterHigh = audioCtx.createBiquadFilter();
+    this.biquadFilterHigh.type = 'highshelf';
+    this.biquadFilterHigh.frequency.value = 2000;
+
+    // connect the nodes together
+    source.connect(this.biquadFilterLow);
+    this.biquadFilterLow.connect(this.biquadFilterMid);
+    this.biquadFilterMid.connect(this.biquadFilterHigh);
+    this.biquadFilterHigh.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
   }
-
+  
   shouldComponentUpdate(nextProps) {
     if (JSON.stringify(this.props) === JSON.stringify(nextProps)) {
       return false;

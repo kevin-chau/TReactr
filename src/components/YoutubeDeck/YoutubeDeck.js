@@ -46,7 +46,7 @@ class YoutubeDeck extends Deck {
         myVideo = videoElementList[1];
       }
       // set to anonymous for CORS
-      myVideo.crossOrigin = 'anonymous';
+      myVideo.crossOrigin = 'use-credentials';
       // console.log(myVideo);
       //
       // Create a MediaElementAudioSourceNode
@@ -57,22 +57,22 @@ class YoutubeDeck extends Deck {
       gainNode.gain.value = 1;
 
       // Create a Biquad Filters
-      this.biquadFilterLow = audioCtx.createBiquadFilter();
-      this.biquadFilterLow.type = 'lowshelf';
-      this.biquadFilterLow.frequency.value = 250;
-      this.biquadFilterMid = audioCtx.createBiquadFilter();
-      this.biquadFilterMid.type = 'peaking';
-      this.biquadFilterMid.Q.value = 1.0;
-      this.biquadFilterMid.frequency.value = 1100;
-      this.biquadFilterHigh = audioCtx.createBiquadFilter();
-      this.biquadFilterHigh.type = 'highshelf';
-      this.biquadFilterHigh.frequency.value = 2000;
+      // this.biquadFilterLow = audioCtx.createBiquadFilter();
+      // this.biquadFilterLow.type = 'lowshelf';
+      // this.biquadFilterLow.frequency.value = 250;
+      // this.biquadFilterMid = audioCtx.createBiquadFilter();
+      // this.biquadFilterMid.type = 'peaking';
+      // this.biquadFilterMid.Q.value = 1.0;
+      // this.biquadFilterMid.frequency.value = 1100;
+      // this.biquadFilterHigh = audioCtx.createBiquadFilter();
+      // this.biquadFilterHigh.type = 'highshelf';
+      // this.biquadFilterHigh.frequency.value = 2000;
 
       // connect the nodes together
-      videosource.connect(this.biquadFilterLow);
-      this.biquadFilterLow.connect(this.biquadFilterMid);
-      this.biquadFilterMid.connect(this.biquadFilterHigh);
-      this.biquadFilterHigh.connect(gainNode);
+      videosource.connect(gainNode);
+      // this.biquadFilterLow.connect(this.biquadFilterMid);
+      // this.biquadFilterMid.connect(this.biquadFilterHigh);
+      // this.biquadFilterHigh.connect(gainNode);
       gainNode.connect(audioCtx.destination);
     }
   }

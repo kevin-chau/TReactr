@@ -17,7 +17,7 @@ class YoutubePlayer extends React.Component {
   render() {
     return (
       <video width="380" height="213" controls="true" autoPlay>
-        <source src={this.props.url} type="video/mp4" />
+        <source src={this.props.url} />
       </video>
     );
   }
@@ -86,7 +86,8 @@ class YoutubePlayer extends React.Component {
       console.log('LOADING YOUTUBE HTML5 VIDEO');
       for (let i = 0, l = videos.length; i < l; i++) {
         const video = videos[i];
-        const mp4url = 'https://www.youtubeinmp4.com/';
+        const mp4url = 'https://kevins-cors-anywhere.herokuapp.com/https://www.youtubeinmp4.com/';
+        // video.crossOrigin = "anonymous";
         video.src = mp4url + mp4downloadlink;
       }
     }

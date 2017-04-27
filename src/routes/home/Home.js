@@ -12,6 +12,7 @@ import FxUnit from '../../components/FxUnit';
 import Mixer from '../../components/Mixer';
 import Deck from '../../components/Deck';
 import CrossFader from '../../components/CrossFader';
+import SoundcloudDeck from '../../components/SoundcloudDeck';
 import YoutubeDeck from '../../components/YoutubeDeck';
 import s from './Home.css';
 
@@ -224,7 +225,7 @@ class Home extends React.Component {
 
           <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
-              <Deck
+              <SoundcloudDeck
                 playing
                 name="DeckC"
                 url="https://soundcloud.com/loudpvck/lit"
