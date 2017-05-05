@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import Wavesurfer from 'react-wavesurfer';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import PropTypes from 'prop-types';
 import Deck from '../Deck';
@@ -128,6 +129,9 @@ class SoundcloudDeck extends Deck {
             clientId: process.env.SOUNDCLOUD_CLIENT_ID,
           }}
           volume={this.props.volume / 127}
+        />
+        <Wavesurfer
+          audioFile={this.props.url}
         />
       </div>
     );

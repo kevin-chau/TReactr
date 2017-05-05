@@ -25,7 +25,7 @@ To install TReactr, use:
 This is equivalent to `yarn install` or `npm install`.
 
 ## Run:
-To start a3 dev server and launch TReactr in your browser, use:
+To start a dev server and launch TReactr in your browser, use:
 
   yarn start
 
