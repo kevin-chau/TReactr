@@ -130,9 +130,6 @@ class SoundcloudDeck extends Deck {
           }}
           volume={this.props.volume / 127}
         />
-        <Wavesurfer
-          audioFile={this.props.url}
-        />
       </div>
     );
   }

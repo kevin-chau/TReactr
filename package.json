@@ -124,6 +124,7 @@
     "stylelint": "^7.10.0",
     "stylelint-config-standard": "^16.0.0",
     "url-loader": "^0.5.8",
+    "webmidi": "^2.0.0-rc.5",
     "webpack": "^2.3.3",
     "webpack-bundle-analyzer": "^2.3.1",
     "webpack-dev-middleware": "^1.10.1",
@@ -210,6 +211,11 @@
       "stylelint",
       "git add"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.(css|less)$": "<rootDir>/config/CSSStub.js"
+    }
   },
   "scripts": {
     "lint:js": "eslint src tools",

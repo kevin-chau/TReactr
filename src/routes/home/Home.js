@@ -8,6 +8,7 @@
  */
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import WebMidi from 'webmidi';
 import FxUnit from '../../components/FxUnit';
 import Mixer from '../../components/Mixer';
 import Deck from '../../components/Deck';
@@ -77,6 +78,16 @@ class Home extends React.Component {
   changeHighpassB = (newHighpass) => { this.setState({ HighpassB: newHighpass }); };
   changeHighpassC = (newHighpass) => { this.setState({ HighpassC: newHighpass }); };
   changeHighpassD = (newHighpass) => { this.setState({ HighpassD: newHighpass }); };
+
+  componentDidMount() {
+    WebMidi.enable(function (err) {
+      if (err) {
+        console.log("WebMidi could not be enabled.", err);
+      } else {
+        console.log("WebMidi enabled!");
+      }
+    });
+  }
 
   render() {
     return (
