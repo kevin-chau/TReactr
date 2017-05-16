@@ -27,6 +27,12 @@ dotenv.config();
 // -----------------------------------------------------------------------------
 
 const config = {
+  // resolve: {
+  //   alias: {
+  //     wavesurfer: path.resolve(__dirname, './node_modules/wavesurfer.js/dist/wavesurfer.js'),
+  //   },
+  // },
+
   context: path.resolve(__dirname, '..'),
 
   output: {

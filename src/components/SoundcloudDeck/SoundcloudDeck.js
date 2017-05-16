@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-import Wavesurfer from 'react-wavesurfer';
+// import Wavesurfer from 'react-wavesurfer';
+// import WaveSurfer from 'wavesurfer';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import PropTypes from 'prop-types';
 import Deck from '../Deck';
