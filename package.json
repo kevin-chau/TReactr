@@ -52,7 +52,7 @@
     "treactr-slider": "^7.0.1",
     "treactr-toggle": "^3.0.8",
     "universal-router": "^3.0.0",
-    "wavesurfer.js": "^1.4.0",
+    "wavesurfer.js": "^2.0.0-beta01",
     "whatwg-fetch": "^2.0.3",
     "youtube-audio-stream": "^0.0.46"
   },

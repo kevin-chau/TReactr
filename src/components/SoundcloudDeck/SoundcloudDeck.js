@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 // import Wavesurfer from 'react-wavesurfer';
-// import WaveSurfer from 'wavesurfer';
+import WaveSurfer from 'wavesurfer.js';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import PropTypes from 'prop-types';
 import Deck from '../Deck';
@@ -9,10 +9,9 @@ import s from './SoundcloudDeck.css';
 
 let audioCtx;
 
-function scale(OldValue, OldMin, OldMax, NewMin ,NewMax)
-{
-    var NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin;
-    return NewValue;
+function scale(OldValue, OldMin, OldMax, NewMin, NewMax) {
+  const NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin;
+  return NewValue;
 }
 
 class SoundcloudDeck extends Deck {
@@ -77,11 +76,11 @@ class SoundcloudDeck extends Deck {
     this.biquadFilterHigh.frequency.value = 2000;
     this.biquadFilterLowpass = audioCtx.createBiquadFilter();
     this.biquadFilterLowpass.type = 'lowpass';
-    this.biquadFilterLowpass.Q.value = .71;
+    this.biquadFilterLowpass.Q.value = 0.71;
     this.biquadFilterLowpass.frequency.value = 22000;
     this.biquadFilterHighpass = audioCtx.createBiquadFilter();
     this.biquadFilterHighpass.type = 'highpass';
-    this.biquadFilterHighpass.Q.value = .71;
+    this.biquadFilterHighpass.Q.value = 0.71;
     this.biquadFilterHighpass.frequency.value = 0;
 
 
