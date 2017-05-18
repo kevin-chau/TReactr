@@ -92,6 +92,22 @@ class SoundcloudDeck extends Deck {
     this.biquadFilterLowpass.connect(this.biquadFilterHighpass);
     this.biquadFilterHighpass.connect(this.gainNode);
     this.gainNode.connect(audioCtx.destination);
+
+    // Wavesurfer
+    var wavesurfer = WaveSurfer.create({
+      container: '#waveform'
+    });
+
+    wavesurfer.load('https://api.soundcloud.com/tracks/216100519/stream?client_id=064ede04fcc297ca28418c8164e47a15');
+
+    // SC.initialize({
+    //   client_id: process.env.SOUNDCLOUD_CLIENT_ID
+    // });
+    //
+    // var track_url = 'http://soundcloud.com/forss/flickermood';
+    // SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
+    //   console.log('oEmbed response: ', oEmbed);
+    // });
   }
 
   shouldComponentUpdate(nextProps) {
@@ -130,6 +146,7 @@ class SoundcloudDeck extends Deck {
           }}
           volume={this.props.volume / 127}
         />
+        <div id="waveform"></div>
       </div>
     );
   }
