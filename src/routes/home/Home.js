@@ -93,6 +93,36 @@ class Home extends React.Component {
         input.addListener('pitchbend', 'all', function(e) {
           console.log('Pitch value: ' + e.value);
         });
+
+        // Listen to control change message on all channels
+        input.addListener('controlchange', 'all',
+          function (e) {
+            if (e.controller.number === 1){
+              console.log("CC1", e);
+            }
+            if (e.controller.number === 2){
+              console.log("CC2", e);
+            }
+            if (e.controller.number === 3){
+              console.log("CC3", e);
+            }
+            if (e.controller.number === 4){
+              console.log("CC4", e);
+            }
+            if (e.controller.number === 5){
+              console.log("CC5", e);
+            }
+            if (e.controller.number === 6){
+              console.log("CC6", e);
+            }
+            if (e.controller.number === 7){
+              console.log("CC7", e);
+            }
+            if (e.controller.number === 8){
+              console.log("CC8", e);
+            }
+          }
+        );
       }
     });
   }
