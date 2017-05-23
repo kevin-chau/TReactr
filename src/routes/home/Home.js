@@ -85,6 +85,14 @@ class Home extends React.Component {
         console.log("WebMidi could not be enabled.", err);
       } else {
         console.log("WebMidi enabled!");
+        console.log(WebMidi.inputs);
+        console.log(WebMidi.outputs);
+
+        var input = WebMidi.getInputByName('MPKmini2');
+
+        input.addListener('pitchbend', 'all', function(e) {
+          console.log('Pitch value: ' + e.value);
+        });
       }
     });
   }

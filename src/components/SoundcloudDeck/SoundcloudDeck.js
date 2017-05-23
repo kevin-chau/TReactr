@@ -94,8 +94,8 @@ class SoundcloudDeck extends Deck {
     this.gainNode.connect(audioCtx.destination);
 
     // Wavesurfer
-    var wavesurfer = WaveSurfer.create({
-      container: '#waveform'
+    const wavesurfer = WaveSurfer.create({
+      container: '#waveform',
     });
 
     wavesurfer.load('https://api.soundcloud.com/tracks/216100519/stream?client_id=064ede04fcc297ca28418c8164e47a15');
@@ -146,7 +146,7 @@ class SoundcloudDeck extends Deck {
           }}
           volume={this.props.volume / 127}
         />
-        <div id="waveform"></div>
+        <div id="waveform" />
       </div>
     );
   }
