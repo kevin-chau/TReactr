@@ -59,6 +59,14 @@ class Mixer extends React.Component {
     };
   }
 
+  shouldComponentUpdate(nextProps) {
+    if (JSON.stringify(this.props) === JSON.stringify(nextProps)) {
+      return false;
+    }
+    this.setState({high: nextProps.high})
+    return true;
+  }
+
   render() {
     return (
       <div className={s.Mixer_container} >

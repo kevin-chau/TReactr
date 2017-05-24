@@ -233,6 +233,7 @@ class Home extends React.Component {
                 low={this.state.LowC}
                 mid={this.state.MidC}
                 high={this.state.HighC}
+                changeHigh={this.changeHighC.bind(this)}
                 lowpass={this.state.LowpassC}
                 highpass={this.state.HighpassC}
               />

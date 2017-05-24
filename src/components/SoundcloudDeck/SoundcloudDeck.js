@@ -25,6 +25,12 @@ class SoundcloudDeck extends Deck {
     high: PropTypes.number,
     lowpass: PropTypes.number,
     highpass: PropTypes.number,
+    changeVolume: PropTypes.func,
+    changeLow: PropTypes.func,
+    changeMid: PropTypes.func,
+    changeHigh: PropTypes.func,
+    changeLowpass: PropTypes.func,
+    changeHighpass: PropTypes.func,
   };
 
   static defaultProps = {
@@ -37,6 +43,12 @@ class SoundcloudDeck extends Deck {
     high: 63,
     lowpass: 63,
     highpass: 63,
+    changeVolume: null,
+    changeLow: null,
+    changeMid: null,
+    changeHigh: null,
+    changeLowpass: null,
+    changeHighpass: null,
   };
 
   componentDidMount() {
