@@ -80,6 +80,7 @@ class Home extends React.Component {
   changeHighpassD = (newHighpass) => { this.setState({ HighpassD: newHighpass }); };
 
   componentDidMount() {
+    const home = this;
     WebMidi.enable(function (err) {
       if (err) {
         console.log("WebMidi could not be enabled.", err);
@@ -96,9 +97,9 @@ class Home extends React.Component {
 
         // Listen to control change message on all channels
         input.addListener('controlchange', 'all',
-          function (e) {
+          (e) => {
             if (e.controller.number === 1){
-              console.log("CC1", e);
+              home.changeHighC(e.value);
             }
             if (e.controller.number === 2){
               console.log("CC2", e);
@@ -206,7 +207,7 @@ class Home extends React.Component {
               </div>
             </div> {/* End Center Column */}
             <div style={{ float: 'left' }}>
-              <Deck
+              <YoutubeDeck
                 playing
                 name="DeckB"
                 url="https://www.youtube.com/watch?v=j6sSQq7a_Po?html5=1"
@@ -227,7 +228,7 @@ class Home extends React.Component {
               <SoundcloudDeck
                 playing
                 name="DeckC"
-                url="https://soundcloud.com/loudpvck/lit"
+                url="https://soundcloud.com/wearewavedash/honey-jar"
                 volume={this.state.VolumeC}
                 low={this.state.LowC}
                 mid={this.state.MidC}
