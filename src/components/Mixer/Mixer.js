@@ -11,6 +11,9 @@ class Mixer extends React.Component {
     side: PropTypes.string,
     otherside: PropTypes.string,
     volume: PropTypes.number,
+    high: PropTypes.number,
+    mid: PropTypes.number,
+    low: PropTypes.number,
     changeVolume: PropTypes.func,
     changeLow: PropTypes.func,
     changeMid: PropTypes.func,
@@ -23,6 +26,9 @@ class Mixer extends React.Component {
     side: 'left',
     otherside: 'right',
     volume: 0,
+    high: null,
+    mid: null,
+    low: null,
     changeVolume: null,
     changeLow: null,
     changeMid: null,
@@ -31,42 +37,6 @@ class Mixer extends React.Component {
     changeHighpass: null,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      // Knobs
-      high: 63,
-      mid: 63,
-      low: 63,
-      filter: 63,
-      gain: 63,
-      key: 63,
-      pan: 63,
-
-      // Buttons
-      high_kill: false,
-      low_kill: false,
-      mid_kill: false,
-      filter_kill: false,
-      gain_kill: false,
-      key_kill: false,
-      fx1_on: false,
-      fx2_on: false,
-      cue_on: false,
-
-      // Volume
-      volume: this.props.volume,
-    };
-  }
-
-  shouldComponentUpdate(nextProps) {
-    if (JSON.stringify(this.props) === JSON.stringify(nextProps)) {
-      return false;
-    }
-    this.setState({high: nextProps.high})
-    return true;
-  }
-
   render() {
     return (
       <div className={s.Mixer_container} >
@@ -74,9 +44,8 @@ class Mixer extends React.Component {
         <div className={s.Mixer_Box} style={{ float: this.props.otherside }}>
           <div className={s.knob}>
             <BiDirectionalKnob
-              value={this.state.high}
+              value={this.props.high}
               onChange={(newValue) => {
-                this.setState({ high: newValue });
                 this.props.changeHigh(newValue);
               }}
             />
@@ -84,9 +53,8 @@ class Mixer extends React.Component {
           <div className={s.knob_label}>
             <div style={{ float: 'right' }}>
               <Kill
-                defaultChecked={this.state.high_kill}
+                defaultChecked={this.props.high_kill}
                 onChange={(newValue) => {
-                  this.setState({ high_kill: newValue.target.checked });
                 }}
               />
             </div>
@@ -94,9 +62,8 @@ class Mixer extends React.Component {
           </div>
           <div className={s.knob}>
             <BiDirectionalKnob
-              value={this.state.mid}
+              value={this.props.mid}
               onChange={(newValue) => {
-                this.setState({ mid: newValue });
                 this.props.changeMid(newValue);
               }}
             />
@@ -104,9 +71,8 @@ class Mixer extends React.Component {
           <div className={s.knob_label}>
             <div style={{ float: 'right' }}>
               <Kill
-                defaultChecked={this.state.mid_kill}
+                defaultChecked={this.props.mid_kill}
                 onChange={(newValue) => {
-                  this.setState({ mid_kill: newValue.target.checked });
                 }}
               />
             </div>
@@ -114,9 +80,8 @@ class Mixer extends React.Component {
           </div>
           <div className={s.knob}>
             <BiDirectionalKnob
-              value={this.state.low}
+              value={this.props.low}
               onChange={(newValue) => {
-                this.setState({ low: newValue });
                 this.props.changeLow(newValue);
               }}
             />
@@ -124,9 +89,8 @@ class Mixer extends React.Component {
           <div className={s.knob_label}>
             <div style={{ float: 'right' }}>
               <Kill
-                defaultChecked={this.state.low_kill}
+                defaultChecked={this.props.low_kill}
                 onChange={(newValue) => {
-                  this.setState({ low_kill: newValue.target.checked });
                 }}
               />
             </div>
@@ -135,9 +99,8 @@ class Mixer extends React.Component {
           <div className={s.slider}>
             <Slider
               vertical
-              value={this.state.volume}
+              value={this.props.volume}
               onChange={(newValue) => {
-                this.setState({ volume: newValue });
                 this.props.changeVolume(newValue);
               }}
               max={127}
@@ -149,18 +112,16 @@ class Mixer extends React.Component {
         <div className={s.Mixer_Box} style={{ float: this.props.side, marginBottom: '2px' }}>
           <div className={s.knob}>
             <BiDirectionalKnob
-              value={this.state.gain}
+              value={this.props.gain}
               onChange={(newValue) => {
-                this.setState({ gain: newValue });
               }}
             />
           </div>
           <div className={s.knob_label}>
             <div style={{ float: 'right' }}>
               <Kill
-                defaultChecked={this.state.gain_kill}
+                defaultChecked={this.props.gain_kill}
                 onChange={(newValue) => {
-                  this.setState({ gain_kill: newValue.target.checked });
                 }}
               />
             </div>
@@ -168,9 +129,8 @@ class Mixer extends React.Component {
           </div>
           <div className={s.knob}>
             <BiDirectionalKnob
-              value={this.state.filter}
+              value={this.props.filter}
               onChange={(newValue) => {
-                this.setState({ filter: newValue });
                 this.props.changeLowpass(newValue);
                 this.props.changeHighpass(newValue);
               }}
@@ -179,9 +139,8 @@ class Mixer extends React.Component {
           <div className={s.knob_label}>
             <div style={{ float: 'right' }}>
               <Kill
-                defaultChecked={this.state.filter_kill}
+                defaultChecked={this.props.filter_kill}
                 onChange={(newValue) => {
-                  this.setState({ filter_kill: newValue.target.checked });
                 }}
               />
             </div>
@@ -194,17 +153,15 @@ class Mixer extends React.Component {
           <div style={{ marginTop: '5px', marginBottom: '2px' }}>
             <div style={{ margin: '2px 1px 0px 4px', float: 'left' }}>
               <FxToggle1
-                defaultChecked={this.state.fx1_on}
+                defaultChecked={this.props.fx1_on}
                 onChange={(newValue) => {
-                  this.setState({ fx1_on: newValue.target.checked });
                 }}
               />
             </div>
             <div style={{ margin: '2px', marginBottom: '0px', float: 'left' }}>
               <FxToggle2
-                defaultChecked={this.state.fx2_on}
+                defaultChecked={this.props.fx2_on}
                 onChange={(newValue) => {
-                  this.setState({ fx2_on: newValue.target.checked });
                 }}
               />
             </div>
@@ -216,18 +173,16 @@ class Mixer extends React.Component {
         <div className={s.Mixer_Box} style={{ float: this.props.side, marginTop: '2px' }}>
           <div className={s.knob}>
             <BiDirectionalKnob
-              value={this.state.key}
+              value={this.props.key}
               onChange={(newValue) => {
-                this.setState({ key: newValue });
               }}
             />
           </div>
           <div className={s.knob_label}>
             <div style={{ float: 'right' }}>
               <Kill
-                defaultChecked={this.state.key_kill}
+                defaultChecked={this.props.key_kill}
                 onChange={(newValue) => {
-                  this.setState({ key_kill: newValue.target.checked });
                 }}
               />
             </div>
@@ -235,17 +190,15 @@ class Mixer extends React.Component {
           </div>
           <div style={{ margin: '17px 5px 20px 5px' }}>
             <ToggleMonitorCue
-              defaultChecked={this.state.cue_on}
+              defaultChecked={this.props.cue_on}
               onChange={(newValue) => {
-                this.setState({ cue_on: newValue.target.checked });
               }}
             />
           </div>
           <div className={s.knob} style={{ marginLeft: '13px' }}>
             <BiDirectionalKnob
-              value={this.state.pan}
+              value={this.props.pan}
               onChange={(newValue) => {
-                this.setState({ pan: newValue });
               }}
               width={29}
               height={29}

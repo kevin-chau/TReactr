@@ -207,7 +207,7 @@ class Home extends React.Component {
               </div>
             </div> {/* End Center Column */}
             <div style={{ float: 'left' }}>
-              <YoutubeDeck
+              <Deck
                 playing
                 name="DeckB"
                 url="https://www.youtube.com/watch?v=j6sSQq7a_Po?html5=1"
@@ -233,7 +233,6 @@ class Home extends React.Component {
                 low={this.state.LowC}
                 mid={this.state.MidC}
                 high={this.state.HighC}
-                changeHigh={this.changeHighC.bind(this)}
                 lowpass={this.state.LowpassC}
                 highpass={this.state.HighpassC}
               />
