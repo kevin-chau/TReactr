@@ -5,7 +5,7 @@ import WaveSurfer from 'wavesurfer.js';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import PropTypes from 'prop-types';
 import Deck from '../Deck';
-import s from './SoundcloudDeck.css';
+import s from './SoundcloudPlayer.css';
 
 let audioCtx;
 
@@ -14,7 +14,7 @@ function scale(OldValue, OldMin, OldMax, NewMin, NewMax) {
   return NewValue;
 }
 
-class SoundcloudDeck extends Deck {
+class SoundcloudPlayer extends Deck {
   static propTypes = {
     url: PropTypes.string,
     playing: PropTypes.bool,
@@ -152,4 +152,4 @@ class SoundcloudDeck extends Deck {
   }
 }
 
-export default withStyles(s)(SoundcloudDeck);
+export default withStyles(s)(SoundcloudPlayer);
