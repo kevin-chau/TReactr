@@ -153,14 +153,16 @@ class Home extends React.Component {
 
           <div style={{ margin: '0 auto', width: '100%', overflow: 'hidden' }}>
             <div style={{ float: 'left' }}>
-              <YoutubeDeck
+              <SoundcloudPlayer
                 playing
                 name="DeckA"
-                url="https://www.youtube.com/watch?v=vbylJ3Ai7-M"
+                url="https://soundcloud.com/loudpvck/pace"
                 volume={this.state.VolumeA}
                 low={this.state.LowA}
                 mid={this.state.MidA}
                 high={this.state.HighA}
+                lowpass={this.state.LowpassA}
+                highpass={this.state.HighpassA}
               />
             </div>
             <div name="centercolumn">
@@ -207,14 +209,16 @@ class Home extends React.Component {
               </div>
             </div> {/* End Center Column */}
             <div style={{ float: 'left' }}>
-              <Deck
+              <SoundcloudPlayer
                 playing
                 name="DeckB"
-                url="https://www.youtube.com/watch?v=j6sSQq7a_Po?html5=1"
+                url="https://soundcloud.com/bitbirdofficial/droeloe-x-san-holo-lines-of-the-broken"
                 volume={this.state.VolumeB}
                 low={this.state.LowB}
                 mid={this.state.MidB}
                 high={this.state.HighB}
+                lowpass={this.state.LowpassB}
+                highpass={this.state.HighpassB}
               />
             </div>
           </div>
@@ -228,7 +232,7 @@ class Home extends React.Component {
               <SoundcloudPlayer
                 playing
                 name="DeckC"
-                url="https://soundcloud.com/wearewavedash/honey-jar"
+                url="https://soundcloud.com/bitbirdofficial/thefuture"
                 volume={this.state.VolumeC}
                 low={this.state.LowC}
                 mid={this.state.MidC}

@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import PropTypes from 'prop-types';
 import Deck from '../Deck';
-import YoutubePlayer from '../YoutubePlayer';
+import YoutubeMedia from '../YoutubeMedia';
 import s from './YoutubeDeck.css';
 
 let audioCtx;
@@ -99,7 +99,7 @@ class YoutubeDeck extends Deck {
   render() {
     return (
       <div className={s.container} style={{ height: '213px', width: '380px' }}>
-        <YoutubePlayer
+        <YoutubeMedia
           url={this.props.url}
         />
       </div>

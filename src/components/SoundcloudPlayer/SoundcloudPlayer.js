@@ -48,10 +48,14 @@ class SoundcloudPlayer extends Deck {
     // Select audio element
     const audioElementList = document.querySelectorAll('audio');
     let myAudio;
-    if (this.props.name === 'DeckC') {
+    if (this.props.name === 'DeckA') {
       myAudio = audioElementList[0];
-    } else if (this.props.name === 'DeckD') {
+    } else if (this.props.name === 'DeckB') {
       myAudio = audioElementList[1];
+    } else if (this.props.name === 'DeckC') {
+      myAudio = audioElementList[2];
+    } else if (this.props.name === 'DeckD') {
+      myAudio = audioElementList[3];
     }
     // set to anonymous for CORS
     myAudio.crossOrigin = 'anonymous';

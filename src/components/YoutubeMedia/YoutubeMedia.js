@@ -11,9 +11,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './YoutubePlayer.css';
+import s from './YoutubeMedia.css';
 
-class YoutubePlayer extends React.Component {
+class YoutubeMedia extends React.Component {
   render() {
     return (
       <video width="380" height="213" controls="true" autoPlay>
@@ -94,4 +94,4 @@ class YoutubePlayer extends React.Component {
   }
 }
 
-export default withStyles(s)(YoutubePlayer);
+export default withStyles(s)(YoutubeMedia);
