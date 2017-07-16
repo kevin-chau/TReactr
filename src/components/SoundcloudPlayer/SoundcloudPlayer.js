@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 import WaveSurfer from 'wavesurfer.js';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import PropTypes from 'prop-types';
-import Deck from '../Deck';
+import Player from '../Player';
 import s from './SoundcloudPlayer.css';
 
 let audioCtx;
@@ -14,7 +14,7 @@ function scale(OldValue, OldMin, OldMax, NewMin, NewMax) {
   return NewValue;
 }
 
-class SoundcloudPlayer extends Deck {
+class SoundcloudPlayer extends Player {
   static propTypes = {
     url: PropTypes.string,
     playing: PropTypes.bool,
@@ -48,13 +48,13 @@ class SoundcloudPlayer extends Deck {
     // Select audio element
     const audioElementList = document.querySelectorAll('audio');
     let myAudio;
-    if (this.props.name === 'DeckA') {
+    if (this.props.name === 'PlayerA') {
       myAudio = audioElementList[0];
-    } else if (this.props.name === 'DeckB') {
+    } else if (this.props.name === 'PlayerB') {
       myAudio = audioElementList[1];
-    } else if (this.props.name === 'DeckC') {
+    } else if (this.props.name === 'PlayerC') {
       myAudio = audioElementList[2];
-    } else if (this.props.name === 'DeckD') {
+    } else if (this.props.name === 'PlayerD') {
       myAudio = audioElementList[3];
     }
     // set to anonymous for CORS

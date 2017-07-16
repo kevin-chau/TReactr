@@ -11,10 +11,10 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import WebMidi from 'webmidi';
 import FxUnit from '../../components/FxUnit';
 import Mixer from '../../components/Mixer';
-import Deck from '../../components/Deck';
+// import Player from '../../components/Player';
 import CrossFader from '../../components/CrossFader';
 import SoundcloudPlayer from '../../components/SoundcloudPlayer';
-import YoutubeDeck from '../../components/YoutubeDeck';
+// import YoutubeDeck from '../../components/YoutubeDeck';
 import s from './Home.css';
 
 /* eslint-disable react/jsx-no-bind */
@@ -46,6 +46,14 @@ class Home extends React.Component {
       HighpassB: 63,
       HighpassC: 63,
       HighpassD: 63,
+      GainA: 63,
+      GainB: 63,
+      GainC: 63,
+      GainD: 63,
+      FilterA: 63,
+      FilterB: 63,
+      FilterC: 63,
+      FilterD: 63,
     };
   }
 
@@ -78,6 +86,16 @@ class Home extends React.Component {
   changeHighpassB = (newHighpass) => { this.setState({ HighpassB: newHighpass }); };
   changeHighpassC = (newHighpass) => { this.setState({ HighpassC: newHighpass }); };
   changeHighpassD = (newHighpass) => { this.setState({ HighpassD: newHighpass }); };
+
+  changeGainA = (newGain) => { this.setState({ GainA: newGain }); };
+  changeGainB = (newGain) => { this.setState({ GainB: newGain }); };
+  changeGainC = (newGain) => { this.setState({ GainC: newGain }); };
+  changeGainD = (newGain) => { this.setState({ GainD: newGain }); };
+
+  changeFilterA = (newFilter) => { this.setState({ FilterA: newFilter }); };
+  changeFilterB = (newFilter) => { this.setState({ FilterB: newFilter }); };
+  changeFilterC = (newFilter) => { this.setState({ FilterC: newFilter }); };
+  changeFilterD = (newFilter) => { this.setState({ FilterD: newFilter }); };
 
   componentDidMount() {
     const home = this;
@@ -155,7 +173,7 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <SoundcloudPlayer
                 playing
-                name="DeckA"
+                name="PlayerA"
                 url="https://soundcloud.com/loudpvck/pace"
                 volume={this.state.VolumeA}
                 low={this.state.LowA}
@@ -183,6 +201,10 @@ class Home extends React.Component {
                       changeLowpass={this.changeLowpassA.bind(this)}
                       highpass={this.state.HighpassA}
                       changeHighpass={this.changeHighpassA.bind(this)}
+                      gain={this.state.GainA}
+                      changeGain={this.changeGainA.bind(this)}
+                      filter={this.state.FilterA}
+                      changeFilter={this.changeFilterA.bind(this)}
                     />
                   </div>
 
@@ -203,6 +225,10 @@ class Home extends React.Component {
                       changeLowpass={this.changeLowpassB.bind(this)}
                       highpass={this.state.HighpassB}
                       changeHighpass={this.changeHighpassB.bind(this)}
+                      gain={this.state.GainB}
+                      changeGain={this.changeGainB.bind(this)}
+                      filter={this.state.FilterB}
+                      changeFilter={this.changeFilterB.bind(this)}
                     />
                   </div>
                 </div> {/* End AB Mixer */}
@@ -211,7 +237,7 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <SoundcloudPlayer
                 playing
-                name="DeckB"
+                name="PlayerB"
                 url="https://soundcloud.com/bitbirdofficial/droeloe-x-san-holo-lines-of-the-broken"
                 volume={this.state.VolumeB}
                 low={this.state.LowB}
@@ -231,7 +257,7 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <SoundcloudPlayer
                 playing
-                name="DeckC"
+                name="PlayerC"
                 url="https://soundcloud.com/bitbirdofficial/thefuture"
                 volume={this.state.VolumeC}
                 low={this.state.LowC}
@@ -259,6 +285,10 @@ class Home extends React.Component {
                       changeLowpass={this.changeLowpassC.bind(this)}
                       highpass={this.state.HighpassC}
                       changeHighpass={this.changeHighpassC.bind(this)}
+                      gain={this.state.GainC}
+                      changeGain={this.changeGainC.bind(this)}
+                      filter={this.state.FilterC}
+                      changeFilter={this.changeFilterC.bind(this)}
                     />
                   </div>
 
@@ -279,6 +309,10 @@ class Home extends React.Component {
                       changeLowpass={this.changeLowpassD.bind(this)}
                       highpass={this.state.HighpassD}
                       changeHighpass={this.changeHighpassD.bind(this)}
+                      gain={this.state.GainD}
+                      changeGain={this.changeGainD.bind(this)}
+                      filter={this.state.FilterD}
+                      changeFilter={this.changeFilterD.bind(this)}
                     />
                   </div>
                 </div> {/* End CD Mixer */}
@@ -287,7 +321,7 @@ class Home extends React.Component {
             <div style={{ float: 'left' }}>
               <SoundcloudPlayer
                 playing
-                name="DeckD"
+                name="PlayerD"
                 url="https://soundcloud.com/skrillex/torro-torro-make-a-move-skrillex-remix"
                 volume={this.state.VolumeD}
                 low={this.state.LowD}

@@ -14,12 +14,16 @@ class Mixer extends React.Component {
     high: PropTypes.number,
     mid: PropTypes.number,
     low: PropTypes.number,
+    gain: PropTypes.number,
+    filter: PropTypes.number,
     changeVolume: PropTypes.func,
     changeLow: PropTypes.func,
     changeMid: PropTypes.func,
     changeHigh: PropTypes.func,
     changeLowpass: PropTypes.func,
     changeHighpass: PropTypes.func,
+    changeFilter: PropTypes.func,
+    changeGain: PropTypes.func,
   };
 
   static defaultProps = {
@@ -29,12 +33,16 @@ class Mixer extends React.Component {
     high: null,
     mid: null,
     low: null,
+    gain: null,
+    filter: null,
     changeVolume: null,
     changeLow: null,
     changeMid: null,
     changeHigh: null,
     changeLowpass: null,
     changeHighpass: null,
+    changeFilter: null,
+    changeGain: null,
   };
 
   render() {
@@ -114,6 +122,7 @@ class Mixer extends React.Component {
             <BiDirectionalKnob
               value={this.props.gain}
               onChange={(newValue) => {
+                this.props.changeGain(newValue);
               }}
             />
           </div>
@@ -133,6 +142,7 @@ class Mixer extends React.Component {
               onChange={(newValue) => {
                 this.props.changeLowpass(newValue);
                 this.props.changeHighpass(newValue);
+                this.props.changeFilter(newValue);
               }}
             />
           </div>
