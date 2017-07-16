@@ -195,7 +195,7 @@ class Home extends React.Component {
                       changeVolume={this.changeVolumeB.bind(this)}
                       low={this.state.LowB}
                       changeLow={this.changeLowB.bind(this)}
-                      mid={this.stateeMidB}
+                      mid={this.state.MidB}
                       changeMid={this.changeMidB.bind(this)}
                       high={this.state.HighB}
                       changeHigh={this.changeHighB.bind(this)}
