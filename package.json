@@ -53,6 +53,7 @@
     "treactr-toggle": "^3.0.8",
     "universal-router": "^3.0.0",
     "wavesurfer.js": "^2.0.0-beta01",
+    "webmidi": "^2.0.0-rc.5",
     "whatwg-fetch": "^2.0.3",
     "youtube-audio-stream": "^0.0.46"
   },
