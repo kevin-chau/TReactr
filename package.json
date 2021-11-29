@@ -237,4 +237,7 @@
     "serve": "babel-node tools/run runServer",
     "start": "babel-node tools/run start"
   }
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  }
 }
