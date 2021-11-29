@@ -18,12 +18,12 @@ class Feedback extends React.Component {
         <div className={s.container}>
           <a
             className={s.link}
-            href="mailto:kevinchau321@gmail.com?Subject=TReactr%20Question"
+            href="mailto:kevin@kevinchau.com?Subject=TReactr%20Question"
           >Ask a question</a>
           <span className={s.spacer}>|</span>
           <a
             className={s.link}
-            href="https://github.com/kevinchau321/TReactr/issues/new"
+            href="https://github.com/kevin-chau/TReactr/issues/new"
           >Report an issue</a>
         </div>
       </div>
