@@ -23,7 +23,7 @@ class Contact extends React.Component {
         <div className={s.container}>
           <h1>{this.props.title}</h1>
           <p>Kevin Chau</p>
-          <p>kevinchau321@gmail.com</p>
+          <p>kevin@kevinchau.com</p>
         </div>
       </div>
     );
