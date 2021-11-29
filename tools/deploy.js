@@ -13,15 +13,6 @@ import { spawn } from './lib/cp';
 import { makeDir, moveDir, cleanDir } from './lib/fs';
 import run from './run';
 
-// GitHub Pages
-// const remote = {
-//   name: 'github',
-//   url: 'https://github.com/kevinchau321/TReactr.git',
-//   branch: 'gh-pages',
-//   website: 'https://kevinchau321.github.io/Treactr/',
-//   static: true,
-// };
-
 // Heroku App
 const remote = {
   name: 'heroku',

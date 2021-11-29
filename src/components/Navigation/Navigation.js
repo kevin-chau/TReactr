@@ -19,7 +19,7 @@ class Navigation extends React.Component {
       <div className={s.root} role="navigation">
         <Link className={s.link} to="/about">About</Link>
         <Link className={s.link} to="/contact">Contact</Link>
-        <a className={s.link} href="https://www.github.com/kevinchau321/TReactr">GitHub</a>
+        <a className={s.link} href="https://www.github.com/kevin-chau/TReactr">GitHub</a>
         <span className={s.spacer}> | </span>
         <Link className={s.link} to="/login">Log in</Link>
         <span className={s.spacer}>or</span>
