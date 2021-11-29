@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 // import Wavesurfer from 'react-wavesurfer';
-import WaveSurfer from 'wavesurfer.js';
+// import WaveSurfer from 'wavesurfer.js';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import PropTypes from 'prop-types';
 import Player from '../Player';
@@ -98,11 +98,11 @@ class SoundcloudPlayer extends Player {
     this.gainNode.connect(audioCtx.destination);
 
     // Wavesurfer
-    const wavesurfer = WaveSurfer.create({
-      container: '#waveform',
-    });
-
-    wavesurfer.load('https://api.soundcloud.com/tracks/216100519/stream?client_id=064ede04fcc297ca28418c8164e47a15');
+    // const wavesurfer = WaveSurfer.create({
+    //   container: '#waveform',
+    // });
+    //
+    // wavesurfer.load('https://api.soundcloud.com/tracks/216100519/stream?client_id=064ede04fcc297ca28418c8164e47a15');
 
     // SC.initialize({
     //   client_id: process.env.SOUNDCLOUD_CLIENT_ID
@@ -125,8 +125,10 @@ class SoundcloudPlayer extends Player {
     this.biquadFilterLow.gain.value = ((this.props.low * 20) / 127) - 10;
     this.biquadFilterMid.gain.value = ((this.props.mid * 20) / 127) - 10;
     this.biquadFilterHigh.gain.value = ((this.props.high * 20) / 127) - 10;
-    this.biquadFilterHighpass.frequency.value = this.props.highpass <= 63 ? 0 : scale(this.props.highpass, 63, 127, 0, 22000);
-    this.biquadFilterLowpass.frequency.value = this.props.lowpass >= 63 ? 22000 : scale(this.props.lowpass, 0, 63, 0, 22000);
+    this.biquadFilterHighpass.frequency.value = this.props.highpass <= 63 ? 0 :
+                                  scale(this.props.highpass, 63, 127, 0, 22000);
+    this.biquadFilterLowpass.frequency.value = this.props.lowpass >= 63 ? 22000
+                                  : scale(this.props.lowpass, 0, 63, 0, 22000);
   }
 
   biquadFilterLow;
